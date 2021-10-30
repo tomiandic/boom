@@ -9,7 +9,7 @@
     height: 0;
     bottom: 0;
     left: 0;
-    background: rgb(255, 127, 23);
+    background: var(--main);
     z-index:1;
 }
 .landingLoader{
@@ -39,7 +39,7 @@
     border-radius: 100%;
     position: absolute;
     transform: translateY(-15px) scale(0);
-    border: 1px solid rgba(255, 166, 0, 0.3);
+    border: 1px solid var(--main);
 }
 .circle:nth-of-type(2){
     height: 20vw;

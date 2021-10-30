@@ -13,7 +13,7 @@
     padding: 20px 60px;
     display: flex;
     align-items: center;
-    font-family: "GT America Expanded Bold";
+    font-family: 'MuseoModerno', cursive;
     border: none;
     background-color:var(--main);
     color: #fff;
@@ -50,7 +50,7 @@
     white-space: nowrap;
 }
 h1 .line span{
-    font-family: "GT America Expanded Bold";
+    font-family: 'MuseoModerno', cursive;
 }
 .line{
     height: 27px;

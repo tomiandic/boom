@@ -4,7 +4,7 @@ import * as classes from "../styles/loader.module.css";
 
 const Loader = ({ pageIsLoaded, landingVideoRef }) => {
   const loaderBottomPicture = useRef(null);
-  const loaderLogo = useRef([]);
+  const loaderLogo = useRef();
   const circles = useRef([]);
   const loaderTransitionDiv = useRef();
   const loaderContainer = useRef();
@@ -13,7 +13,7 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
 
   useEffect(() => {
     loaderTL.current
-      .to(loaderLogo.current[1], {
+      .to(loaderLogo.current, {
         ease: Power3.easeInOut,
         delay: 0.5,
         opacity: 1,
@@ -45,29 +45,11 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
           scale: 1.6,
           yoyo: true,
           repeat: -1,
+          borderColor: "#00E8FC",
           ease: Power3.easeOut,
         },
         "-=.3"
       );
-    /*  .to(
-        loaderLogo.current[1],
-        {
-          delay: 1,
-          ease: Sine.easeInOut,
-          opacity: 1,
-          duration: 1,
-          repeat: -1,
-          yoyo: true,
-        },
-        "-=2.5"
-      )
-      .to(loaderLogo.current[1], {
-        ease: Sine.easeInOut,
-        opacity: 0,
-        duration: 1,
-        repeat: -1,
-        yoyo: true,
-      }); */
   }, []);
 
   useEffect(() => {
@@ -111,15 +93,8 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
     <div ref={loaderContainer} className={classes.landingLoader}>
       <img
         preload="true"
-        ref={(el) => addToRefs(el, loaderLogo)}
+        ref={loaderLogo}
         className={classes.loaderLogo}
-        src="/boom_gray.svg"
-      />
-      <img
-        preload="true"
-        ref={(el) => addToRefs(el, loaderLogo)}
-        className={classes.loaderLogo}
-        style={{ transform: "translateY(-10px)" }}
         src="/boom_final_black.svg"
       />
       <img

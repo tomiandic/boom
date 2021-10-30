@@ -35,16 +35,17 @@
     justify-content: center;
     margin-top: 3rem;
     color: var(--black);
-    font-family: "GT America Expanded Bold";
+    font-family: 'MuseoModerno', cursive;
     text-transform: uppercase;
     font-size: 20px;
     opacity: 0;
     transform: skewX(25deg);
+    font-weight: 500;
+
 }
 .navLink:last-of-type{
     color: var(--main);
     fill: var(--main);
-    font-weight: bold;
 }
 .navLink:first-of-type{
     margin-top: 5rem;
