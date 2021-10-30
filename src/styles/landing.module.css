@@ -1,0 +1,101 @@
+.landing{
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.button{
+    margin: 20px auto;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    font-family: "GT America Expanded Bold";
+    border: none;
+    background-color:var(--main);
+    color: #fff;
+    fill: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.videoBackdrop{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.landingContent{
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    width: 90vw;
+    padding: 5vw;
+}
+
+.landingContent > h1{
+    font-size: 23px;
+    text-transform: uppercase;
+    text-align: left;
+    white-space: nowrap;
+}
+h1 .line span{
+    font-family: "GT America Expanded Bold";
+}
+.line{
+    height: 27px;
+    position: relative;
+    overflow: hidden;
+}
+.line span{
+    position: absolute;
+}  
+.landingParagraph{
+    margin: 40px 0;
+    line-height: 1.8rem;
+    font-weight: 500;
+    opacity: .8;
+    text-align: left;
+    width: 100%;
+}
+.backdropGradient{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(65deg, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0));
+}
+.svgWave{
+    width: 60px;
+    float: left;
+    margin: 15px 0;
+}
+
+.svgWave > path{
+    stroke-dasharray: 45;
+    stroke-dashoffset: 45;
+}
+
+@media (min-width: 600px) {
+    .button{
+        margin-left:0;
+    }
+    .landingContent > h1{
+        font-size: 2rem;
+    }
+    .line {
+        height: 2.5rem;
+    }
+    
+}

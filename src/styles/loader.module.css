@@ -1,0 +1,72 @@
+.loaderLogo{
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+}
+.loaderTransition{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(255, 127, 23);
+}
+.landingLoader{
+    background: #fff;
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.loadingPic{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    z-index:1;
+}
+.circle{
+    height: 10vw;
+    width: 10vw; 
+    border-radius: 100%;
+    position: absolute;
+    transform: translateY(-15px) scale(0);
+    border: 1px solid rgba(255, 166, 0, 0.3);
+}
+.circle:nth-of-type(2){
+    height: 20vw;
+    width: 20vw; 
+}
+.circle:nth-of-type(3){
+    height: 40vw;
+    width: 40vw; 
+}
+.circle:nth-of-type(4){
+    height: 60vw;
+    width: 60vw; 
+}.circle:nth-of-type(5){
+    height: 80vw;
+    width: 80vw; 
+}
+.circle:nth-of-type(6){
+    height: 100vw;
+    width: 100vw; 
+}
+
+
+
+
+@media (min-width: 600px) {
+
+    .loadingPic{
+        display:none;
+    }
+
+}

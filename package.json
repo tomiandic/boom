@@ -1,0 +1,24 @@
+{
+  "name": "boom-events",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Boom Events",
+  "author": "tomiandic",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^3.13.1",
+    "gsap": "^3.8.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "splitting": "^1.0.6"
+  }
+}

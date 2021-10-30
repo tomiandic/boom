@@ -1,0 +1,21 @@
+@import url("//db.onlinewebfonts.com/c/22b4c73e6141de7c9937f42cb58bdb4b?family=GT+America+Expanded+Bold");
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+* {
+    margin:0;
+    padding:0;
+    text-decoration: 0;
+    font-family: 'Spartan', sans-serif;
+    /* font-family: "GT America Expanded Bold"; */
+}
+
+html, body{
+    min-height: 100%;
+}
+
+:root{
+    --main: #ff7b00;
+    --secondary: #00E8FC;
+    --black: rgb(22, 22, 22);
+}
+
+
