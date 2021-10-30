@@ -129,7 +129,7 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
         src="/loading-pic.png"
       />
       <div ref={loaderTransitionDiv} className={classes.loaderTransition}></div>
-      {Array.from(Array(5).keys()).map((el) => (
+      {Array.from(Array(6).keys()).map((el) => (
         <div className={classes.circle} ref={(el) => addToRefs(el, circles)}>
           {" "}
         </div>
