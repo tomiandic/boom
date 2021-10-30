@@ -20,23 +20,27 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
         y: -10,
         duration: 1,
       })
-      .from(
+      .to(
         loaderBottomPicture.current,
         {
           ease: Power3.easeInOut,
-          opacity: 0,
-          scale: 2,
-          rotate: 10,
-          bottom: -300,
+          opacity: 1,
           duration: 3,
+          rotate: 0,
+          scale: 1,
+          bottom: 0,
         },
         "-=.5"
       )
-      .to(circles.current, {
-        scale: 1.5,
-        stagger: 0.1,
-        ease: Power3.easeOut,
-      })
+      .to(
+        circles.current,
+        {
+          scale: 1.5,
+          stagger: 0.15,
+          ease: Power3.easeInOut,
+        },
+        "-=1.5"
+      )
 
       .to(
         circles.current,
@@ -45,7 +49,7 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
           scale: 1.6,
           yoyo: true,
           repeat: -1,
-          borderColor: "#00E8FC",
+          borderColor: "#ff7b00",
           ease: Power3.easeOut,
         },
         "-=.3"
