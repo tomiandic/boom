@@ -13,6 +13,7 @@ import "../styles/global.css";
 const IndexPage = () => {
   const [pageIsLoaded, setPageIsLoaded] = useState(false);
 
+  const socialMedia = useRef([]);
   const landingVideo = useRef();
   const landingTitle = useRef([]);
   const landingButton = useRef();
@@ -56,12 +57,22 @@ const IndexPage = () => {
       .from(
         landingButton.current,
         {
-          duration: 2,
+          duration: 1.5,
           ease: Power3.easeInOut,
           opacity: 0,
           width: 0,
+          padding: "20px 0",
         },
         "-=3.8"
+      )
+      .to(
+        socialMedia.current,
+        {
+          x: 0,
+          ease: Power3.easeOut,
+          stagger: 0.1,
+        },
+        "-=.8"
       );
   }
 
@@ -111,23 +122,23 @@ const IndexPage = () => {
         <p className={classes.landingParagraph}>
           <div className={classes.line}>
             <span ref={(el) => addToRefs(el, landingTitle)}>
-              Suspendisse augue mauris,
+              Order your boat party ticket on time
             </span>
           </div>
           <div className={classes.line}>
             <span ref={(el) => addToRefs(el, landingTitle)}>
-              facilisis eget mauris et,
+              to get the early bird prices,
             </span>
           </div>
           <div className={classes.line}>
             <span ref={(el) => addToRefs(el, landingTitle)}>
-              condimentum imperdiet ipsum.
+              and much more.
             </span>
           </div>
         </p>
 
         <button ref={landingButton} className={classes.button}>
-          BOOK NOW{" "}
+          ORDER TICKETS{" "}
           <svg
             style={{ marginLeft: 10 }}
             width="24"
@@ -137,6 +148,24 @@ const IndexPage = () => {
             <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
           </svg>
         </button>
+        <div className={classes.socialMediaContainer}>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.instagram.com/instaboom.pula/?hl=hr"
+            ref={(el) => addToRefs(el, socialMedia)}
+          >
+            <img src="icons/instagram-white.svg" />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.facebook.com/BOOMeventsPula/"
+            ref={(el) => addToRefs(el, socialMedia)}
+          >
+            <img src="icons/facebook-white.svg" />
+          </a>
+        </div>
       </div>
     </section>
   );

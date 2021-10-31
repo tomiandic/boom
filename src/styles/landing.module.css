@@ -23,6 +23,7 @@
     letter-spacing: 1px;
     white-space: nowrap;
     overflow: hidden;
+    font-weight: 500;
 }
 
 .videoBackdrop{
@@ -44,7 +45,7 @@
 }
 
 .landingContent > h1{
-    font-size: 23px;
+    font-size: 27px;
     text-transform: uppercase;
     text-align: left;
     white-space: nowrap;
@@ -53,7 +54,7 @@ h1 .line span{
     font-family: 'MuseoModerno', cursive;
 }
 .line{
-    height: 27px;
+    height: 33px;
     position: relative;
     overflow: hidden;
 }
@@ -61,12 +62,13 @@ h1 .line span{
     position: absolute;
 }  
 .landingParagraph{
-    margin: 40px 0;
+    margin-bottom: 20px;
     line-height: 1.8rem;
     font-weight: 500;
     opacity: .8;
     text-align: left;
     width: 100%;
+    display: inline-block;
 }
 .backdropGradient{
     position: absolute;
@@ -79,7 +81,7 @@ h1 .line span{
 .svgWave{
     width: 60px;
     float: left;
-    margin: 15px 0;
+    margin: 25px 0;
 }
 
 .svgWave > path{
@@ -87,15 +89,38 @@ h1 .line span{
     stroke-dashoffset: 45;
 }
 
+.socialMediaContainer{
+    overflow: hidden;
+    display: none;
+    align-items: center;
+    text-align: left;
+}
+.socialMediaContainer > a{
+    transform: translateX(150px);
+    height: 25px;
+    margin: 20px 5px;
+    display: inline-block;
+}
+.socialMediaContainer img{
+    height: 25px;
+    width: 25px;
+}
 @media (min-width: 600px) {
     .button{
         margin-left:0;
     }
     .landingContent > h1{
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .line {
-        height: 2.5rem;
+        height: 2.8rem;
     }
+    .landingContent{
+        width: 75vw;
+    }
+    .socialMediaContainer{
+        display: flex;
+    }
+   
     
 }

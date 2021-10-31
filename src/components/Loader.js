@@ -20,7 +20,7 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
         y: -10,
         duration: 1,
       })
-      .to(
+      /*   .to(
         loaderBottomPicture.current,
         {
           ease: Power3.easeInOut,
@@ -31,7 +31,7 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
           bottom: 0,
         },
         "-=.5"
-      )
+      ) */
       .to(
         circles.current,
         {
@@ -39,7 +39,7 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
           stagger: 0.15,
           ease: Power3.easeInOut,
         },
-        "-=1.5"
+        "-=.5"
       )
 
       .to(
@@ -101,12 +101,12 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
         className={classes.loaderLogo}
         src="/boom_final_black.svg"
       />
-      <img
+      {/*   <img
         preload="true"
         ref={loaderBottomPicture}
         className={classes.loadingPic}
         src="/loading-pic.png"
-      />
+      /> */}
       <div ref={loaderTransitionDiv} className={classes.loaderTransition}></div>
       {Array.from(Array(6).keys()).map((el) => (
         <div className={classes.circle} ref={(el) => addToRefs(el, circles)}>
