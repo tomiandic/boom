@@ -6,6 +6,8 @@
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
+    max-width: 100vw;
+    position:relative;
 }
 
 .button{
@@ -100,6 +102,7 @@ h1 .line span{
     height: 25px;
     margin: 20px 5px;
     display: inline-block;
+    opacity: 0;
 }
 .socialMediaContainer img{
     height: 25px;
