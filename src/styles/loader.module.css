@@ -7,7 +7,7 @@
     position: absolute;
 }
 .landingLoader{
-    background: #fff;
+    background: rgb(255, 255, 255);
     height: 100%;
     width: 100vw;
     position: fixed;
@@ -26,7 +26,8 @@
     border-radius: 100%;
     position: absolute;
     transform: scale(0);
-    border: 1px solid rgb(236, 236, 236);
+    border: 1px solid rgb(212, 212, 212);
+    opacity: .5;
 }
 .circle:nth-of-type(2){
     height: 25vw;

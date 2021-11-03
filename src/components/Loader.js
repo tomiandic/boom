@@ -47,12 +47,11 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
   useEffect(() => {
     if (pageIsLoaded) {
       landingVideoRef.current.play();
-      hideLoaderTl
-      .to(loaderContainer.current, {
+      hideLoaderTl.to(loaderContainer.current, {
         duration: 1,
         "clip-path": "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
         ease: Power3.easeOut,
-      })
+      });
     }
   }, [pageIsLoaded]);
 

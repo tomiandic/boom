@@ -15,7 +15,7 @@
     padding: 20px 60px;
     display: flex;
     align-items: center;
-    font-family: 'MuseoModerno', cursive;
+    font-family: 'Righteous', cursive;
     border: none;
     background-color:var(--main);
     color: #fff;
@@ -47,13 +47,14 @@
 }
 
 .landingContent > h1{
-    font-size: 27px;
+    font-size: 28px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     text-align: left;
     white-space: nowrap;
 }
 h1 .line span{
-    font-family: 'MuseoModerno', cursive;
+    font-family: 'Righteous', cursive;
 }
 .line{
     height: 33px;
@@ -78,7 +79,7 @@ h1 .line span{
     left: 0;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(65deg, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0));
+    background: linear-gradient(65deg, rgba(58, 19, 1, 0.75), rgb(20 60 102 / 25%));
 }
 .svgWave{
     width: 60px;

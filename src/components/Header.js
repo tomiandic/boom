@@ -14,7 +14,7 @@ const Header = ({ pageIsLoaded }) => {
   useEffect(() => {
     sidebarTL.current
       .to(mobileNav.current, {
-        height: "97%",
+        height: "100%",
         backgroundColor: "#fff",
         duration: 1,
         ease: Power3.easeOut,
@@ -86,7 +86,7 @@ const Header = ({ pageIsLoaded }) => {
   return (
     <nav ref={mobileNav} className={classes.headerContainer}>
       <img className={classes.logo} src="/boom_all_white.svg" />
-     
+
       <Link
         className={classes.navLink}
         ref={(el) => addToRefs(el, navLinks)}
@@ -138,7 +138,7 @@ const Header = ({ pageIsLoaded }) => {
         <span ref={(el) => addToRefs(el, hamburgerLines)}></span>
         <span ref={(el) => addToRefs(el, hamburgerLines)}></span>
       </span>
-      
+
       <div className={classes.socialMediaContainer}>
         <a
           target="_blank"

@@ -26,7 +26,7 @@ const IndexPage = () => {
     setTimeout(() => {
       setPageIsLoaded(true);
       landingTL.current.play();
-    }, 10000); 
+    }, 10000);
   }, []);
 
   const addToRefs = (el, refArray) => {
@@ -40,16 +40,20 @@ const IndexPage = () => {
       .from(landingVideo.current, {
         duration: 1.5,
         scale: 3,
-        skewX: 30
+        skewX: 30,
       })
-      .from(landingTitle.current, {
-        duration: 1,
-        y: 65,
-        rotate: 8,
-        skewX: -50,
-        stagger: 0.2,
-        ease: Power3.easeOut,
-      }, "-=1")
+      .from(
+        landingTitle.current,
+        {
+          duration: 1,
+          y: 65,
+          rotate: 8,
+          skewX: -50,
+          stagger: 0.2,
+          ease: Power3.easeOut,
+        },
+        "-=1"
+      )
       .to(
         landingSvg.current,
         {
@@ -68,7 +72,7 @@ const IndexPage = () => {
           width: 0,
           padding: "20px 0",
         },
-        "-=3.8"
+        "-=4"
       )
       .to(
         socialMedia.current,
@@ -77,7 +81,7 @@ const IndexPage = () => {
           duration: 1.2,
           ease: Power3.easeOut,
           stagger: 0.2,
-          opacity: 1
+          opacity: 1,
         },
         "-=3"
       );
@@ -158,24 +162,25 @@ const IndexPage = () => {
               <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
             </svg>
           </button>
-   
-        <div className={classes.socialMediaContainer}>
-          <a
-            target="_blank"
-            rel="noopener"
-            href="https://www.instagram.com/instaboom.pula/?hl=hr"
-            ref={(el) => addToRefs(el, socialMedia)}
-          >
-            <img src="icons/instagramWhite.svg" />
-          </a>
-          <a
-            target="_blank"
-            rel="noopener"
-            href="https://www.facebook.com/BOOMeventsPula/"
-            ref={(el) => addToRefs(el, socialMedia)}
-          >
-            <img src="icons/facebookWhite.svg" />
-          </a>
+
+          <div className={classes.socialMediaContainer}>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.instagram.com/instaboom.pula/?hl=hr"
+              ref={(el) => addToRefs(el, socialMedia)}
+            >
+              <img src="icons/instagramWhite.svg" />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.facebook.com/BOOMeventsPula/"
+              ref={(el) => addToRefs(el, socialMedia)}
+            >
+              <img src="icons/facebookWhite.svg" />
+            </a>
+          </div>
         </div>
       </section>
       <About />
