@@ -3,7 +3,6 @@ import { gsap, Power3, Sine } from "gsap";
 import * as classes from "../styles/loader.module.css";
 
 const Loader = ({ pageIsLoaded, landingVideoRef }) => {
-  const loaderBottomPicture = useRef(null);
   const loaderLogo = useRef();
   const circles = useRef([]);
   const loaderTransitionDiv = useRef();
@@ -17,21 +16,11 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
         ease: Power3.easeInOut,
         delay: 0.5,
         opacity: 1,
-        y: -10,
-        duration: 1,
+        skewX: 0,
+        translateY: 0,
+        scaleY: 1,
+        duration: 1.3,
       })
-      /*   .to(
-        loaderBottomPicture.current,
-        {
-          ease: Power3.easeInOut,
-          opacity: 1,
-          duration: 3,
-          rotate: 0,
-          scale: 1,
-          bottom: 0,
-        },
-        "-=.5"
-      ) */
       .to(
         circles.current,
         {
@@ -41,7 +30,6 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
         },
         "-=.5"
       )
-
       .to(
         circles.current,
         {
@@ -58,32 +46,13 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
 
   useEffect(() => {
     if (pageIsLoaded) {
-      loaderTL.current.pause();
       landingVideoRef.current.play();
       hideLoaderTl
-        .to(loaderTransitionDiv.current, {
-          ease: Power3.easeInOut,
-          height: "100%",
-          duration: 0.9,
-        })
-        .to(loaderTransitionDiv.current, {
-          ease: Power3.easeInOut,
-          height: "0%",
-          duration: 0.9,
-          bottom: "unset",
-          top: 0,
-        })
-        .to(
-          loaderContainer.current,
-          {
-            ease: Power3.easeInOut,
-            height: "0%",
-            duration: 0.7,
-            bottom: "unset",
-            top: 0,
-          },
-          "-=1"
-        );
+      .to(loaderContainer.current, {
+        duration: 1,
+        "clip-path": "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
+        ease: Power3.easeOut,
+      })
     }
   }, [pageIsLoaded]);
 
@@ -108,7 +77,7 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
         src="/loading-pic.png"
       /> */}
       <div ref={loaderTransitionDiv} className={classes.loaderTransition}></div>
-      {Array.from(Array(6).keys()).map((el) => (
+      {Array.from(Array(4).keys()).map((el) => (
         <div className={classes.circle} ref={(el) => addToRefs(el, circles)}>
           {" "}
         </div>
