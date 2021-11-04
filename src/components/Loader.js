@@ -3,7 +3,6 @@ import { gsap, Power3, Sine } from "gsap";
 import * as classes from "../styles/loader.module.css";
 
 const Loader = ({ pageIsLoaded, landingVideoRef }) => {
-  const loaderLogo = useRef();
   const circles = useRef([]);
   const loaderTransitionDiv = useRef();
   const loaderContainer = useRef();
@@ -15,27 +14,19 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
   useEffect(() => {
     console.log(strokeLogo.current.map(item => console.log(item.getTotalLength())))
     loaderTL.current
+   
     .to(
       strokeLogo.current,
       {
         strokeDashoffset: 0,
         strokeWidth: 40,
         duration: 2,
-        stagger: .3,
+        stagger: .2,
         ease: Power3.easeInOut,
         stroke: "#000"
       },
-      "-=1"
     )
-      .to(loaderLogo.current, {
-        ease: Power3.easeInOut,
-        delay: 0.5,
-        opacity: 1,
-        skewX: 0,
-        translateY: 0,
-        scaleY: 1,
-        duration: 1.3,
-      })
+      
       .to(
         circles.current,
         {
@@ -43,7 +34,7 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
           stagger: 0.15,
           ease: Power3.easeInOut,
         },
-        "-=2.8"
+        "-=.8"
       )
       .to(
         circles.current,
@@ -55,7 +46,7 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
           borderColor: "#ff7b00",
           ease: Power3.easeOut,
         },
-        "-=2"
+        "-=.2"
       ); 
   }, []);
 
@@ -67,7 +58,8 @@ const Loader = ({ pageIsLoaded, landingVideoRef }) => {
         "clip-path": "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
         ease: Power3.easeOut,
       });
-    }
+      loaderTL.current.pause()
+   }
   }, [pageIsLoaded]);
 
   const addToRefs = (el, refArray) => {

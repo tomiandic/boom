@@ -1,9 +1,7 @@
 .loaderLogo{
     height: 40px;
     margin-top: 8px;
-    margin-left: 4px;
- /*    opacity: 0; */
- /*    transform: skewX(15deg) translateY(15px) scaleY(2); */
+    margin-left: 2px;
     position: absolute;
 }
 .loaderLogo path,
@@ -25,7 +23,6 @@
     overflow: hidden;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
-
 .circle{
     border-radius: 100%;
     position: absolute;
@@ -34,20 +31,20 @@
     opacity: .7;
 }
 .circle:nth-of-type(2){
-    height: 25vw;
-    width: 25vw; 
+    height: 30vw;
+    width: 30vw; 
 }
 .circle:nth-of-type(3){
-    height: 50vw;
-    width: 50vw; 
+    height: 56vw;
+    width: 56vw; 
 }
 .circle:nth-of-type(4){
-    height: 80vw;
-    width: 80vw; 
-
-}.circle:nth-of-type(5){
-    height: 115vw;
-    width: 115vw; 
+    height: 85vw;
+    width: 85vw; 
+}
+.circle:nth-of-type(5){
+    height: 120vw;
+    width: 120vw; 
 }
 
 
