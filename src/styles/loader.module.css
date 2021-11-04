@@ -1,10 +1,14 @@
 .loaderLogo{
-    height: 30px;
+    height: 40px;
     margin-top: 8px;
     margin-left: 4px;
-    opacity: 0;
-    transform: skewX(15deg) translateY(15px) scaleY(2);
+ /*    opacity: 0; */
+ /*    transform: skewX(15deg) translateY(15px) scaleY(2); */
     position: absolute;
+}
+.loaderLogo path,
+.loaderLogo circle{
+    stroke: var(--main);
 }
 .landingLoader{
     background: rgb(255, 255, 255);
@@ -27,7 +31,7 @@
     position: absolute;
     transform: scale(0);
     border: 1px solid rgb(212, 212, 212);
-    opacity: .5;
+    opacity: .7;
 }
 .circle:nth-of-type(2){
     height: 25vw;
