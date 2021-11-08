@@ -157,25 +157,6 @@ const IndexPage = () => {
               <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
             </svg>
           </button>
-
-          <div className={classes.socialMediaContainer}>
-            <a
-              target="_blank"
-              rel="noopener"
-              href="https://www.instagram.com/instaboom.pula/?hl=hr"
-              ref={(el) => addToRefs(el, socialMedia)}
-            >
-              <img src="icons/instagramWhite.svg" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener"
-              href="https://www.facebook.com/BOOMeventsPula/"
-              ref={(el) => addToRefs(el, socialMedia)}
-            >
-              <img src="icons/facebookWhite.svg" />
-            </a>
-          </div>
         </div>
       </section>
       <About />

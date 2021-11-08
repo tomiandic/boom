@@ -24,9 +24,9 @@ const Header = ({ pageIsLoaded }) => {
         {
           width: 0,
           backgroundColor: "#000",
-          duration: 0.1,
+          duration: 0.2,
         },
-        "-=.5"
+        "-=.8"
       )
       .to(
         hamburgerLines.current[0],
@@ -34,20 +34,20 @@ const Header = ({ pageIsLoaded }) => {
           rotate: 45,
           backgroundColor: "#d5d5d5",
           y: 19,
-          duration: 0.3,
+          duration: 0.6,
           width: 35,
         },
-        "-=.5"
+        "-=.8"
       )
       .to(
         hamburgerLines.current[2],
         {
           rotate: -45,
           backgroundColor: "#d7d7d7",
-          duration: 0.3,
+          duration: 0.6,
           width: 35,
         },
-        "-=.5"
+        "-=.8"
       )
       .to(
         navLinks.current,
@@ -86,50 +86,51 @@ const Header = ({ pageIsLoaded }) => {
   return (
     <nav ref={mobileNav} className={classes.headerContainer}>
       <img className={classes.logo} src="/boom_all_white.svg" />
-
-      <Link
-        className={classes.navLink}
-        ref={(el) => addToRefs(el, navLinks)}
-        to="/"
-      >
-        Gallery
-      </Link>
-      <Link
-        className={classes.navLink}
-        ref={(el) => addToRefs(el, navLinks)}
-        to="/"
-      >
-        Events
-      </Link>
-      <Link
-        className={classes.navLink}
-        ref={(el) => addToRefs(el, navLinks)}
-        to="/"
-      >
-        About
-      </Link>
-      <Link
-        className={classes.navLink}
-        ref={(el) => addToRefs(el, navLinks)}
-        to="/"
-      >
-        F.A.Q
-      </Link>
-      <Link
-        className={classes.navLink}
-        ref={(el) => addToRefs(el, navLinks)}
-        to="/"
-      >
-        Book Tickets
-        <svg
-          style={{ marginLeft: 10 }}
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
+      <div className={classes.navLinks}>
+        <Link
+          className={classes.navLink}
+          ref={(el) => addToRefs(el, navLinks)}
+          to="/"
         >
-          <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-        </svg>
-      </Link>
+          Gallery
+        </Link>
+        <Link
+          className={classes.navLink}
+          ref={(el) => addToRefs(el, navLinks)}
+          to="/"
+        >
+          Events
+        </Link>
+        <Link
+          className={classes.navLink}
+          ref={(el) => addToRefs(el, navLinks)}
+          to="/"
+        >
+          About
+        </Link>
+        <Link
+          className={classes.navLink}
+          ref={(el) => addToRefs(el, navLinks)}
+          to="/"
+        >
+          F.A.Q
+        </Link>
+        <Link
+          className={classes.navLink}
+          ref={(el) => addToRefs(el, navLinks)}
+          to="/"
+        >
+          Book Tickets
+          <svg
+            style={{ marginLeft: 10 }}
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+          </svg>
+        </Link>
+      </div>
       <span
         onClick={() => setSidebarOpen(!sidebarOpen)}
         className={classes.hamburger}
@@ -171,6 +172,24 @@ const Header = ({ pageIsLoaded }) => {
           ref={(el) => addToRefs(el, socialMedia)}
         >
           <img src="icons/phone.svg" />
+        </a>
+      </div>
+      <div className={classes.headerSocialMediaContainer}>
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://www.instagram.com/instaboom.pula/?hl=hr"
+          ref={(el) => addToRefs(el, socialMedia)}
+        >
+          <img src="icons/instagramWhite.svg" />
+        </a>
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://www.facebook.com/BOOMeventsPula/"
+          ref={(el) => addToRefs(el, socialMedia)}
+        >
+          <img src="icons/facebookWhite.svg" />
         </a>
       </div>
     </nav>

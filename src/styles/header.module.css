@@ -4,19 +4,22 @@
     height: 5rem;
     position: fixed;
     top: 0;
-    border-radius: 4px;
     z-index: 2;
     overflow: hidden;
     backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .hamburger{
     width: 40px;
     height: 25px;
     position: absolute;
+    right: 5vw;
+    top: 30px;
     cursor:pointer;
-    right: 1rem;
-    top: 18px;
     z-index:2;
 }
 .hamburger span{
@@ -29,6 +32,7 @@
     opacity: 1;
     right: 0;
 }
+
 .navLink{
     display: flex;
     align-items: center;
@@ -49,12 +53,13 @@
     fill: var(--main);
 }
 .navLink:first-of-type{
-    margin-top: 5rem;
+    margin-top: 0;
 }
 .logo{
     height: 40px;
-    margin-top: 14px;
-    margin-left: 10px;
+    left: 5vw;
+    top: 20px;
+    position: absolute;
 }
 .hamburger span:nth-child(1){
     top:0;
@@ -86,6 +91,18 @@
     width: 22px;
     margin: 5px 15px;
 }
+.headerSocialMediaContainer{
+    align-items: center;
+    display: none;
+}
+.headerSocialMediaContainer > a{
+    margin: 20px 5px;
+    display: inline-block;
+}
+.headerSocialMediaContainer img{
+    height: 20px;
+    width: 20px;
+}
 
 @media (min-width: 900px) {
     .hamburger{
@@ -101,13 +118,25 @@
         transform: unset;
         min-width: unset;
         opacity: 1;
-        font-size: 1rem;
+        font-size: .9rem;
         margin: 5px 15px;
         margin-top: 5px!important;
         color: white;
     }
-    .headerContainer{
+    .navLinks{
         display: flex;
+    }
+    .headerSocialMediaContainer{
+        display: flex;
+    }
+    .socialMediaContainer{
+     display: none;
+    }
+    .headerContainer{
+        justify-content: space-around;
+    }
+    .logo{
+        position: unset;
     }
 
 }

@@ -44,6 +44,7 @@
     z-index: 1;
     width: 85vw;
     padding: 5vw;
+    padding-top: 15vw;
 }
 
 .landingContent > h1{
@@ -92,23 +93,7 @@ h1 .line span{
     stroke-dashoffset: 45;
 }
 
-.socialMediaContainer{
-    overflow: hidden;
-    display: none;
-    align-items: center;
-    text-align: left;
-}
-.socialMediaContainer > a{
-    transform: translateX(150px);
-    height: 25px;
-    margin: 20px 5px;
-    display: inline-block;
-    opacity: 0;
-}
-.socialMediaContainer img{
-    height: 25px;
-    width: 25px;
-}
+
 section{
     min-height: 100vh;
 }

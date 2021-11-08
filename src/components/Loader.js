@@ -44,7 +44,7 @@ const Loader = ({ landingTL, landingVideoRef }) => {
         loaderContainer.current,
         {
           duration: 1.5,
-          "clip-path": "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
           ease: Power3.easeOut,
           onComplete: () => loaderTL.current.pause(),
         },
