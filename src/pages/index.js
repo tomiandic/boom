@@ -23,10 +23,6 @@ const IndexPage = () => {
 
   useEffect(() => {
     initTimelines();
-    setTimeout(() => {
-      setPageIsLoaded(true);
-      landingTL.current.play();
-    }, 10000);
   }, []);
 
   const addToRefs = (el, refArray) => {
@@ -58,7 +54,7 @@ const IndexPage = () => {
         landingSvg.current,
         {
           strokeDashoffset: 0,
-          duration: 4,
+          duration: 3,
           ease: Power3.easeOut,
         },
         "-=1"
@@ -91,7 +87,7 @@ const IndexPage = () => {
     <>
       <section className={classes.landing}>
         <Header />
-        <Loader landingVideoRef={landingVideo} pageIsLoaded={pageIsLoaded} />
+        <Loader landingVideoRef={landingVideo} landingTL={landingTL} />
 
         <div className={classes.backdropGradient} />
         <video
@@ -101,7 +97,6 @@ const IndexPage = () => {
           muted
           playsInline
           loop
-          autoPlay
         />
         <div className={classes.landingContent} data-animation="landing-loader">
           <h1>
