@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import * as classes from "../styles/landing.module.css";
 import Loader from "../components/Loader";
 import { gsap, Power3, Sine } from "gsap";
@@ -7,7 +8,7 @@ import About from "../components/sections/About";
 import Header from "../components/Header";
 
 //TODO: loader component needs to stop animations when unmounted which does not work
-
+import "swiper/css";
 import "../styles/global.css";
 // markup
 
@@ -146,7 +147,7 @@ const IndexPage = () => {
             </div>
           </p>
 
-          <button ref={landingButton} className={classes.button}>
+          {/*     <button ref={landingButton} className={classes.button}>
             ORDER TICKETS{" "}
             <svg
               style={{ marginLeft: 10 }}
@@ -156,8 +157,49 @@ const IndexPage = () => {
             >
               <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
             </svg>
-          </button>
+          </button> */}
         </div>
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={3}
+          className={classes.swiperContainer}
+        >
+          <SwiperSlide className={classes.swiperSlide}>
+            <p className={classes.eventName}>Party Boat - Pula</p>
+            <p className={classes.eventDate}>
+              24<span>July</span>
+            </p>
+            <div className={classes.slideBottom} />
+          </SwiperSlide>
+          <SwiperSlide className={classes.swiperSlide}>
+            <p className={classes.eventName}>Party Boat - Pula</p>
+            <p className={classes.eventDate}>
+              24<span>July</span>
+            </p>
+            <div className={classes.slideBottom} />
+          </SwiperSlide>
+          <SwiperSlide className={classes.swiperSlide}>
+            <p className={classes.eventName}>Party Boat - Pula</p>
+            <p className={classes.eventDate}>
+              24<span>July</span>
+            </p>
+            <div className={classes.slideBottom} />
+          </SwiperSlide>
+          <SwiperSlide className={classes.swiperSlide}>
+            <p className={classes.eventName}>Party Boat - Pula</p>
+            <p className={classes.eventDate}>
+              24<span>July</span>
+            </p>
+            <div className={classes.slideBottom} />
+          </SwiperSlide>
+          <SwiperSlide className={classes.swiperSlide}>
+            <p className={classes.eventName}>Party Boat - Pula</p>
+            <p className={classes.eventDate}>
+              24<span>July</span>
+            </p>
+            <div className={classes.slideBottom} />
+          </SwiperSlide>
+        </Swiper>
       </section>
       <About />
     </>

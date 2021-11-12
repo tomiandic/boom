@@ -13,7 +13,9 @@ html, body{
 }
 
 :root{
-    --main: #ff7b00;
+    /* --main: #ff7b00; */
+    --main: #ff5200;
+    --mainDark: #b93500;
     --secondary: #00E8FC;
     --black: rgb(22, 22, 22);
 }

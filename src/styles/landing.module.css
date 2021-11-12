@@ -12,7 +12,7 @@
 
 .button{
     margin: 20px auto;
-    padding: 20px 60px;
+    padding: 15px 50px;
     display: flex;
     align-items: center;
     font-family: 'Righteous', cursive;
@@ -27,12 +27,22 @@
     overflow: hidden;
     font-weight: 500;
 }
+.button svg{
+    transform: translateX(10px);
+    transition: transform 0.5s;
+}
+.button:hover svg{
+    transform: translateX(20px)
+}
+.button:hover{
+    background-color: var(--mainDark);
+}
 
 .videoBackdrop{
     position: absolute;
     top:0;
     left:0;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     z-index: -1;
     object-fit: cover;
@@ -44,7 +54,7 @@
     z-index: 1;
     width: 85vw;
     padding: 5vw;
-    padding-top: 15vw;
+    padding-top: 10vw;
 }
 
 .landingContent > h1{
@@ -62,6 +72,9 @@ h1 .line span{
     position: relative;
     overflow: hidden;
 }
+p .line{
+    height: 28px;
+}
 .line span{
     position: absolute;
 }  
@@ -73,12 +86,12 @@ h1 .line span{
     text-align: left;
     width: 100%;
     display: inline-block;
-}
+} 
 .backdropGradient{
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     background: linear-gradient(65deg, rgba(58, 19, 1, 0.75), rgb(20 60 102 / 25%));
 }
@@ -92,8 +105,38 @@ h1 .line span{
     stroke-dasharray: 45;
     stroke-dashoffset: 45;
 }
+.swiperContainer{
+    width: 100vw;
+    position: absolute!important;
+    bottom: 30px;
+}
+.swiperContainer > div{
+    margin: 20px;
+}
+.swiperSlide{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px -5px black;
+    overflow: hidden;
+}
+.eventName{
+    margin: 8px;
+    font-size: 13px;
+    font-weight: 800;
+}
+.eventDate{
+    font-size: 30px;
+    margin: 8px;
+    font-weight: 500;
 
-
+}
+.eventDate span{
+    font-size: 12px;
+}
+.slideBottom{
+    background-color: var(--main);
+    height: 15px;
+}
 section{
     min-height: 100vh;
 }

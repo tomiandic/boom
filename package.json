@@ -19,6 +19,7 @@
     "gsap": "^3.8.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "splitting": "^1.0.6"
+    "splitting": "^1.0.6",
+    "swiper": "^7.2.0"
   }
 }
