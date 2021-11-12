@@ -107,21 +107,34 @@ p .line{
 }
 .swiperContainer{
     width: 100vw;
-    position: absolute!important;
-    bottom: 30px;
 }
 .swiperContainer > div{
     margin: 20px;
 }
+.landingBottomContainer{
+    width: 100vw;
+    z-index: 1;
+    position: relative;
+}
+.landingBottomContainer > p{
+    margin-left: 8vw;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: -10px;
+}
 .swiperSlide{
     background: #fff;
     border-radius: 5px;
+    border-left: 5px solid var(--secondary);
     box-shadow: 0 4px 25px -7px #00000075;
     overflow: hidden;
 }
 .eventName{
     margin: 8px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
 }
 .eventDate{
