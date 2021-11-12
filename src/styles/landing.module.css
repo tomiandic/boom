@@ -42,7 +42,7 @@
     position: absolute;
     top:0;
     left:0;
-    height: 85vh;
+    height: 100%;
     width: 100%;
     z-index: -1;
     object-fit: cover;
@@ -91,9 +91,9 @@ p .line{
     position: absolute;
     top: 0;
     left: 0;
-    height: 85vh;
+    height: 100%;
     width: 100%;
-    background: linear-gradient(65deg, rgba(58, 19, 1, 0.75), rgb(20 60 102 / 25%));
+    background: linear-gradient(185deg,#004d8bad, rgb(58 19 1 / 0%), #f45236);
 }
 .svgWave{
     width: 50px;
