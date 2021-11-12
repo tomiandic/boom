@@ -42,7 +42,7 @@
     position: absolute;
     top:0;
     left:0;
-    height: 90vh;
+    height: 85vh;
     width: 100%;
     z-index: -1;
     object-fit: cover;
@@ -91,7 +91,7 @@ p .line{
     position: absolute;
     top: 0;
     left: 0;
-    height: 90vh;
+    height: 85vh;
     width: 100%;
     background: linear-gradient(65deg, rgba(58, 19, 1, 0.75), rgb(20 60 102 / 25%));
 }
@@ -116,7 +116,7 @@ p .line{
 .swiperSlide{
     background: #fff;
     border-radius: 5px;
-    box-shadow: 0 4px 20px -5px black;
+    box-shadow: 0 4px 25px -7px #00000075;
     overflow: hidden;
 }
 .eventName{
@@ -133,9 +133,10 @@ p .line{
 .eventDate span{
     font-size: 12px;
 }
-.slideBottom{
-    background-color: var(--main);
-    height: 15px;
+.swiperSlide > svg{
+    position: absolute;
+    right: 5px;
+    bottom: 3px;
 }
 section{
     min-height: 100vh;
