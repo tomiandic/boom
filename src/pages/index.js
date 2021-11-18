@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import * as classes from "../styles/landing.module.css";
 import Loader from "../components/Loader";
 import { gsap, Power3, Sine } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "../components/sections/About";
 
 import Header from "../components/Header";
@@ -12,11 +13,14 @@ import "swiper/css";
 import "../styles/global.css";
 // markup
 
+gsap.registerPlugin(ScrollTrigger);
+
 const IndexPage = () => {
   const socialMedia = useRef([]);
   const landingVideo = useRef();
   const landingTitle = useRef([]);
   const landingButton = useRef();
+  const aboutSection = useRef();
   const landingSvg = useRef();
   const landingTL = useRef(gsap.timeline({ paused: true }));
   const landingSlides = useRef();
@@ -81,6 +85,18 @@ const IndexPage = () => {
         },
         "-=3"
       );
+
+      gsap.to(aboutSection.current,
+        {
+          yPercent: -100,
+          scrollTrigger: {
+            trigger: aboutSection.current,
+            start: "top top",
+            end: "bottom center",
+            scrub: true,
+          }
+        })
+
   }
 
   return (
@@ -254,7 +270,7 @@ const IndexPage = () => {
           </Swiper>
         </div>
       </section>
-      <About />
+      <About reference={aboutSection} />
     </>
   );
 };
