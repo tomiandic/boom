@@ -13,14 +13,13 @@ import "../styles/global.css";
 // markup
 
 const IndexPage = () => {
-  const [pageIsLoaded, setPageIsLoaded] = useState(false);
-
   const socialMedia = useRef([]);
   const landingVideo = useRef();
   const landingTitle = useRef([]);
   const landingButton = useRef();
   const landingSvg = useRef();
   const landingTL = useRef(gsap.timeline({ paused: true }));
+  const landingSlides = useRef();
 
   useEffect(() => {
     initTimelines();
@@ -168,7 +167,14 @@ const IndexPage = () => {
             className={classes.swiperContainer}
           >
             <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Party Boat - Pula</p>
+              <p className={classes.eventName}>Party Boat</p>
+              <div className={classes.eventLocation}>
+                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
+                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                  <path d="M0 0h48v48h-48z" fill="none" />
+                </svg>
+                Pula
+              </div>
               <p className={classes.eventDate}>
                 24<span>July</span>
               </p>
@@ -178,7 +184,14 @@ const IndexPage = () => {
               </svg>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Party Boat - Pula</p>
+              <p className={classes.eventName}>Party Boat</p>
+              <div className={classes.eventLocation}>
+                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
+                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                  <path d="M0 0h48v48h-48z" fill="none" />
+                </svg>
+                Pula
+              </div>
               <p className={classes.eventDate}>
                 24<span>July</span>
               </p>
@@ -188,7 +201,14 @@ const IndexPage = () => {
               </svg>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Party Boat - Pula</p>
+              <p className={classes.eventName}>Party Boat</p>
+              <div className={classes.eventLocation}>
+                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
+                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                  <path d="M0 0h48v48h-48z" fill="none" />
+                </svg>
+                Pula
+              </div>
               <p className={classes.eventDate}>
                 24<span>July</span>
               </p>
@@ -198,7 +218,14 @@ const IndexPage = () => {
               </svg>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Party Boat - Pula</p>
+              <p className={classes.eventName}>Party Boat</p>
+              <div className={classes.eventLocation}>
+                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
+                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                  <path d="M0 0h48v48h-48z" fill="none" />
+                </svg>
+                Pula
+              </div>
               <p className={classes.eventDate}>
                 24<span>July</span>
               </p>
@@ -208,11 +235,17 @@ const IndexPage = () => {
               </svg>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Party Boat - Pula</p>
+              <p className={classes.eventName}>Party Boat</p>
+              <div className={classes.eventLocation}>
+                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
+                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                  <path d="M0 0h48v48h-48z" fill="none" />
+                </svg>
+                Pula
+              </div>
               <p className={classes.eventDate}>
                 24<span>July</span>
               </p>
-
               <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
                 <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
               </svg>
