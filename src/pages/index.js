@@ -93,6 +93,7 @@ const IndexPage = () => {
           opacity: 0,
           duration: 1,
           clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+          x:50,
           stagger: 0.2,
         },
         "-=2.4"

@@ -1,15 +1,17 @@
 .sectionContainer{
-    width: 80vw;
+    width: 90vw;
     margin: auto;
-    margin-top: 10rem;
+    margin-top: 7rem;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     color: var(--black);
 }
 
 .sectionContainer h1{
-    font-size: 55px;
+    font-size: 35px;
+    margin-bottom: 2rem;
     flex: 1;
-    line-height: 90px;
 }
 .sectionContainer h1 span{
     color: var(--secondary);
@@ -17,18 +19,34 @@
 .sectionContainer p{
     flex: 2;
     line-height: 1.8rem;
-    margin-left: 5rem;
+}
+.imageHolder img{
+    width: 120%;
 }
 
-.sectionContainer img{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+.imageHolder{
+    max-height: 400px;
     width: 100%;
-    z-index: -1;
+    overflow: hidden;
+    margin-top: 4rem;
 }
 
 .aboutSection{
     position: relative;
     min-height: 900px;
+}
+
+@media (min-width: 900px) {
+    .sectionContainer{
+        width: 80vw;
+        flex-direction: row;
+        margin-top: 10rem;
+    }
+    .sectionContainer h1{
+        font-size: 55px;
+        line-height: 90px;
+    }
+    .sectionContainer p{
+        margin-left: 5rem;
+    }
 }

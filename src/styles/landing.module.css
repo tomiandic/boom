@@ -178,22 +178,8 @@ p .line{
 section{
     min-height: 100vh;
 }
-@media (min-width: 600px) {
-    .button{
-        margin-left:0;
-    }
-    .landingContent > h1{
-        font-size: 2.2rem;
-    }
-    .line {
-        height: 2.8rem;
-    }
-    .landingContent{
-        width: 75vw;
-    }
-    .socialMediaContainer{
-        display: flex;
-    }
+@media (min-width: 900px) {
+
     .button{
         display: flex;
     }
@@ -233,6 +219,22 @@ section{
     .backdropGradient{
         background: linear-gradient(185deg,#004d8bad, rgb(58 19 1 / 0%), #000);
     }
+    .landingContent{
+        width: 75vw;
+    }
+}
+@media (min-width: 600px) {
+    .button{
+        margin-left:0;
+    }
+    .landingContent > h1{
+        font-size: 2.2rem;
+    }
+    .line {
+        height: 2.8rem;
+    }
+    .socialMediaContainer{
+        display: flex;
+    }
   
-    
 }
