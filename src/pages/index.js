@@ -30,6 +30,7 @@ const IndexPage = () => {
   }, []);
 
   const addToRefs = (el, refArray) => {
+    console.log("add to refs", el);
     if (el && !refArray.current.includes(el)) {
       refArray.current.push(el);
     }
@@ -84,19 +85,26 @@ const IndexPage = () => {
           opacity: 1,
         },
         "-=3"
+      )
+      .from(
+        landingSlides.current.querySelectorAll(".swiper-slide"),
+        {
+          ease: Power3.easeOut,
+          opacity: 0,
+          duration: 1,
+          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
+          stagger: 0.2,
+        },
+        "-=2.4"
       );
 
-      gsap.to(aboutSection.current,
-        {
-          yPercent: -100,
-          scrollTrigger: {
-            trigger: aboutSection.current,
-            start: "top top",
-            end: "bottom center",
-            scrub: true,
-          }
-        })
-
+    /*     gsap.to(aboutSection.current, {
+      y: -1000,
+      scrollTrigger: {
+        trigger: aboutSection.current,
+        scrub: true,
+      },
+    }); */
   }
 
   return (
@@ -162,7 +170,7 @@ const IndexPage = () => {
               strokeWidth="2"
             />
           </svg>
-          {/*     <button ref={landingButton} className={classes.button}>
+          <button ref={landingButton} className={classes.button}>
             ORDER TICKETS{" "}
             <svg
               style={{ marginLeft: 10 }}
@@ -172,18 +180,29 @@ const IndexPage = () => {
             >
               <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
             </svg>
-          </button> */}
+          </button>
         </div>
 
-        <div className={classes.landingBottomContainer}>
-          <p>Upcoming events:</p>
+        <div ref={landingSlides} className={classes.landingBottomContainer}>
+          <div className={classes.line}>
+            <p ref={(el) => addToRefs(el, landingTitle)}>Upcoming events:</p>
+          </div>
           <Swiper
             spaceBetween={10}
             slidesPerView={3}
+            breakpoints={{
+              640: {
+                slidesPerView: 4,
+              },
+            }}
             className={classes.swiperContainer}
           >
             <SwiperSlide className={classes.swiperSlide}>
               <p className={classes.eventName}>Party Boat</p>
+
+              <p className={classes.eventDate}>
+                24<span>July</span>
+              </p>
               <div className={classes.eventLocation}>
                 <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
                   <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
@@ -191,16 +210,37 @@ const IndexPage = () => {
                 </svg>
                 Pula
               </div>
+              <div className={classes.slideArrowHolder}>
+                <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
+                  <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+                </svg>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className={classes.swiperSlide}>
+              <p className={classes.eventName}>Crazy Party Boom Boat</p>
+
               <p className={classes.eventDate}>
                 24<span>July</span>
               </p>
-
-              <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
-                <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-              </svg>
+              <div className={classes.eventLocation}>
+                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
+                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                  <path d="M0 0h48v48h-48z" fill="none" />
+                </svg>
+                Pula
+              </div>
+              <div className={classes.slideArrowHolder}>
+                <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
+                  <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+                </svg>
+              </div>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
               <p className={classes.eventName}>Party Boat</p>
+
+              <p className={classes.eventDate}>
+                24<span>July</span>
+              </p>
               <div className={classes.eventLocation}>
                 <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
                   <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
@@ -208,16 +248,18 @@ const IndexPage = () => {
                 </svg>
                 Pula
               </div>
-              <p className={classes.eventDate}>
-                24<span>July</span>
-              </p>
-
-              <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
-                <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-              </svg>
+              <div className={classes.slideArrowHolder}>
+                <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
+                  <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+                </svg>
+              </div>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
               <p className={classes.eventName}>Party Boat</p>
+
+              <p className={classes.eventDate}>
+                24<span>July</span>
+              </p>
               <div className={classes.eventLocation}>
                 <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
                   <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
@@ -225,33 +267,18 @@ const IndexPage = () => {
                 </svg>
                 Pula
               </div>
-              <p className={classes.eventDate}>
-                24<span>July</span>
-              </p>
-
-              <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
-                <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-              </svg>
+              <div className={classes.slideArrowHolder}>
+                <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
+                  <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+                </svg>
+              </div>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
               <p className={classes.eventName}>Party Boat</p>
-              <div className={classes.eventLocation}>
-                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
-                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
-                  <path d="M0 0h48v48h-48z" fill="none" />
-                </svg>
-                Pula
-              </div>
-              <p className={classes.eventDate}>
-                24<span>July</span>
-              </p>
 
-              <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
-                <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-              </svg>
-            </SwiperSlide>
-            <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Party Boat</p>
+              <p className={classes.eventDate}>
+                24<span>July</span>
+              </p>
               <div className={classes.eventLocation}>
                 <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
                   <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
@@ -259,12 +286,11 @@ const IndexPage = () => {
                 </svg>
                 Pula
               </div>
-              <p className={classes.eventDate}>
-                24<span>July</span>
-              </p>
-              <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
-                <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-              </svg>
+              <div className={classes.slideArrowHolder}>
+                <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
+                  <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+                </svg>
+              </div>
             </SwiperSlide>
             <SwiperSlide></SwiperSlide>
           </Swiper>
