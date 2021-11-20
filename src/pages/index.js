@@ -185,7 +185,9 @@ const IndexPage = () => {
 
         <div ref={landingSlides} className={classes.landingBottomContainer}>
           <div className={classes.line}>
-            <p ref={(el) => addToRefs(el, landingTitle)}>Upcoming events:</p>
+            <span ref={(el) => addToRefs(el, landingTitle)}>
+              Upcoming events:
+            </span>
           </div>
           <Swiper
             spaceBetween={10}

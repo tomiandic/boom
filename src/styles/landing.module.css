@@ -114,7 +114,7 @@ p .line{
     position: relative;
     margin-bottom: 55px;
 }
-.landingBottomContainer .line p{
+.landingBottomContainer .line span{
     margin-left: 5vw;
     text-transform: uppercase;
     color: #fff;
@@ -207,7 +207,7 @@ section{
         margin-bottom: unset;
         right: -60px;
     }
-    .landingBottomContainer > p{
+    .landingBottomContainer .line span{
         margin-left: 0;
         margin-bottom: 1rem;
     }
@@ -229,6 +229,9 @@ section{
     .eventDate > span{
         margin-top: unset;
         font-size: 14px;
+    }
+    .backdropGradient{
+        background: linear-gradient(185deg,#004d8bad, rgb(58 19 1 / 0%), #000);
     }
   
     
