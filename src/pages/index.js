@@ -5,6 +5,7 @@ import Loader from "../components/Loader";
 import { gsap, Power3, Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "../components/sections/About";
+import Gallery from "../components/sections/Gallery";
 
 import Header from "../components/Header";
 
@@ -93,7 +94,7 @@ const IndexPage = () => {
           opacity: 0,
           duration: 1,
           clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
-          x:50,
+          x: 50,
           stagger: 0.2,
         },
         "-=2.4"
@@ -300,6 +301,7 @@ const IndexPage = () => {
         </div>
       </section>
       <About reference={aboutSection} />
+      <Gallery />
     </>
   );
 };
