@@ -93,11 +93,10 @@ const IndexPage = () => {
           ease: Power3.easeOut,
           opacity: 0,
           duration: 1,
-          clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
           x: 50,
           stagger: 0.2,
         },
-        "-=2.4"
+        "-=3"
       );
 
     /*     gsap.to(aboutSection.current, {
@@ -221,7 +220,7 @@ const IndexPage = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Crazy Party Boom Boat</p>
+              <p className={classes.eventName}>Crazy Party Boat</p>
 
               <p className={classes.eventDate}>
                 24<span>July</span>
@@ -301,7 +300,8 @@ const IndexPage = () => {
         </div>
       </section>
       <About reference={aboutSection} />
-      <Gallery />
+      <section style={{ minHeight: "100vh" }}></section>
+      {/* <Gallery /> */}
     </>
   );
 };

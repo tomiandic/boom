@@ -1,7 +1,7 @@
 .sectionContainer{
     width: 90vw;
     margin: auto;
-    margin-top: 7rem;
+    padding-top: 7rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -16,7 +16,7 @@
 }
 .sectionContainer h1 span{
 /*     color: var(--secondary); */
-display: inline-block;
+    display: inline-block;
     transform: skewX(0) translateY(0);
 }
 .sectionContainer p{
@@ -25,28 +25,31 @@ display: inline-block;
 }
 .imageHolder img{
     width: 100%;
-    position: absolute;
-    top: 20%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .imageHolder{
-    min-height: 400px;
+    min-height: 500px;
     width: 100%;
+    left:0;
+    bottom: 0;
+    margin-top: 6rem;
     overflow: hidden;
-    margin-top: 4rem;
-    position:relative;
+    position: relative;
+    z-index: -10;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
 }
-
 .aboutSection{
     position: relative;
-    min-height: 900px;
+    min-height: 100vh;
 }
 
 @media (min-width: 900px) {
     .sectionContainer{
         width: 80vw;
         flex-direction: row;
-        margin-top: 10rem;
+        padding-top: 10rem;
     }
     .sectionContainer h1{
         font-size: 55px;
@@ -55,4 +58,14 @@ display: inline-block;
     .sectionContainer p{
         margin-left: 5rem;
     }
+    .aboutDeco{
+        height: 80vh;
+        width: 500px;
+        background: rgb(207, 241, 255);
+        position: absolute;
+        left:0;
+        top: 0;
+        z-index: -1;
+    }
+  
 }

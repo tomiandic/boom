@@ -18,9 +18,9 @@ const About = (props) => {
         chars: aboutContainer.current.querySelectorAll("h1 span span"),
       },
       paragraph: aboutContainer.current.querySelector("p"),
-      image: aboutContainer.current.querySelector("img"),
+      image: aboutContainer.current.querySelector("#aboutImage"),
     };
-    console.log(DOM.title.chars);
+    console.log(aboutContainer.current);
     gsap.from(DOM.title.chars, {
       y: 20,
       ease: Power3.easeOut,
@@ -29,25 +29,26 @@ const About = (props) => {
       stagger: 0.05,
       scrollTrigger: {
         trigger: aboutContainer.current,
-        start: "center bottom", //when the top of the trigger hits bottom of vw
+        start: "top bottom", //when the top of the trigger hits bottom of vw
       },
     });
 
     gsap.from(DOM.image, {
-      scale: 1.5,
+      clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
       scrollTrigger: {
         trigger: aboutContainer.current,
-        start: "top bottom", //when the top of the trigger hits bottom of vw
+        start: "center bottom", //when the top of the trigger hits bottom of vw
+        end: "bottom center",
         scrub: true, //
       },
     });
   }, []);
 
   return (
-    <section className={classes.aboutSection} ref={props.reference}>
-      <div ref={aboutContainer} className={classes.sectionContainer}>
+    <section ref={aboutContainer} className={classes.aboutSection}>
+      <div className={classes.sectionContainer}>
         <h1>
-          <SplitText copy="Enjoy your summer with us" />
+          <SplitText copy="Enjoy your summer with Boom" />
         </h1>
         {/*  Enjoy your <span>summer</span> with us */}
         {/*  </h1> */}
@@ -60,9 +61,9 @@ const About = (props) => {
           enim quis semper euismod, risus ipsum ullamcorper quam, quis vulputate
           mauris lacus pulvinar mauris.
         </p>
-        <div className={classes.imageHolder}>
-          <img src="/about2.jpg" />
-        </div>
+      </div>
+      <div id="aboutImage" className={classes.imageHolder}>
+        <img src="/about2.jpg" />
       </div>
     </section>
   );
