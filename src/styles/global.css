@@ -20,4 +20,19 @@ html, body{
     --black: rgb(22, 22, 22);
 }
 
+.sectionContent{
+    width: 90vw;
+    margin: auto;
+    padding: 7rem 0;
+}
+
+@media (min-width: 900px) {
+
+    .sectionContent{
+        width: 80vw;
+        padding: 10rem 0;
+    }
+
+}
+
 

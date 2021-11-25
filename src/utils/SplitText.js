@@ -9,7 +9,14 @@ const SplitText = (props) => {
             {char}
           </span>
         ) : (
-          <span aria-hidden="true" key={index}>
+          <span
+            style={{
+              diplay: "inline-block",
+              transform: "skewX(0) translateY(0)",
+            }}
+            aria-hidden="true"
+            key={index}
+          >
             {char}
           </span>
         )

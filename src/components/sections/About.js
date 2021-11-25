@@ -63,8 +63,10 @@ const About = (props) => {
         </p>
       </div>
       <div id="aboutImage" className={classes.imageHolder}>
-        <img src="/about2.jpg" />
+        <img className={classes.desktopImage} src="/about2.jpg" />
+        <img className={classes.mobileImage} src="/about.jpg" />
       </div>
+      <div className={classes.aboutBackdrop}></div>
     </section>
   );
 };

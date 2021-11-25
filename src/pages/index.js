@@ -6,6 +6,7 @@ import { gsap, Power3, Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "../components/sections/About";
 import Gallery from "../components/sections/Gallery";
+import Blog from "../components/sections/Blog";
 
 import Header from "../components/Header";
 
@@ -300,7 +301,7 @@ const IndexPage = () => {
         </div>
       </section>
       <About reference={aboutSection} />
-      <section style={{ minHeight: "100vh" }}></section>
+      <Blog />
       {/* <Gallery /> */}
     </>
   );
