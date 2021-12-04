@@ -3,8 +3,6 @@ import { Link } from "gatsby";
 import { gsap, Power3, Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import SplitText from "../../utils/SplitText";
-
 import * as classes from "../../styles/blog.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,9 +45,7 @@ const Blog = (props) => {
   return (
     <section ref={aboutContainer} className={classes.blogSection}>
       <div className="sectionContent">
-        <h1>
-          <SplitText copy="Latest news" />
-        </h1>
+        <h1>{/* <SplitText copy="Latest news" /> */}</h1>
         <div className={classes.articlesHolder}>
           <div className={classes.article}>
             <div className={classes.articleOverlay} />

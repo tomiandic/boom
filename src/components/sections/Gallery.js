@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/dist/default-skin/default-skin.css";
-import SplitText from "../../utils/SplitText";
 
 import * as classes from "../../styles/gallery.module.css";
 gsap.registerPlugin(ScrollTrigger);

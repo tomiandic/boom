@@ -1,0 +1,13 @@
+.line span{
+    font-family: 'Righteous', cursive;
+    position: absolute;
+}
+.line{
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    height: 2.8rem;
+}
+p .line{
+    height: 28px;
+}

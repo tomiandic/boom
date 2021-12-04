@@ -32,7 +32,6 @@ const IndexPage = () => {
   }, []);
 
   const addToRefs = (el, refArray) => {
-    console.log("add to refs", el);
     if (el && !refArray.current.includes(el)) {
       refArray.current.push(el);
     }
@@ -301,7 +300,7 @@ const IndexPage = () => {
         </div>
       </section>
       <About reference={aboutSection} />
-      <Blog />
+      {/* <Blog /> */}
       {/* <Gallery /> */}
     </>
   );
