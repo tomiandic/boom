@@ -1,73 +1,180 @@
 .sectionContainer{
     width: 90vw;
     margin: auto;
-    padding: 7rem 0;
+    padding: 11rem 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     flex-wrap: wrap;
-    color: var(--black);
+    color: var(--white);
 }
 
 .sectionContainer h2{
-    font-size: 35px;
-    margin-bottom: 2rem;
+    font-size: 30px;
     flex: 1;
-    overflow: hidden;
+    font-family: 'Draper', sans-serif;
+    line-height: 40px;
 }
 .sectionContainer h2 span{
-/*     color: var(--secondary); */
-    display: inline-block;
-    transform: skewX(0) translateY(0);
+    font-family: 'Draper', sans-serif;
+    color: var(--secondary);
 }
 .sectionContainer p{
-    flex: 2;
-    line-height: 1.8rem;
+    flex: 1;
+    line-height: 2rem;
+    margin-right: 5rem;
+    font-size: .9rem;
+    margin: 2rem;
 }
 .imageHolder img{
-    min-width: 60%;
-    height: 100%;
-    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit:cover;
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
-.desktopImage{
-    display: none;
+.aboutTopHolder{
+    position: relative;
+    display: block;
 }
 .imageHolder{
-    min-height: 400px;
-    max-height: 500px;
-    width: 100%;
+    min-height: 700px;
+    max-height: 800px;
+    width: 90%;
     margin-top: 6rem;
     position: relative;
+    border-radius: 4px;
     display: flex;
-}
-.imageHolder:nth-of-type(2){
-    align-self: flex-end;
-    margin-top: 15rem;
+    overflow: hidden;
+    box-shadow: 0 10px 50px -2px rgba(1, 6, 26, 0.3);
+    background: rgb(239, 241, 243);
 }
 .aboutSection{
     position: relative;
     min-height: 100vh;
+    background: #1c1c1c;
 }
-.aboutImagesHolder{
-    background: var(--secondary);
-    padding: 6rem 0;
+.aboutSection > h2{
+    font-family: "Draper", sans-serif;
+    color: var(--black);
+    font-size: 12rem;
+    background: var(--lightBackground);
+    padding: 5rem;
+}
+.aboutSliderHolder{
+    background: #fff;
+    padding: 15rem 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sliderSwitcher{
+    height: 200px;
+    width: 100px;
+    background: var(--main);
+    position: absolute;
+    right: 0;
+    padding: 1rem;
+    color: #fff;
+    box-shadow: 0 0 20px -15px var(--main);
+    cursor: pointer;
+    transition: 200ms all;
+}
+.sliderSwitcher:hover{
+    box-shadow: 0 0px 0px 0px var(--main);
+    width: 145px;
+    height: 305px;
+}
+.switchNum{
+    font-size: 30px;
+    font-weight: 800;
+}
+.switchTitle{
+    font-size: 11px;
+    font-family: 'Draper', sans-serif;
+}
+.switchArrow{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    fill: #fff;
+}
+.switchArrow svg{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+.sectionButton{
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--main);
+    letter-spacing: 2px;
+    margin-top: 2.5rem;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    transition: 300ms color;
+    cursor: pointer;
+}
+.sectionButton::after {
+    -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+      transition: all 0.3s ease-out;
+  }
+.sectionButton::after {
+    background: var(--main);
+    content: '';
+    position: absolute;
+    z-index: -1;
+  }
+  .sectionButton::after {
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  .sectionButton:hover:after {
+    height: 100%;
+  }
+  .sectionButton:hover{
+      color: #fff;
+  }
+  
+.largeTitleNum{
+    color: var(--secondary);
+    font-family: 'Draper', sans-serif;
+    margin-bottom: 10px;
 }
 .largeTitle{
-    font-size: 35px;
+    font-size: 30px;
     color: rgb(0, 0, 0);
     font-weight: 900;
     text-transform: uppercase;
     position: relative;
     z-index: 10;
     margin-bottom: 2rem;
+    font-family: 'Draper', sans-serif;
+    letter-spacing: 3px;
+    background: #fff;
+    width: 40%;
+    padding: 20px;
+    margin-left: -10px;
 }
 
 .largeTitle:nth-of-type(2){
     margin-right: 5vw;
     margin-left: auto;
     text-align: right;
+}
+.paragraph{
+    line-height: 1.8rem;
+    font-size: 15px;
+    color: var(--black);
+}
+.paraHolder{
+    display: flex;
 }
 .line span{
     font-weight: 900;
@@ -82,20 +189,32 @@
 p .line{
     height: 28px;
 }
-.aboutPara{
-    background: #fff;
-    margin-left: -4vw;
-    box-shadow: 0 10px 20px -2px rgba(0, 0, 0, 0.219);
-    z-index: 1;
-    margin-top: 3rem;
-    margin-right: 2rem;
-    padding: 2rem;
+.paraDeco{
+    height: 4px;
+    min-width: 40px;
+    margin-right: 10px;
+    margin-top: 5px;
+    background: var(--secondary)
 }
-@media (min-width: 900px) {
+.aboutPara{
+    z-index: 1;
+    padding: 2rem 4rem;
+    max-width: 100%;
+    width: 90%;
+    margin-top: -7rem;
+}
+.seaDeco{
+    position: absolute;
+    bottom:-75px;
+    right:0;
+    width: 70%;
+    height: 150px;
+    object-fit: cover;
+}
+@media (min-width: 1000px) {
     .sectionContainer{
-        width: 80vw;
+        width: 85vw;
         flex-direction: row;
-        padding-top: 10rem;
     }
     .sectionContainer h1{
         font-size: 55px;
@@ -113,11 +232,31 @@ p .line{
         top: 0;
         z-index: -1;
     }
-    .desktopImage{
-        display: unset;
+    .imageHolder{
+        min-height: 700px;
+        max-height: 800px;
+        min-width: 400px;
+        width: 30%;
     }
-    .mobileImage{
-        display: none;
+    .aboutSliderHolder{
+        flex-direction: row;
+    }
+    .aboutPara{
+        z-index: 1;
+        padding: 2rem;
+        max-width: 40%;
+        margin-left: -50px;
+        margin-top: 0;
+    }
+    .largeTitle{
+        background: transparent;
+        font-size: 25px;
+    }
+    .sliderSwitcher{
+        height: 300px;
+        width: 140px;
+        padding: 1rem;
+        box-shadow: 0 10px 50px -10px var(--main);
     }
   
 }

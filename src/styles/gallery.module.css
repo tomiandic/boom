@@ -1,0 +1,98 @@
+.gallerySection{
+    overflow:hidden;
+    position: relative;
+}
+.swiperContainer{
+    width: 70vw;
+    height: 700px; 
+    margin-bottom: 10rem;
+}
+
+.swiperContainer img{ 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.quoteHolder{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to top, white, #f5f6f6);
+}
+
+.quoteHolder svg{
+    height: 50px;
+    width: 50px;
+    fill: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+.galleryQuote{
+    font-family: 'Draper', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    width: 80%;
+    color: var(--black);
+}
+
+.navContainer{
+    width: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20rem;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%);
+}
+.navContainer div:first-of-type svg{
+    transform: rotate(180deg);
+}
+.navContainer svg{
+    height: 30px;
+    width: 30px;
+}
+.navContainer div{
+    padding: 5rem;
+    border: 2px solid var(--black);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 400ms ease-out;
+}
+.navContainer div:hover{
+    transform: scale(1.2);
+}
+
+.sectionButton{
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-top: 2.5rem;
+    padding: 1.5rem 3rem;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    transition: 300ms transform ease-out;
+    background: var(--main);
+    cursor: pointer;
+
+}
+.sectionButton:hover{
+    transform: scale(1.03);
+}
+
+.buttonHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10rem;
+}
+

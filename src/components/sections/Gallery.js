@@ -5,12 +5,22 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/dist/default-skin/default-skin.css";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-cards"
+import SwiperCore, {
+  EffectCards, Navigation
+} from 'swiper';
 import * as classes from "../../styles/gallery.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
-const GallerySection = (props) => {
-  const galleryContainer = useRef();
+
+// install Swiper modules
+SwiperCore.use([EffectCards, Navigation]);
+const GallerySection = (props) => { 
+  const navNext = useRef();
+  const navPrev = useRef();
+
 
   useEffect(() => {
     /*  let DOM = {
@@ -43,251 +53,60 @@ const GallerySection = (props) => {
       },
     }); */
   }, []);
-
+ 
   return (
     <section className={classes.gallerySection}>
-      <Gallery>
-        <Item
-          original="/gallery/1.jpg"
-          thumbnail="/gallery/1.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/1.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/2.jpg"
-          thumbnail="/gallery/2.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/2.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/3.jpg"
-          thumbnail="/gallery/3.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/3.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/4.jpg"
-          thumbnail="/gallery/4.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/4.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/5.jpg"
-          thumbnail="/gallery/5.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/5.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/6.jpg"
-          thumbnail="/gallery/6.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/6.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/7.jpg"
-          thumbnail="/gallery/7.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/7.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/8.jpg"
-          thumbnail="/gallery/8.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/8.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/9.jpg"
-          thumbnail="/gallery/9.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/9.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/10.jpg"
-          thumbnail="/gallery/10.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/10.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/11.jpg"
-          thumbnail="/gallery/11.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/11.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/12.jpg"
-          thumbnail="/gallery/12.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/12.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/13.jpg"
-          thumbnail="/gallery/13.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/13.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/14.jpg"
-          thumbnail="/gallery/14.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/14.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/15.jpg"
-          thumbnail="/gallery/15.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/15.jpg"
-            />
-          )}
-        </Item>
-        <Item
-          original="/gallery/16.jpg"
-          thumbnail="/gallery/16.jpg"
-          width="1024"
-          height="768"
-        >
-          {({ ref, open }) => (
-            <img
-              className="gallery-image"
-              ref={ref}
-              onClick={open}
-              src="/gallery/16.jpg"
-            />
-          )}
-        </Item>
-      </Gallery>
+      <div className={classes.quoteHolder}>
+      <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
+        <path d="M12.96 4.46l-1.42-1.42-3.54 3.55-3.54-3.55-1.42 1.42 3.55 3.54-3.55 3.54 1.42 1.42 3.54-3.55 3.54 3.55 1.42-1.42-3.55-3.54 3.55-3.54z"></path>
+    </svg>
+        <h2 className={classes.galleryQuote}>Some smart quote related to boom events that needs to be seen before gallery section </h2>
+      </div>
+      <Swiper effect={'cards'} grabCursor={true}
+         navigation={{
+          prevEl: navPrev.current,
+          nextEl: navNext.current
+        }}
+        onBeforeInit={(swiper) => {
+          swiper.params.navigation.prevEl = navPrev.current;
+          swiper.params.navigation.nextEl = navNext.current;
+        }}
+      className={classes.swiperContainer}>
+        <SwiperSlide>
+          <img src="./gallery/20.jpg"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="./gallery/21.jpg"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="./gallery/22.jpg"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="./gallery/23.jpg"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="./gallery/24.jpg"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="./gallery/25.jpg"></img>
+        </SwiperSlide>
+        <div className={classes.navContainer}>
+          <div ref={navPrev}>
+            <svg rotate="90" width="20" height="20" viewBox="0 0 24 24">
+              <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+            </svg>
+          </div>
+          <div ref={navNext}>
+            <svg width="20" height="20" viewBox="0 0 24 24">
+              <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+            </svg>
+          </div>
+      </div>
+      </Swiper>
+    
+      <div className={classes.buttonHolder}>
+        <button className={classes.sectionButton}>Check Events</button>
+      </div>
     </section>
   );
 };

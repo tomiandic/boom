@@ -1,0 +1,45 @@
+.reviewSection{
+    position: relative;
+    min-height: 60vh;
+}
+.sectionContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 14rem;
+    color: var(--black);
+}
+.sectionContainer h2{
+    flex: 1;
+    font-size: 30px;
+    line-height: 40px;
+    font-family: "Draper", sans-serif;
+}
+.sectionContainer p {
+    line-height: 1.8rem;
+    font-size: 14px;
+}
+.sectionContainer img{
+    height: 6rem;
+    width: 6rem;
+    margin-top: -10rem;
+}
+.reviewContainer{
+    flex: 2;
+}
+.reviewDetails{
+    display: flex;
+}
+.reviewDetails p{
+    font-family: "Draper", sans-serif;
+    font-size: 8px;
+    margin-right: 20px;
+}
+.reviewDetails p:first-of-type{
+    color: var(--main);
+}
+.reviewDetails p:last-of-type{
+    color: gray;
+}

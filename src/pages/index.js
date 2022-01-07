@@ -7,9 +7,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import About from "../components/sections/About";
 import Gallery from "../components/sections/Gallery";
 import Blog from "../components/sections/Blog";
-
+import Reviews from "../components/sections/Reviews";
 import Header from "../components/Header";
+import Footer from "../components/sections/Footer";
 
+ 
 //TODO: loader component needs to stop animations when unmounted which does not work
 import "swiper/css";
 import "../styles/global.css";
@@ -191,117 +193,150 @@ const IndexPage = () => {
             </span>
           </div>
           <Swiper
-            spaceBetween={10}
+            spaceBetween={15}
             slidesPerView={3}
-            breakpoints={{
-              640: {
-                slidesPerView: 4,
-              },
-            }}
             className={classes.swiperContainer}
           >
             <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Party Boat</p>
-
-              <p className={classes.eventDate}>
-                24<span>July</span>
-              </p>
-              <div className={classes.eventLocation}>
-                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
-                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
-                  <path d="M0 0h48v48h-48z" fill="none" />
-                </svg>
-                Pula
+              <div className={classes.eventDate}>
+                <p>
+                  24<span>Jully</span>
+                </p>
               </div>
-              <div className={classes.slideArrowHolder}>
-                <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
-                  <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-                </svg>
+              <div className={classes.eventDetails}>
+                <p className={classes.eventName}>Giant Party Boom Boat in Pula</p>
+                <div className={classes.bottomDetails}>
+                <div className={classes.dash}></div>
+
+                  <div className={classes.eventDetail}>
+                    <p>
+                    Pula
+                    </p>
+                  </div>
+                  <div className={classes.eventDetail}>
+                    <p>
+                    16:00 - 22:00
+                    </p>
+                  </div>
+                </div>
+                <div className={classes.slideArrowHolder}>
+                  </div>
               </div>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Crazy Party Boat</p>
-
-              <p className={classes.eventDate}>
-                24<span>July</span>
-              </p>
-              <div className={classes.eventLocation}>
-                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
-                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
-                  <path d="M0 0h48v48h-48z" fill="none" />
-                </svg>
-                Pula
+              <div className={classes.eventDate}>
+                <p>
+                  24<span>Jully</span>
+                </p>
               </div>
-              <div className={classes.slideArrowHolder}>
-                <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
-                  <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-                </svg>
+              <div className={classes.eventDetails}>
+                <p className={classes.eventName}>Giant Party Boom Boat</p>
+                <div className={classes.bottomDetails}>
+                <div className={classes.dash}></div>
+
+                  <div className={classes.eventDetail}>
+                    <p>
+                    Pula
+                    </p>
+                  </div>
+                  <div className={classes.eventDetail}>
+                    <p>
+                    16:00 - 22:00
+                    </p>
+                  </div>
+                </div>
+                <div className={classes.slideArrowHolder}>
+                  </div>
               </div>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Party Boat</p>
-
-              <p className={classes.eventDate}>
-                24<span>July</span>
-              </p>
-              <div className={classes.eventLocation}>
-                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
-                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
-                  <path d="M0 0h48v48h-48z" fill="none" />
-                </svg>
-                Pula
+              <div className={classes.eventDate}>
+                <p>
+                  24<span>Jully</span>
+                </p>
               </div>
-              <div className={classes.slideArrowHolder}>
-                <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
-                  <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-                </svg>
+              <div className={classes.eventDetails}>
+                <p className={classes.eventName}>Giant Party Boom Boat in Pula</p>
+                <div className={classes.bottomDetails}>
+                <div className={classes.dash}></div>
+
+                  <div className={classes.eventDetail}>
+                    <p>
+                    Pula
+                    </p>
+                  </div>
+                  <div className={classes.eventDetail}>
+                    <p>
+                    16:00 - 22:00
+                    </p>
+                  </div>
+                </div>
+                <div className={classes.slideArrowHolder}>
+                  </div>
               </div>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Party Boat</p>
-
-              <p className={classes.eventDate}>
-                24<span>July</span>
-              </p>
-              <div className={classes.eventLocation}>
-                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
-                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
-                  <path d="M0 0h48v48h-48z" fill="none" />
-                </svg>
-                Pula
+              <div className={classes.eventDate}>
+                <p>
+                  24<span>Jully</span>
+                </p>
               </div>
-              <div className={classes.slideArrowHolder}>
-                <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
-                  <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-                </svg>
+              <div className={classes.eventDetails}>
+                <p className={classes.eventName}>Giant Party Boom Boat in Pula</p>
+                <div className={classes.bottomDetails}>
+                <div className={classes.dash}></div>
+
+                  <div className={classes.eventDetail}>
+                    <p>
+                    Pula
+                    </p>
+                  </div>
+                  <div className={classes.eventDetail}>
+                    <p>
+                    16:00 - 22:00
+                    </p>
+                  </div>
+                </div>
+                <div className={classes.slideArrowHolder}>
+                  </div>
               </div>
             </SwiperSlide>
             <SwiperSlide className={classes.swiperSlide}>
-              <p className={classes.eventName}>Party Boat</p>
-
-              <p className={classes.eventDate}>
-                24<span>July</span>
-              </p>
-              <div className={classes.eventLocation}>
-                <svg fill="#00E8FC" height="48" viewBox="0 0 48 48" width="48">
-                  <path d="M24 4c-7.73 0-14 6.27-14 14 0 10.5 14 26 14 26s14-15.5 14-26c0-7.73-6.27-14-14-14zm0 19c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
-                  <path d="M0 0h48v48h-48z" fill="none" />
-                </svg>
-                Pula
+              <div className={classes.eventDate}>
+                <p>
+                  24<span>Jully</span>
+                </p>
               </div>
-              <div className={classes.slideArrowHolder}>
-                <svg fill="#ff5200" width="20" height="20" viewBox="0 0 24 24">
-                  <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-                </svg>
+              <div className={classes.eventDetails}>
+                <p className={classes.eventName}>Giant Party Boom Boat in Pula</p>
+                <div className={classes.bottomDetails}>
+                <div className={classes.dash}></div>
+
+                  <div className={classes.eventDetail}>
+                    <p>
+                    Pula
+                    </p>
+                  </div>
+                  <div className={classes.eventDetail}>
+                    <p>
+                    16:00 - 22:00
+                    </p>
+                  </div>
+                </div>
+                <div className={classes.slideArrowHolder}>
+                  </div>
               </div>
             </SwiperSlide>
             <SwiperSlide></SwiperSlide>
+
           </Swiper>
         </div>
       </section>
       <About reference={aboutSection} />
-      {/* <Blog /> */}
-      {/* <Gallery /> */}
+      <Blog />
+      <Gallery /> 
+      <Reviews />
+      <Footer />
     </>
   );
 };

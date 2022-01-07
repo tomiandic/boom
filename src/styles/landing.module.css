@@ -6,14 +6,13 @@
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    max-width: 100vw;
+    max-width: 100vw; 
     position:relative;
 }
 .button{
     margin: 20px auto;
     padding: 15px 50px;
     align-items: center;
-    font-family: 'Righteous', cursive;
     border: none;
     background-color:var(--main);
     color: #fff;
@@ -22,9 +21,9 @@
     border-radius: 4px;
     letter-spacing: 1px;
     white-space: nowrap;
-    overflow: hidden;
-    font-weight: 500;
+    font-weight: 800;
     display: none;
+    transition: transform 300ms;
 }
 .button svg{
     transform: translateX(10px);
@@ -34,7 +33,7 @@
     transform: translateX(20px)
 }
 .button:hover{
-    background-color: var(--mainDark);
+    transform: scale(1.02);
 }
 .videoBackdrop{
     position: absolute;
@@ -52,29 +51,35 @@
     width: 90vw;
     padding: 5vw;
     padding-top: 10vw;
-    margin-top: auto;
 }
 .landingContent > h1{
     font-size: 28px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     text-align: left;
     white-space: nowrap;
 }
 h1 .line span{
-    font-family: 'Righteous', cursive;
+    font-family: 'Draper', sans-serif;
 }
 .line{
-    height: 33px;
+    height: 35px;
     position: relative;
     overflow: hidden;
 }
 p .line{
-    height: 28px;
+    height: 30px;
 }
 .line span{
     position: absolute;
 }  
+.dash{
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--secondaryDark) ,var(--secondary), #fff);
+    top: -7px;
+    position: absolute;
+}
 .landingParagraph{
     margin-bottom: 20px;
     line-height: 1.8rem;
@@ -125,54 +130,74 @@ p .line{
 }
 .swiperSlide{
     background: #fff;
-    border-radius: 7px;
-    border-left: 5px solid var(--secondary);
+    border-radius: 2px;
     box-shadow: 0 4px 25px -7px #00000075;
     overflow: hidden;
     cursor: pointer;
+    display: flex; 
+    min-width: 280px; 
+    height: 85px!important; 
+    padding: 5px;
 }
-.eventName,
-.eventLocation{
-    margin: 8px;
-    font-size: 12px;
-    font-weight: 800;
+.swiperSlide:hover .eventDate{
+    transform: scale(.94);
 }
-.eventLocation{
+.swiperSlide:hover{
+    transition: transform 300ms;
+    transform: scale(.98)!important;
+}
+.eventName{
     font-weight: 500;
+    color: var(--black);
 }
 .eventDate{
     font-size: 30px;
-    margin: 8px;
-    font-weight: 500;
-}
-.eventDate span{
-    font-size: 12px;
-}
-.eventLocation{
-    margin-left: 4px;
-    margin-top: -4px;
+    font-weight: 900;
+    background: var(--secondary);
+    height: 100%;
+    color: #fff;
+    min-width: 80px;
+    text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px 2px #e7e7e7;
+    transition: transform 300ms;
 }
-.eventLocation svg{
-    height: 19px;
-    width: 19px;
+.eventDate span{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+}
+.bottomDetails{
+    display: flex;
+    position: absolute;
+    bottom: 6px;
+    opacity: .7;
+}
+.eventDetails{
+    padding: 8px 10px ;
+    color: var(--black);
+}
+.eventDetail{
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+.eventDetail p{
+    font-size: 10px;
+    margin-top: 4px;
 }
 
 .slideArrowHolder{
     position: absolute;
     right: 6px;
-    bottom: 7px;
+    bottom: 6px;
     height: 22px;
     width: 22px;
-    border-radius: 50%;
-    padding: 5px;
-    background: #fff;
-}
-.swiperSlide:hover{
-   background: var(--main);
-   border-left: unset;
-   color: #fff;
+    fill: var(--main);
 }
 section{
     min-height: 100vh;
@@ -188,13 +213,16 @@ section{
     .landingBottomContainer{
         width: 50%;
         position: absolute;
-        bottom: 6vw;
+        bottom: 0;
+        padding: 3rem 0; 
         margin-bottom: unset;
-        right: -60px;
+        right: 0;
     }
     .landingBottomContainer .line span{
         margin-left: 0;
         margin-bottom: 1rem;
+        font-size: 12px;
+        opacity: .8;
     }
     .swiperContainer{
         width: 50vw;
@@ -204,16 +232,14 @@ section{
     }
     .swiperSlide{
         border-left:0;
-        padding: 5px;
     }
     .eventName{
-        font-size:15px;
+        font-size:14px;
         line-height: 1.4rem;
     }
-    .eventLocation,
+    .eventDetail,
     .eventDate > span{
-        margin-top: unset;
-        font-size: 14px;
+        font-size: 11px;
     }
     .backdropGradient{
         background: linear-gradient(185deg,#004d8bad, rgb(58 19 1 / 0%), #000);
@@ -227,10 +253,10 @@ section{
         margin-left:0;
     }
     .landingContent > h1{
-        font-size: 2.2rem;
+        font-size: 2.1rem;
     }
     .line {
-        height: 2.8rem;
+        height: 2.5rem;
     }
     .socialMediaContainer{
         display: flex;
