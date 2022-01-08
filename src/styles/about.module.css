@@ -1,22 +1,21 @@
 .sectionContainer{
     width: 90vw;
     margin: auto;
-    padding: 11rem 0;
+    padding: 10rem 0;
     display: flex;
     flex-direction: column-reverse;
     flex-wrap: wrap;
     color: var(--white);
 }
-
-.sectionContainer h2{
-    font-size: 30px;
-    flex: 1;
-    font-family: 'Draper', sans-serif;
-    line-height: 40px;
-}
 .sectionContainer h2 span{
     font-family: 'Draper', sans-serif;
     color: var(--secondary);
+}
+.sectionContainer h2{
+    font-size: 25px;
+    flex: 1;
+    font-family: 'Draper', sans-serif;
+    line-height: 40px;
 }
 .sectionContainer p{
     flex: 1;
@@ -36,8 +35,8 @@
     display: block;
 }
 .imageHolder{
-    min-height: 700px;
-    max-height: 800px;
+    min-height: 500px;
+    max-height: 550px;
     width: 90%;
     margin-top: 6rem;
     position: relative;
@@ -51,51 +50,49 @@
     position: relative;
     min-height: 100vh;
     background: #1c1c1c;
-}
-.aboutSection > h2{
-    font-family: "Draper", sans-serif;
-    color: var(--black);
-    font-size: 12rem;
-    background: var(--lightBackground);
-    padding: 5rem;
+    overflow: hidden;
 }
 .aboutSliderHolder{
     background: #fff;
-    padding: 15rem 0;
+    padding: 11rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .sliderSwitcher{
-    height: 200px;
-    width: 100px;
+    height: 130px;
+    width: 70px;
     background: var(--main);
     position: absolute;
     right: 0;
-    padding: 1rem;
+    top: 30rem;
+    padding: 10px;
     color: #fff;
     box-shadow: 0 0 20px -15px var(--main);
     cursor: pointer;
     transition: 200ms all;
+    z-index: 2;
 }
 .sliderSwitcher:hover{
-    box-shadow: 0 0px 0px 0px var(--main);
-    width: 145px;
-    height: 305px;
+    box-shadow: 0 0px 0px 0px #fff;
+    width: 73px;
+    height: 133px;
 }
 .switchNum{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 800;
+    margin-bottom: 5px;
 }
 .switchTitle{
-    font-size: 11px;
+    font-size: 8px;
     font-family: 'Draper', sans-serif;
 }
 .switchArrow{
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 5px;
+    right: 10px;
     fill: #fff;
 }
 .switchArrow svg{
@@ -146,9 +143,10 @@
     color: var(--secondary);
     font-family: 'Draper', sans-serif;
     margin-bottom: 10px;
+    font-size: 20px;
 }
 .largeTitle{
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(0, 0, 0);
     font-weight: 900;
     text-transform: uppercase;
@@ -158,9 +156,9 @@
     font-family: 'Draper', sans-serif;
     letter-spacing: 3px;
     background: #fff;
-    width: 40%;
     padding: 20px;
-    margin-left: -10px;
+    margin-left: -10px; 
+    display: inline-block; 
 }
 
 .largeTitle:nth-of-type(2){
@@ -169,12 +167,13 @@
     text-align: right;
 }
 .paragraph{
-    line-height: 1.8rem;
-    font-size: 15px;
+    line-height: 1.5rem;
+    font-size: 13px;
     color: var(--black);
 }
 .paraHolder{
     display: flex;
+    margin-left: -30px;
 }
 .line span{
     font-weight: 900;
@@ -210,15 +209,30 @@ p .line{
     width: 70%;
     height: 150px;
     object-fit: cover;
+    z-index: 1;
+}
+.scrolltext{
+    font-family: "Draper", sans-serif;
+    color: var(--black);
+    font-size: 6rem;
+    white-space: nowrap;
+    transform: translateX(50%);
+}
+.scrolltextHolder{
+    max-width: 100%;
+    background: linear-gradient(to top, var(--lightBackground),var(--lightBackground), #FFF, #fff);
+    display: flex;
+    overflow: hidden;
 }
 @media (min-width: 1000px) {
     .sectionContainer{
         width: 85vw;
         flex-direction: row;
     }
-    .sectionContainer h1{
-        font-size: 55px;
-        line-height: 90px;
+    .sectionContainer h2{
+        font-size: 30px;
+        line-height: 50px;
+        margin-top: 2rem;
     }
     .sectionContainer p{
         margin-left: 5rem;
@@ -240,6 +254,7 @@ p .line{
     }
     .aboutSliderHolder{
         flex-direction: row;
+        padding: 15rem 0;
     }
     .aboutPara{
         z-index: 1;
@@ -250,13 +265,24 @@ p .line{
     }
     .largeTitle{
         background: transparent;
-        font-size: 25px;
+        font-size: 40px;
+        padding: 0;
+        margin-left: 0; 
     }
     .sliderSwitcher{
         height: 300px;
         width: 140px;
         padding: 1rem;
         box-shadow: 0 10px 50px -10px var(--main);
+    }
+    .sliderSwitcher:hover{
+        box-shadow: 0 0px 0px 0px #fff;
+        width: 145px;
+        height: 305px;
+    }
+    .scrolltext{
+        font-size: 8rem;
+        transform: translateX(50%);
     }
   
 }

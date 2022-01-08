@@ -6,14 +6,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: 85%;
     margin: auto;
     margin-top: 14rem;
     color: var(--black);
+    flex-direction: column;
 }
 .sectionContainer h2{
     flex: 1;
-    font-size: 30px;
+    font-size: 25px;
+    text-align: center;
     line-height: 40px;
     font-family: "Draper", sans-serif;
 }
@@ -24,7 +26,6 @@
 .sectionContainer img{
     height: 6rem;
     width: 6rem;
-    margin-top: -10rem;
 }
 .reviewContainer{
     flex: 2;
@@ -42,4 +43,23 @@
 }
 .reviewDetails p:last-of-type{
     color: gray;
+}
+
+
+
+@media (min-width: 1000px){
+
+    .sectionContainer{
+        width: 80%;
+        flex-direction: row;
+    }
+
+    .sectionContainer img{
+        margin-top: -10rem;
+    }
+    .sectionContainer h2{
+        font-size: 30px;
+        text-align: left;
+    }
+
 }

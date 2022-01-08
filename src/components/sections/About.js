@@ -52,17 +52,21 @@ const About = (props) => {
       slideParagraph: aboutContainer.current.querySelector("#sliderPar"),
       image: aboutContainer.current.querySelectorAll("#aboutImage img"),
       slideTitle: aboutContainer.current.querySelector("h3"),
-      slideHandle: aboutContainer.current.querySelector("#slideHandleTitle")
+      slideHandle: aboutContainer.current.querySelector("#slideHandleTitle"),
+      scrolltext: aboutContainer.current.querySelector("#scrolltext")
     };
-    /* gsap.from(DOM.title.lines, {
-      yPercent: 120,
+
+    gsap.to(DOM.scrolltext, {
+      xPercent: -150,
       ease: Power3.easeOut,
-      stagger: 0.15,
+      color: "#00E8FC",
       scrollTrigger: {
-        trigger: aboutContainer.current,
-        start: "top center", //when the top of the trigger hits bottom of vw
+        trigger: DOM.scrolltext,
+        scrub: 1,
+        start: "bottom bottom", //when the top of the trigger hits bottom of vw
+        end: "+=200%"
       },
-    }); */
+    }); 
 
  /*    ScrollTrigger.batch(DOM.image, {
       interval: 0.1,
@@ -118,9 +122,10 @@ const About = (props) => {
             enim quis semper euismod, risus ipsum ullamcorper quam, quis vulputate
             mauris lacus pulvinar mauris.
           </p>
-          <h2>
-            Enjoy your <span>summer</span> <br />with Boom
-          </h2>
+            <h2>
+              Enjoy your <span>summer</span> <br />with Boom
+            </h2>
+
         </div>
         <img className={classes.seaDeco} src="/sea.png"></img>
 
@@ -159,7 +164,9 @@ const About = (props) => {
           </div>
         </div>
       </div>
-      <h2>Beat of ordinary madness</h2>
+      <div className={classes.scrolltextHolder}>
+        <h2 id="scrolltext" className={classes.scrolltext}>Beats of ordinary madness</h2> 
+      </div>
     </section>
   );
 };

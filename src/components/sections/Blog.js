@@ -13,7 +13,7 @@ const Blog = (props) => {
   const aboutContainer = useRef();
   const navPrev = useRef();
   const navNext = useRef();
-
+ 
 
   /*   useEffect(() => {
       let DOM = { 
@@ -55,11 +55,11 @@ const Blog = (props) => {
         <img src="/sea_vertical.jpg" />
 
       </div>
-      <h1>{/* <SplitText copy="Latest news" /> */}</h1>
+
 
       <Swiper
         spaceBetween={25}
-        slidesPerView={3}
+        slidesPerView={2}
         pagination={{
           prevEl: navNext.current,
           nextEl: navPrev.current
@@ -69,7 +69,10 @@ const Blog = (props) => {
           swiper.params.navigation.nextEl = navNext.current;
         }}
         breakpoints={{
-          640: {
+          1000: {
+            slidesPerView: 3
+          },
+          1300: {
             slidesPerView: 4,
           },
         }}

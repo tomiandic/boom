@@ -18,6 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .footerColumn{
     color: #fff;
@@ -35,3 +36,13 @@
     font-size: 15px;
     margin: 5px 0;
 }
+
+@media (min-width: 1000px){
+    .sectionContainer{
+        flex-direction: row;
+    }
+
+}
+
+
+
