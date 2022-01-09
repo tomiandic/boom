@@ -32,6 +32,7 @@
 }
 .aboutTopHolder{
     position: relative;
+    background: #050a0c;
     display: block;
 }
 .imageHolder{
@@ -40,16 +41,15 @@
     width: 90%;
     margin-top: 6rem;
     position: relative;
-    border-radius: 4px;
+    border-radius: var(--borderRadiusDesktop);
     display: flex;
     overflow: hidden;
-    box-shadow: 0 10px 50px -2px rgba(1, 6, 26, 0.3);
+    box-shadow: 0 10px 50px -25px #0a4583;
     background: rgb(239, 241, 243);
 }
 .aboutSection{
     position: relative;
     min-height: 100vh;
-    background: #1c1c1c;
     overflow: hidden;
 }
 .aboutSliderHolder{
@@ -107,12 +107,13 @@
     color: var(--main);
     letter-spacing: 2px;
     margin-top: 2.5rem;
-    padding: 1rem 2rem;
-    border-radius: 3px;
+    padding: 1.5rem 4rem;
+    border-radius: 2px;
     overflow: hidden;
     position: relative;
     transition: 300ms color;
     cursor: pointer;
+    border: 2px solid var(--main);
 }
 .sectionButton::after {
     -webkit-transition: all 0.3s;
@@ -127,7 +128,7 @@
     z-index: -1;
   }
   .sectionButton::after {
-    height: 3px;
+    height: 0;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -161,11 +162,6 @@
     display: inline-block; 
 }
 
-.largeTitle:nth-of-type(2){
-    margin-right: 5vw;
-    margin-left: auto;
-    text-align: right;
-}
 .paragraph{
     line-height: 1.5rem;
     font-size: 13px;
@@ -212,15 +208,15 @@ p .line{
     z-index: 1;
 }
 .scrolltext{
-    font-family: "Draper", sans-serif;
+    font-family: "Draper", sans-serif; 
     color: var(--black);
     font-size: 6rem;
+    text-transform: uppercase;
     white-space: nowrap;
     transform: translateX(50%);
 }
 .scrolltextHolder{
     max-width: 100%;
-    background: linear-gradient(to top, var(--lightBackground),var(--lightBackground), #FFF, #fff);
     display: flex;
     overflow: hidden;
 }
@@ -265,7 +261,7 @@ p .line{
     }
     .largeTitle{
         background: transparent;
-        font-size: 40px;
+        font-size: 55px;
         padding: 0;
         margin-left: 0; 
     }
@@ -281,8 +277,27 @@ p .line{
         height: 305px;
     }
     .scrolltext{
-        font-size: 8rem;
+        font-size: 11rem;
+        font-weight: 900;
         transform: translateX(50%);
     }
-  
+    .paraHolder{
+        display: flex;
+        margin-left: 0;
+    }
+    .switchNum{
+        font-size: 30px;
+    }
+    .switchTitle{
+        font-size: 10px;
+    }
+    .switchArrow{
+        bottom: 10px;
+        right: 15px;
+    }
+    .paragraph{
+        line-height: 1.8rem;
+        font-size: 15px;
+        color: var(--black);
+    }
 }

@@ -130,7 +130,7 @@ p .line{
 }
 .swiperSlide{
     background: #fff;
-    border-radius: 2px;
+    border-radius: var(--borderRadiusDesktop);
     box-shadow: 0 4px 25px -7px #00000075;
     overflow: hidden;
     cursor: pointer;
@@ -163,6 +163,7 @@ p .line{
     justify-content: center;
     box-shadow: 0 0 20px 2px #e7e7e7;
     transition: transform 300ms;
+    border-radius: 4px;
 }
 .eventDate span{
     display: block;
@@ -253,10 +254,10 @@ section{
         margin-left:0;
     }
     .landingContent > h1{
-        font-size: 2.1rem;
+        font-size: 2.6rem;
     }
     .line {
-        height: 2.5rem;
+        height: 3rem;
     }
     .socialMediaContainer{
         display: flex;

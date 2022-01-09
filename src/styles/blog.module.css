@@ -4,7 +4,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    background-color: var(--lightBackground);
 }
 
 .blogSection h1{
@@ -15,7 +14,7 @@
     position: relative;
     cursor: pointer;
     box-shadow: 0 15px 40px -8px rgba(1, 6, 29, 0.5); 
-    border-radius: 4px;
+    border-radius: var(--borderRadiusDesktop);
     overflow: hidden;
 }
 .article:hover .articleDetails{
@@ -40,7 +39,7 @@
 .articleTooltip{
     opacity: 0; 
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 8px;
     font-weight: 600;
     margin-bottom: -10px;
     margin-top: 10px;
@@ -80,30 +79,29 @@
     fill: #fff;
 }
 .swiperContainer{
-    width: 93vw;
+    width: 100vw;
     margin-right: -50px!important;
     margin-left: auto!important;
     padding: 3rem 0!important;
 }
 .titleHolder{
-    background: rgba(0, 183, 255, 0.4);
     height:80vh;
-    width: 35vw;
+    width: 45vw;
     min-width: 350px;
     position: absolute;
     left:0;
     display: flex;
     align-items: center;
-    z-index: 1;
+    z-index: 1; 
 }
 .titleHolder h2{
     font-family: 'Draper', sans-serif;
-    color: #fff;
-    font-size: 25px;
+    color: var(--black);
+    font-size: 22px;
     transform: rotate(-90deg);
     letter-spacing: 5px;
     z-index: 2;
-    margin-left: -110px;
+    margin-left: -115px;
 }
 .titleHolder img{
     height:100%;
@@ -111,6 +109,7 @@
     position: absolute;
     left:0;
     z-index: 0;
+    display: none;
 }
 .sliderNavigation div{
     margin: 1rem;
@@ -119,7 +118,7 @@
 .sliderNavigation svg{
     height: 40px;
     width: 40px;
-    fill: #fff;
+    fill: var(--main);
 }
 .sliderNavigation div:first-of-type svg{
     transform: rotate(180deg);
@@ -127,15 +126,15 @@
 .sliderNavigation{
     z-index: 2;
     position: absolute;
-    top: -20px;
-    left: -10px;
-    display: flex;
+    bottom: -25px;
+    right: 180px;
+    display: none;
 }
 
 @media (min-width: 800px) {
 
     .titleHolder h2{
-        margin-left: -50px;
+        margin-left: -250px;
     }
     .article img{
         height: 500px;
@@ -143,23 +142,41 @@
     .article h3{
         font-size: 15px;
     }
+    .sliderNavigation{
+        display: flex;
+    }
+    .articleTooltip{
+        font-size: 10px;
+    }
 }
 
 @media (min-width: 1000px) {
 
     .swiperContainer{
-        width: 85vw;
+        width: 95vw;
         margin-right: -100px!important;
     }
     .titleHolder h2{
         font-size: 40px;
-        margin-left: 0;
+        margin-left: -150px;
     }
     .article h3{
         font-size: 1rem;
+        line-height: 1.5rem;
     }
     .article img{
         height: 550px;
     }
-
+    .sliderNavigation{
+        display: flex;
+    }
+    .articleTooltip{
+        font-size: 11px;
+    }
+    .articleDetails{
+      padding: 15px;
+    }
+    .articleDate{
+        font-size: 9px;
+    }
 }

@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: 5rem;
 }
 .footerSection svg{
     position: absolute;
@@ -19,10 +20,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 80%;
 }
 .footerColumn{
     color: #fff;
     margin: 3rem;
+    width: 80%;
 }
 .footerColumn h4{
     margin-bottom: 1rem;

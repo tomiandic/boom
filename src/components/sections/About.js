@@ -57,13 +57,12 @@ const About = (props) => {
     };
 
     gsap.to(DOM.scrolltext, {
-      xPercent: -150,
+      xPercent: -110,
       ease: Power3.easeOut,
-      color: "#00E8FC",
       scrollTrigger: {
         trigger: DOM.scrolltext,
         scrub: 1,
-        start: "bottom bottom", //when the top of the trigger hits bottom of vw
+        start: "top bottom", //when the top of the trigger hits bottom of vw
         end: "+=200%"
       },
     }); 

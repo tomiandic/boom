@@ -57,10 +57,14 @@ const GallerySection = (props) => {
   return (
     <section className={classes.gallerySection}>
       <div className={classes.quoteHolder}>
+      <img src="./gallery/30.jpg"></img>
       <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
         <path d="M12.96 4.46l-1.42-1.42-3.54 3.55-3.54-3.55-1.42 1.42 3.55 3.54-3.55 3.54 1.42 1.42 3.54-3.55 3.54 3.55 1.42-1.42-3.55-3.54 3.55-3.54z"></path>
-    </svg>
-        <h2 className={classes.galleryQuote}>Some smart quote related to boom events that needs to be seen before gallery section </h2>
+      </svg>
+        <h2 className={classes.galleryQuote}>Some quote related to boom events before gallery section </h2>
+        <div className={classes.buttonHolder}>
+        <button className={classes.sectionButton}>Check Events</button>
+      </div>
       </div>
       <Swiper effect={'cards'} grabCursor={true}
          navigation={{
@@ -103,10 +107,7 @@ const GallerySection = (props) => {
           </div>
       </div>
       </Swiper>
-    
-      <div className={classes.buttonHolder}>
-        <button className={classes.sectionButton}>Check Events</button>
-      </div>
+  
     </section>
   );
 };
