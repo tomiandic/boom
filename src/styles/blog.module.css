@@ -7,7 +7,7 @@
 }
 
 .blogSection h1{
-    font-size: 35px;
+    font-size: 35px; 
     color: #fff;
 }
 .article{
@@ -35,6 +35,7 @@
     margin: 10px 0;
     color: var(--secondary);
     text-transform: uppercase;
+    opacity: .7;
 }
 .articleTooltip{
     opacity: 0; 
@@ -82,7 +83,7 @@
     width: 100vw;
     margin-right: -50px!important;
     margin-left: auto!important;
-    padding: 3rem 0!important;
+    padding: 5rem 0!important;
 }
 .titleHolder{
     height:80vh;
@@ -116,9 +117,9 @@
     cursor: pointer;
 }
 .sliderNavigation svg{
-    height: 40px;
-    width: 40px;
-    fill: var(--main);
+    height: 35px;
+    width: 35px;
+    fill: var(--black);
 }
 .sliderNavigation div:first-of-type svg{
     transform: rotate(180deg);
@@ -127,7 +128,7 @@
     z-index: 2;
     position: absolute;
     bottom: -25px;
-    right: 180px;
+    left: 0px;
     display: none;
 }
 

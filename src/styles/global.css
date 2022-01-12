@@ -39,6 +39,18 @@ html, body{
 .swiper-button-disabled{
     opacity: .3;
 }
+.swiper-horizontal > .swiper-pagination-progressbar{
+    width: 65%!important;
+    height: 2px!important;
+    bottom: 11px;
+    left: 20%;
+    top: unset;
+    background: rgb(228, 228, 228);
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+    background: var(--secondary);
+}
+
 @media (min-width: 900px) {
 
     .sectionContent{

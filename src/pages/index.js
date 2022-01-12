@@ -50,7 +50,7 @@ const IndexPage = () => {
         landingTitle.current,
         {
           duration: 1,
-          y: 65,
+          y: 95,
           rotate: 8,
           skewX: -50,
           stagger: 0.2,

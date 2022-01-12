@@ -20,30 +20,38 @@ SwiperCore.use([EffectCards, Navigation]);
 const GallerySection = (props) => { 
   const navNext = useRef();
   const navPrev = useRef();
+  const galleryContainer = useRef();
 
 
   useEffect(() => {
-    /*  let DOM = {
+      let DOM = {
       title: {
-        element: aboutContainer.current.querySelector("h1"),
-        chars: aboutContainer.current.querySelectorAll("h1 span span"),
+        element: galleryContainer.current.querySelector("h1"),
+        chars: galleryContainer.current.querySelectorAll("h1 span span"),
       },
-      paragraph: aboutContainer.current.querySelector("p"),
-      image: aboutContainer.current.querySelector("img"),
+      quote: galleryContainer.current.querySelector("#quoteHolder"),
+      image: galleryContainer.current.querySelector("#backdropImage"),
+      imageOverlay: galleryContainer.current.querySelector("#imageOverlay"),
     };
-    console.log(DOM.title.chars);
-    gsap.from(DOM.title.chars, {
-      y: 20,
-      ease: Power3.easeOut,
-      opacity: 0,
-      skewX: 40,
-      stagger: 0.05,
+
+    gsap.to(DOM.image, {
+      clipPath: "polygon(0 15%, 100% 20%, 100% 80%, 0 80%)",
       scrollTrigger: {
-        trigger: aboutContainer.current,
-        start: "center bottom", //when the top of the trigger hits bottom of vw
+        trigger: DOM.image,
+        start: "bottom bottom", //when the top of the trigger hits bottom of vw
+        scrub: true,
+        pin: true
       },
     });
-
+    gsap.from(DOM.quote, {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: DOM.quote,
+        start: "bottom bottom", //when the top of the trigger hits bottom of vw
+        scrub: true
+      },
+    });
+/* 
     gsap.from(DOM.image, {
       scale: 1.5,
       scrollTrigger: {
@@ -55,16 +63,21 @@ const GallerySection = (props) => {
   }, []);
  
   return (
-    <section className={classes.gallerySection}>
-      <div className={classes.quoteHolder}>
-      <img src="./gallery/30.jpg"></img>
-      <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
-        <path d="M12.96 4.46l-1.42-1.42-3.54 3.55-3.54-3.55-1.42 1.42 3.55 3.54-3.55 3.54 1.42 1.42 3.54-3.55 3.54 3.55 1.42-1.42-3.55-3.54 3.55-3.54z"></path>
-      </svg>
-        <h2 className={classes.galleryQuote}>Some quote related to boom events before gallery section </h2>
-        <div className={classes.buttonHolder}>
-        <button className={classes.sectionButton}>Check Events</button>
-      </div>
+    <section ref={galleryContainer} className={classes.gallerySection}>
+      <div id="backdropImage" className={classes.quoteHolder}>
+        <img src="./gallery/30.jpg"></img>
+       
+        <div id="imageOverlay" className={classes.imageOverlay}></div>
+
+        <div style={{zIndex: 10}} id="quoteHolder">
+       {/*  <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
+          <path d="M12.96 4.46l-1.42-1.42-3.54 3.55-3.54-3.55-1.42 1.42 3.55 3.54-3.55 3.54 1.42 1.42 3.54-3.55 3.54 3.55 1.42-1.42-3.55-3.54 3.55-3.54z"></path>
+        </svg> */}
+          <h2 className={classes.galleryQuote}>Some quote related to boom events before gallery section </h2>
+          <div className={classes.buttonHolder}>
+            <button className={classes.sectionButton}>Check Events</button>
+          </div>
+        </div>
       </div>
       <Swiper effect={'cards'} grabCursor={true}
          navigation={{

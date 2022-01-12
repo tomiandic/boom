@@ -1,20 +1,20 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "gatsby";
 import { gsap, Power3, Sine } from "gsap";
-import SwiperCore, { Navigation } from 'swiper'
+import SwiperCore, { Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import "swiper/css/pagination"
 import * as classes from "../../styles/blog.module.css";
 gsap.registerPlugin(ScrollTrigger);
-SwiperCore.use([Navigation])
+SwiperCore.use([Navigation, Pagination])
 
 const Blog = (props) => {
   const aboutContainer = useRef();
   const navPrev = useRef();
   const navNext = useRef();
  
-
+ 
   /*   useEffect(() => {
       let DOM = { 
         title: {
@@ -61,8 +61,7 @@ const Blog = (props) => {
         spaceBetween={25}
         slidesPerView={2}
         pagination={{
-          prevEl: navNext.current,
-          nextEl: navPrev.current
+          "type": "progressbar"
         }}
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = navPrev.current;
