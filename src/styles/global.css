@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700&display=swap');
-@import url(//db.onlinewebfonts.com/c/1df7ec39ce3f151f8c44c65de49bf40c?family=Draper);
-/* @font-face {
-    font-family: 'Draper Regular';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Draper Regular'), url('/Draper.woff') format('woff');
-    } */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&display=swap');
 
 * {
     margin:0;

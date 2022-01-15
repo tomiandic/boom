@@ -24,10 +24,11 @@
     opacity: .8;
 }
 .article h3{
-    font-family: 'Draper', sans-serif;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
     font-size: 12px;
     line-height: 1rem;
-    font-weight: 600;
 }
 .articleDate{
     font-size: 7px;
@@ -96,7 +97,9 @@
     z-index: 1; 
 }
 .titleHolder h2{
-    font-family: 'Draper', sans-serif;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
     color: var(--black);
     font-size: 22px;
     transform: rotate(-90deg);
@@ -158,11 +161,11 @@
         margin-right: -100px!important;
     }
     .titleHolder h2{
-        font-size: 40px;
+        font-size: 35px;
         margin-left: -150px;
     }
     .article h3{
-        font-size: 1rem;
+        font-size: .9rem;
         line-height: 1.5rem;
     }
     .article img{

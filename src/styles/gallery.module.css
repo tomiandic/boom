@@ -32,12 +32,13 @@
     position: absolute;
 }
 .imageOverlay{
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     position: absolute;
     height: 100%;
     width: 100%;
     top:0;
     left:0;
+    opacity: 1
 }
 .quoteHolder svg{
     height: 50px;
@@ -47,9 +48,11 @@
 }
 
 .galleryQuote{
-    font-family: 'Draper', sans-serif;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     width: 90%;
     margin: auto;
     color: #fff;
@@ -138,7 +141,7 @@
 
 @media (min-width: 800px) {
     .galleryQuote{
-        font-size: 50px;
+        font-size: 45px;
     }
     .swiperContainer{
         width: 70vw;

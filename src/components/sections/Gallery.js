@@ -51,6 +51,14 @@ const GallerySection = (props) => {
         scrub: true
       },
     });
+    gsap.from(DOM.imageOverlay, {
+      opacity: 0,
+      scrollTrigger: {
+        trigger: DOM.imageOverlay,
+        start: "center bottom", //when the top of the trigger hits bottom of vw
+        scrub: true
+      },
+    });
 /* 
     gsap.from(DOM.image, {
       scale: 1.5,

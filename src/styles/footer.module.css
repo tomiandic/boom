@@ -29,9 +29,11 @@
 }
 .footerColumn h4{
     margin-bottom: 1rem;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 1px;
-    font-family: "Draper", sans-serif;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 .footerColumn a{
     display: block;

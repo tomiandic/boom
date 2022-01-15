@@ -53,9 +53,7 @@ const Blog = (props) => {
       <div className={classes.titleHolder}>
         <h2>Latest News</h2>
         <img src="/sea_vertical.jpg" />
-
       </div>
-
 
       <Swiper
         spaceBetween={25}

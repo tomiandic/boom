@@ -1,6 +1,6 @@
 .reviewSection{
     position: relative;
-    min-height: 60vh;
+    min-height: 80vh;
     background: #ffffff;
     display: flex;
     align-items: center;
@@ -10,18 +10,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 85%;
-    margin: auto;
-    margin-top: 9rem;
+    width: 90%;
     color: var(--black);
     flex-direction: column;
+    position: relative;
 }
 .sectionContainer h2{
     flex: 1;
     font-size: 25px;
     text-align: center;
     line-height: 40px;
-    font-family: "Draper", sans-serif;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 .sectionContainer p {
     line-height: 1.8rem;
@@ -30,30 +31,31 @@
 .sectionContainer img{
     height: 6rem;
     width: 6rem;
+    object-fit: cover;
 }
 .reviewContainer{
-    flex: 2;
-    box-shadow: 0 10px 40px -20px #8ab0ca;
+    box-shadow: 0 5px 20px -10px #a7c0d1;
     border-radius: var(--borderRadiusDesktop);
-    padding: 2rem;
     position: relative;
+    padding: 1.5rem;
     padding-top: 3rem;
 }
 .reviewDetails{
     display: flex;
 }
 .reviewDetails p{
-    font-family: "Draper", sans-serif;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
     font-size: 8px;
     margin-right: 20px;
-    font-weight: 700;
     margin-top: 1rem;
 }
 .reviewDetails p:first-of-type{
     color: var(--main);
 }
 .reviewDetails p:last-of-type{
-    color: gray;
+    color: rgb(200, 200, 200);
 }
 .reviewContainer img{
     border-radius: 50%;
@@ -62,31 +64,41 @@
     position: absolute;
     top: -32px;
 }
+.reviewContainer p{
+    font-family: "Syne", sans-serif;
+    font-weight: 500;
+}
+
 .sliderNavigation div{
     margin: 1rem 0;
     cursor: pointer;
 }
 .sliderNavigation div:last-of-type{
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 .sliderNavigation svg{
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
+    transition: 200ms transform ease-out;
     fill: var(--black);
 }
 .sliderNavigation div:first-of-type svg{
     transform: rotate(180deg);
 }
+.swiperContainer{
+    padding: 5rem 1.5rem!important;
+    width: 90%;
+}
 .sliderNavigation{
     z-index: 2;
-    display: flex;
+    display: none;
 }
 
 
 @media (min-width: 1000px){
 
     .sectionContainer{
-        width: 80%;
+        width: 90%;
         flex-direction: row;
     }
     .sectionContainer > img{
@@ -96,5 +108,16 @@
         font-size: 35px;
         text-align: left;
     }
-
+    .sliderNavigation{
+       display: flex;
+    }
+    .reviewSection{
+        justify-content: flex-end;
+    }
+    .swiperContainer{
+        padding: 5rem!important;
+    }
+    .reviewContainer{
+        box-shadow: 0 10px 40px -20px #8ab0ca;
+    }
 }

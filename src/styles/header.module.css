@@ -38,13 +38,14 @@
     justify-content: center;
     margin-top: 3rem;
     color: var(--black);
-    font-family: 'Draper', sans-serif;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
     text-transform: uppercase;
     font-size: 16px;
     letter-spacing: 1px;
     opacity: 0;
     transform: skewX(25deg) scaleY(1.5);
-    font-weight: 500;
 }
 .navLink:last-of-type{
     color: var(--main);

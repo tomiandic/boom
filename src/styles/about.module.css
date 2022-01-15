@@ -8,13 +8,18 @@
     color: var(--white);
 }
 .sectionContainer h2 span{
-    font-family: 'Draper', sans-serif;
+    font-weight: 800;
     color: var(--secondary);
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 .sectionContainer h2{
     font-size: 25px;
     flex: 1;
-    font-family: 'Draper', sans-serif;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
     line-height: 40px;
 }
 .sectionContainer p{
@@ -87,7 +92,9 @@
 }
 .switchTitle{
     font-size: 8px;
-    font-family: 'Draper', sans-serif;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
 }
 .switchArrow{
     position: absolute;
@@ -142,20 +149,23 @@
   
 .largeTitleNum{
     color: var(--secondary);
-    font-family: 'Draper', sans-serif;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
     margin-bottom: 10px;
     font-size: 20px;
 }
 .largeTitle{
     font-size: 25px;
-    color: rgb(0, 0, 0);
+    color: var(--black);
     font-weight: 900;
     text-transform: uppercase;
     position: relative;
     z-index: 10;
     margin-bottom: 2rem;
-    font-family: 'Draper', sans-serif;
-    letter-spacing: 3px;
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
     background: #fff;
     padding: 20px;
     margin-left: -10px; 
@@ -208,10 +218,11 @@ p .line{
     z-index: 1;
 }
 .scrolltext{
-    font-family: "Draper", sans-serif; 
+    font-family: 'Syne', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
     color: var(--black);
     font-size: 6rem;
-    text-transform: uppercase;
     white-space: nowrap;
     transform: translateX(50%);
 }
@@ -256,14 +267,15 @@ p .line{
         z-index: 1;
         padding: 2rem;
         max-width: 40%;
-        margin-left: -50px;
+        margin-left: -60px;
         margin-top: 0;
     }
     .largeTitle{
         background: transparent;
-        font-size: 55px;
+        font-size: 50px;
         padding: 0;
         margin-left: 0; 
+        color: var(--black);
     }
     .sliderSwitcher{
         height: 300px;
