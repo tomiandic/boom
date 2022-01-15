@@ -59,7 +59,7 @@
 }
 .aboutSliderHolder{
     background: #fff;
-    padding: 11rem 0;
+    padding: 8rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,6 +79,8 @@
     cursor: pointer;
     transition: 200ms all;
     z-index: 2;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 .sliderSwitcher:hover{
     box-shadow: 0 0px 0px 0px #fff;
@@ -91,7 +93,7 @@
     margin-bottom: 5px;
 }
 .switchTitle{
-    font-size: 8px;
+    font-size: 7px;
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
     font-weight: 800;
@@ -156,7 +158,7 @@
     font-size: 20px;
 }
 .largeTitle{
-    font-size: 25px;
+    font-size: 22px;
     color: var(--black);
     font-weight: 900;
     text-transform: uppercase;
@@ -210,10 +212,10 @@ p .line{
 }
 .seaDeco{
     position: absolute;
-    bottom:-75px;
+    bottom:-50px;
     right:0;
-    width: 70%;
-    height: 150px;
+    width: 60%;
+    height: 100px;
     object-fit: cover;
     z-index: 1;
 }
@@ -235,6 +237,12 @@ p .line{
     .sectionContainer{
         width: 85vw;
         flex-direction: row;
+    }
+    .seaDeco{
+        bottom:-75px;
+        right:0;
+        width: 70%;
+        height: 150px;
     }
     .sectionContainer h2{
         font-size: 30px;

@@ -16,7 +16,13 @@ import Footer from "../components/sections/Footer";
 import "swiper/css";
 import "../styles/global.css";
 // markup
+// import Swiper core and required modules
+import SwiperCore, {
+  FreeMode
+} from 'swiper';
 
+// install Swiper modules
+SwiperCore.use([FreeMode]);
 gsap.registerPlugin(ScrollTrigger);
 
 const IndexPage = () => {
@@ -202,17 +208,18 @@ const IndexPage = () => {
           </div>
           <Swiper
             spaceBetween={15}
-            slidesPerView={3}
+            slidesPerView={2}
             className={classes.swiperContainer}
             onBeforeInit={(swiper) => {
               swiper.params.navigation.prevEl = navPrev.current;
               swiper.params.navigation.nextEl = navNext.current;
             }}
+            freeMode={true}
           >
             <SwiperSlide className={classes.swiperSlide}>
               <div className={classes.eventDate}>
                 <p>
-                  24<span>Jully</span>
+                  24<span>September</span>
                 </p>
               </div>
               <div className={classes.eventDetails}>
@@ -339,6 +346,10 @@ const IndexPage = () => {
               </div>
             </SwiperSlide>
             <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+            <SwiperSlide></SwiperSlide>
+
+
           </Swiper>
         </div>
       </section>

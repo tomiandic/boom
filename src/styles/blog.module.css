@@ -81,10 +81,8 @@
     fill: #fff;
 }
 .swiperContainer{
-    width: 100vw;
-    margin-right: -50px!important;
-    margin-left: auto!important;
-    padding: 5rem 0!important;
+    width: 90vw;
+    padding: 5rem 5vw!important;
 }
 .titleHolder{
     height:80vh;
@@ -93,7 +91,7 @@
     position: absolute;
     left:0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     z-index: 1; 
 }
 .titleHolder h2{
@@ -101,11 +99,9 @@
     text-transform: uppercase;
     font-weight: 800;
     color: var(--black);
-    font-size: 22px;
-    transform: rotate(-90deg);
-    letter-spacing: 5px;
+    font-size: 18px;
     z-index: 2;
-    margin-left: -115px;
+    margin-left: 1rem;
 }
 .titleHolder img{
     height:100%;
@@ -137,8 +133,13 @@
 
 @media (min-width: 800px) {
 
+    .titleHolder{
+        align-items: center;
+    }
     .titleHolder h2{
-        margin-left: -250px;
+        transform: rotate(-90deg);
+        z-index: 2;
+        margin-left: -225px;
     }
     .article img{
         height: 500px;

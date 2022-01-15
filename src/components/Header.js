@@ -20,35 +20,32 @@ const Header = ({ pageIsLoaded }) => {
         ease: Power3.easeOut,
       })
       .to(
-        hamburgerLines.current[1],
-        {
-          width: 0,
-          backgroundColor: "#000",
-          duration: 0.2,
-        },
-        "-=.8"
-      )
-      .to(
         hamburgerLines.current[0],
         {
           rotate: 45,
           backgroundColor: "#d5d5d5",
-          y: 19,
+          y: 10,
           duration: 0.6,
           width: 35,
         },
         "-=.8"
       )
       .to(
-        hamburgerLines.current[2],
+        hamburgerLines.current[1],
         {
           rotate: -45,
           backgroundColor: "#d7d7d7",
           duration: 0.6,
           width: 35,
-        },
-        "-=.8"
-      )
+        },"-=.8"
+        )
+        .to(
+          hamburgerLines.current[2],
+          {
+            opacity: 0,
+            duration: 0.6,
+          },"-=.8"
+          )
       .to(
         navLinks.current,
         {
@@ -137,7 +134,7 @@ const Header = ({ pageIsLoaded }) => {
       >
         <span ref={(el) => addToRefs(el, hamburgerLines)}></span>
         <span ref={(el) => addToRefs(el, hamburgerLines)}></span>
-        <span ref={(el) => addToRefs(el, hamburgerLines)}></span>
+        <p ref={(el) => addToRefs(el, hamburgerLines)}>MENU</p>
       </span>
 
       <div className={classes.socialMediaContainer}>

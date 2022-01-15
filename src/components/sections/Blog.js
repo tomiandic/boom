@@ -57,7 +57,7 @@ const Blog = (props) => {
 
       <Swiper
         spaceBetween={25}
-        slidesPerView={2}
+        slidesPerView={1.5}
         pagination={{
           "type": "progressbar"
         }}

@@ -20,11 +20,6 @@ const About = (props) => {
     sliderTL.current.reverse();
   }
 
-  const setNewSlide = () => {
-    console.log("set next", nextIndex)
-    setSliderIndex(nextIndex)
-  }
-
   useEffect(()=> {
     if(isReversed){
       setSliderIndex(nextIndex);
@@ -37,9 +32,7 @@ const About = (props) => {
     sliderTL.current.play(); 
     let totalSlides = aboutSliderData.length;
     let nIdx = sliderIndex + 1 > totalSlides - 1 ? 0 : sliderIndex + 1;
-    console.log("set next index", nIdx);
     setNextIndex(nIdx);
-    /* nextIndex.current = nIdx; */
   }, [sliderIndex])
 
   const aboutContainer = useRef();
@@ -53,7 +46,8 @@ const About = (props) => {
       image: aboutContainer.current.querySelectorAll("#aboutImage img"),
       slideTitle: aboutContainer.current.querySelector("h3"),
       slideHandle: aboutContainer.current.querySelector("#slideHandleTitle"),
-      scrolltext: aboutContainer.current.querySelector("#scrolltext")
+      scrolltext: aboutContainer.current.querySelector("#scrolltext"),
+      slideSwitcher: aboutContainer.current.querySelector("#switcher")
     };
 
     gsap.to(DOM.scrolltext, {
@@ -63,6 +57,27 @@ const About = (props) => {
         trigger: DOM.scrolltext,
         scrub: 1,
         start: "top bottom", //when the top of the trigger hits bottom of vw
+        end: "+=200%"
+      },
+    }); 
+
+    gsap.to(DOM.scrolltext, {
+      xPercent: -110,
+      ease: Power3.easeOut,
+      scrollTrigger: {
+        trigger: DOM.scrolltext,
+        scrub: 1,
+        start: "top bottom", //when the top of the trigger hits bottom of vw
+        end: "+=200%"
+      },
+    }); 
+
+    gsap.to(DOM.slideSwitcher, {
+      y: 300,
+      scrollTrigger: {
+        trigger: DOM.slideSwitcher,
+        scrub: true,
+        start: "center center", //when the top of the trigger hits bottom of vw
         end: "+=200%"
       },
     }); 
@@ -152,7 +167,7 @@ const About = (props) => {
           <img className={classes.mobileImage} src="/about.jpg" />
           <p className={classes.largeTitle}>Other events</p>
         </div> */}
-          <div onClick={() => switchSlide()} className={classes.sliderSwitcher}>
+          <div id="switcher" onClick={() => switchSlide()} className={classes.sliderSwitcher}>
             <p className={classes.switchNum}>{aboutSliderData[nextIndex].number}</p>
             <p id="slideHandleTitle" className={classes.switchTitle}>{aboutSliderData[nextIndex].title}</p>
             <div className={classes.switchArrow}>
