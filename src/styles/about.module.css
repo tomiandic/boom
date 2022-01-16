@@ -15,7 +15,7 @@
     font-weight: 800;
 }
 .sectionContainer h2{
-    font-size: 25px;
+    font-size: 22px;
     flex: 1;
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
@@ -41,7 +41,7 @@
     display: block;
 }
 .imageHolder{
-    min-height: 500px;
+    min-height: 400px;
     max-height: 550px;
     width: 90%;
     margin-top: 6rem;
@@ -49,7 +49,7 @@
     border-radius: var(--borderRadiusDesktop);
     display: flex;
     overflow: hidden;
-    box-shadow: 0 10px 50px -25px #0a4583;
+    box-shadow: 0 10px 30px -15px #0a4583;
     background: rgb(239, 241, 243);
 }
 .aboutSection{
@@ -67,8 +67,8 @@
     position: relative;
 }
 .sliderSwitcher{
-    height: 130px;
-    width: 70px;
+    height: 110px;
+    width: 50px;
     background: var(--main);
     position: absolute;
     right: 0;
@@ -82,19 +82,18 @@
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
 }
-.sliderSwitcher:hover{
+/* .sliderSwitcher:hover{
     box-shadow: 0 0px 0px 0px #fff;
     width: 73px;
     height: 133px;
-}
+} */
 .switchNum{
     font-size: 20px;
     font-weight: 800;
     margin-bottom: 5px;
 }
 .switchTitle{
-    font-size: 7px;
-    font-family: 'Syne', sans-serif;
+    font-size: 8px;
     text-transform: uppercase;
     font-weight: 800;
 }
@@ -154,22 +153,24 @@
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
     font-weight: 800;
-    margin-bottom: 10px;
+    margin-bottom: -10px;
+    z-index:11;
     font-size: 20px;
+    position: relative;
 }
 .largeTitle{
-    font-size: 22px;
+    font-size: 20px;
     color: var(--black);
     font-weight: 900;
     text-transform: uppercase;
     position: relative;
     z-index: 10;
-    margin-bottom: 2rem;
+    margin-bottom: 5px;
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
     font-weight: 800;
     background: #fff;
-    padding: 20px;
+    padding: 40px 25px;
     margin-left: -10px; 
     display: inline-block; 
 }
@@ -212,10 +213,10 @@ p .line{
 }
 .seaDeco{
     position: absolute;
-    bottom:-50px;
+    bottom:-30px;
     right:0;
     width: 60%;
-    height: 100px;
+    height: 60px;
     object-fit: cover;
     z-index: 1;
 }
@@ -253,7 +254,7 @@ p .line{
         margin-left: 5rem;
     }
     .aboutDeco{
-        height: 80vh;
+        height: 50vh;
         width: 500px;
         background: rgb(207, 241, 255);
         position: absolute;
@@ -310,6 +311,7 @@ p .line{
     }
     .switchTitle{
         font-size: 10px;
+        font-family: 'Syne', sans-serif;
     }
     .switchArrow{
         bottom: 10px;

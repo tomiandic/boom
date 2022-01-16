@@ -154,7 +154,7 @@ const About = (props) => {
             <h3 className={classes.largeTitle}>{aboutSliderData[sliderIndex].title}</h3>
             <div id="sliderPar" className={classes.paraHolder}>
               <div className={classes.paraDeco}></div>
-              <div style={{ marginLeft: 10 }}>
+              <div>
                 <p className={classes.paragraph}>
                   {aboutSliderData[sliderIndex].text}
                 </p>
@@ -179,7 +179,7 @@ const About = (props) => {
         </div>
       </div>
       <div className={classes.scrolltextHolder}>
-        <h2 id="scrolltext" className={classes.scrolltext}>Beats of ordinary madness</h2> 
+        <h2 id="scrolltext" className={classes.scrolltext}>Beat of ordinary madness</h2> 
       </div>
     </section>
   );

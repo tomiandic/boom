@@ -126,7 +126,7 @@ p .line{
     text-transform: uppercase;
     color: #fff;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 14px; 
     letter-spacing: 1px;
     margin-bottom: -10px;
 }
@@ -137,9 +137,7 @@ p .line{
     overflow: hidden;
     cursor: pointer;
     display: flex; 
-    min-width: 250px; 
     height: 65px!important; 
-    width: 200px!important;
     padding: 5px;
 }
 .swiperSlide:hover .eventDate{
@@ -238,7 +236,7 @@ section{
         display: none;
     }
     .landingBottomContainer{
-        width: 50%;
+        width: 60%;
         position: absolute;
         bottom: 0;
         padding: 3rem 0; 
@@ -252,7 +250,7 @@ section{
         opacity: .8;
     }
     .swiperContainer{
-        width: 50vw;
+        width: 100%;
     }
     .swiperContainer > div{
         margin: 0;

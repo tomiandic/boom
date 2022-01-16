@@ -208,7 +208,15 @@ const IndexPage = () => {
           </div>
           <Swiper
             spaceBetween={15}
-            slidesPerView={2}
+            slidesPerView={1.5}
+            breakpoints={{
+              700: {
+                slidesPerView: 2.2,
+              },
+              1400: {
+                slidesPerView: 3.2,
+              },
+            }}
             className={classes.swiperContainer}
             onBeforeInit={(swiper) => {
               swiper.params.navigation.prevEl = navPrev.current;
@@ -216,7 +224,8 @@ const IndexPage = () => {
             }}
             freeMode={true}
           >
-            <SwiperSlide className={classes.swiperSlide}>
+            <SwiperSlide>
+              <div className={classes.swiperSlide}>
               <div className={classes.eventDate}>
                 <p>
                   24<span>September</span>
@@ -240,8 +249,10 @@ const IndexPage = () => {
                 <div className={classes.slideArrowHolder}>
                 </div>
               </div>
+            </div>
             </SwiperSlide>
-            <SwiperSlide className={classes.swiperSlide}>
+            <SwiperSlide>
+              <div className={classes.swiperSlide}>
               <div className={classes.eventDate}>
                 <p>
                   24<span>Jully</span>
@@ -266,8 +277,10 @@ const IndexPage = () => {
                 <div className={classes.slideArrowHolder}>
                 </div>
               </div>
+              </div>
             </SwiperSlide>
-            <SwiperSlide className={classes.swiperSlide}>
+            <SwiperSlide>
+              <div className={classes.swiperSlide}>
               <div className={classes.eventDate}>
                 <p>
                   24<span>Jully</span>
@@ -292,8 +305,10 @@ const IndexPage = () => {
                 <div className={classes.slideArrowHolder}>
                 </div>
               </div>
+              </div>
             </SwiperSlide>
-            <SwiperSlide className={classes.swiperSlide}>
+            <SwiperSlide>
+              <div className={classes.swiperSlide}>
               <div className={classes.eventDate}>
                 <p>
                   24<span>Jully</span>
@@ -318,8 +333,10 @@ const IndexPage = () => {
                 <div className={classes.slideArrowHolder}>
                 </div>
               </div>
+              </div>
             </SwiperSlide>
-            <SwiperSlide className={classes.swiperSlide}>
+            <SwiperSlide>
+              <div className={classes.swiperSlide}>
               <div className={classes.eventDate}>
                 <p>
                   24<span>Jully</span>
@@ -344,12 +361,8 @@ const IndexPage = () => {
                 <div className={classes.slideArrowHolder}>
                 </div>
               </div>
+              </div>
             </SwiperSlide>
-            <SwiperSlide></SwiperSlide>
-            <SwiperSlide></SwiperSlide>
-            <SwiperSlide></SwiperSlide>
-
-
           </Swiper>
         </div>
       </section>

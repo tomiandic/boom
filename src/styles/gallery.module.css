@@ -23,7 +23,7 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     z-index: 2;
 }
@@ -149,6 +149,9 @@
     }
     .navContainer div{
         display: inline-block;
+    }
+    .quoteHolder{
+        margin-bottom: 10rem;
     }
 
     

@@ -40,7 +40,8 @@ const GallerySection = (props) => {
         trigger: DOM.image,
         start: "bottom bottom", //when the top of the trigger hits bottom of vw
         scrub: true,
-        pin: true
+        pin: true,
+        end: "+=500"
       },
     });
     gsap.from(DOM.quote, {
