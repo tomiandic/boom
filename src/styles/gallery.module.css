@@ -74,20 +74,21 @@
     transform: rotate(180deg);
 }
 .navContainer svg{
-    height: 30px;
-    width: 30px;
-    fill: var(--main);
-}
-.navContainer div{
-    padding: 7rem;
-    border: 2px solid var(--main);
-    border-radius: 50%;
+    height: 50px;
+    width: 150px;
     cursor: pointer;
-    transition: all 400ms ease-out;
-    display: none;
 }
-.navContainer div:hover{
-    transform: scale(1.2);
+.navContainer svg polyline,
+.navContainer svg line{
+    transition: all 300ms;
+    stroke: var(--main);
+    stroke-width: 1;
+
+}
+
+.navContainer svg:hover line,
+.navContainer svg:hover polyline{   
+    stroke-width: 3;
 }
 
 .sectionButton{
