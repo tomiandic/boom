@@ -10,6 +10,8 @@ import Blog from "../components/sections/Blog";
 import Reviews from "../components/sections/Reviews";
 import Header from "../components/Header";
 import Footer from "../components/sections/Footer";
+import Modal from "../components/Modal";
+
 
 
 //TODO: loader component needs to stop animations when unmounted which does not work
@@ -114,6 +116,7 @@ const IndexPage = () => {
 
   return (
     <>
+    <Modal />
       <section ref={landingContainer} className={classes.landing}>
         <Header />
         <Loader landingVideoRef={landingVideo} landingTL={landingTL} />
@@ -213,8 +216,8 @@ const IndexPage = () => {
               700: {
                 slidesPerView: 2.2,
               },
-              1400: {
-                slidesPerView: 3.2,
+              1500: {
+                slidesPerView: 2.6,
               },
             }}
             className={classes.swiperContainer}

@@ -30,6 +30,9 @@
 .quoteHolder img{
     z-index: -1;
     position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .imageOverlay{
     background: rgba(0, 0, 0, 0.6);
@@ -82,7 +85,7 @@
 .navContainer svg line{
     transition: all 300ms;
     stroke: var(--main);
-    stroke-width: 1;
+    stroke-width: 1.5;
 
 }
 

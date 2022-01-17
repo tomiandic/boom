@@ -227,6 +227,15 @@ section{
 .sliderNavigation div:first-of-type svg{
     transform: rotate(180deg);
 }
+
+@media (min-width: 1400px) {
+
+    .landingBottomContainer{
+        width: 45%!important;
+    }
+
+}
+
 @media (min-width: 900px) {
 
     .button{

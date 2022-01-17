@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import { gsap, Power3, Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { aboutSliderData } from "../../data/data";
-import { TimelineLite } from "gsap/all";
 
 import * as classes from "../../styles/about.module.css";
 gsap.registerPlugin(ScrollTrigger);
@@ -162,11 +161,6 @@ const About = (props) => {
               </div>
             </div>
           </div>
-          {/*   <div id="aboutImage" className={classes.imageHolder}>
-          <img className={classes.desktopImage} src="/about3.jpg" />
-          <img className={classes.mobileImage} src="/about.jpg" />
-          <p className={classes.largeTitle}>Other events</p>
-        </div> */}
           <div id="switcher" onClick={() => switchSlide()} className={classes.sliderSwitcher}>
             <p className={classes.switchNum}>{aboutSliderData[nextIndex].number}</p>
             <p id="slideHandleTitle" className={classes.switchTitle}>{aboutSliderData[nextIndex].title}</p>

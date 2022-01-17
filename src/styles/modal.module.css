@@ -1,0 +1,19 @@
+.modalBackdrop{
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    background: rgba(15, 17, 20, 0.5);
+    z-index: 1000;
+}
+.modalContainer{
+    display: flex;
+    background: #fff;
+    width: 80%;
+    max-width: 900px;
+    min-height: 450px;
+    border-radius: var(--borderRadiusDesktop);
+}
