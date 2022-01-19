@@ -116,7 +116,7 @@ const IndexPage = () => {
 
   return (
     <>
-    <Modal />
+   {/*  <Modal /> */}
       <section ref={landingContainer} className={classes.landing}>
         <Header />
         <Loader landingVideoRef={landingVideo} landingTL={landingTL} />

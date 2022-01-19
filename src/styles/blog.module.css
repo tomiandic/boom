@@ -81,7 +81,7 @@
     fill: #fff;
 }
 .swiperContainer{
-    width: 90vw;
+    width: 100vw;
     padding: 5rem 5vw!important;
 }
 .titleHolder{
@@ -99,7 +99,7 @@
     text-transform: uppercase;
     font-weight: 800;
     color: var(--black);
-    font-size: 18px;
+    font-size: 23px;
     z-index: 2;
     margin-left: 1rem;
 }

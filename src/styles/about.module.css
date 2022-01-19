@@ -68,7 +68,7 @@
 }
 .sliderSwitcher{
     height: 110px;
-    width: 50px;
+    width: 55px;
     background: var(--main);
     position: absolute;
     right: 0;
@@ -206,9 +206,9 @@ p .line{
 }
 .aboutPara{
     z-index: 1;
-    padding: 2rem 4rem;
+    padding: 2rem 1rem;
     max-width: 100%;
-    width: 90%;
+    width: 100%;
     margin-top: -7rem;
 }
 .seaDeco{

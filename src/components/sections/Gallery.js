@@ -86,6 +86,7 @@ const GallerySection = (props) => {
           </div>
         </div>
       </div>
+      <h2 className={classes.galleryTitle}>Gallery</h2>
       <Swiper
         effect={"cards"}
         grabCursor={true}

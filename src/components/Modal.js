@@ -9,9 +9,18 @@ const Modal = () => {
 
   return (
       <div className={classes.modalBackdrop}>
+    
           <div className={classes.modalContainer}>
-            <StaticImage src="../boat.jpg" />
+            <StaticImage className={classes.modalImage} src="../images/dj.jpg" />
+            <div className={classes.modalDetails}>
+            <h2>Get the news first</h2>
+            <p>Sign up to our newsletter and be first to get the info about our events and special prices </p>
+            <input type="text" placeholder="Enter email address"></input>
+            <button>Subscribe Now</button>
+            <img className={classes.closeButton} src="/icons/close.svg" />
           </div>
+          </div>
+         
       </div>
   );
 };
