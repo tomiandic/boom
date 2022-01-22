@@ -371,8 +371,8 @@ const IndexPage = () => {
       </section>
       <About />
       <Blog />
-      <Gallery />
       <Reviews />
+      <Gallery />
       <Footer />
     </>
   );

@@ -4,6 +4,7 @@
     overflow: hidden;
     display: flex;
     align-items: center;
+    background:var(--lightBackground);
 }
 
 .blogSection h1{
@@ -81,8 +82,7 @@
     fill: #fff;
 }
 .swiperContainer{
-    width: 100vw;
-    padding: 5rem 5vw!important;
+    padding: 5rem 1rem!important;
 }
 .titleHolder{
     height:65vh;

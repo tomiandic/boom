@@ -48,7 +48,7 @@
     text-align: center;
     z-index: 1;
     width: 90vw;
-    padding: 5vw;
+
     padding-top: 10vw;
 }
 .landingContent > h1{
@@ -118,6 +118,7 @@ p .line{
     width: 100vw;
     z-index: 1;
     position: relative;
+    margin-top: 2rem;
     margin-bottom: 55px;
     overflow:hidden;
 }
@@ -137,7 +138,7 @@ p .line{
     overflow: hidden;
     cursor: pointer;
     display: flex; 
-    height: 65px!important; 
+    height: 80px!important; 
     padding: 5px;
 }
 .swiperSlide:hover .eventDate{

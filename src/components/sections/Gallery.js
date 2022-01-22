@@ -31,7 +31,7 @@ const GallerySection = (props) => {
     };
 
     gsap.to(DOM.image, {
-      clipPath: "polygon(0 15%, 100% 20%, 100% 80%, 0 80%)",
+      clipPath: "polygon(0 18%, 100% 20%, 100% 80%, 0 80%)",
       scrollTrigger: {
         trigger: DOM.image,
         start: "bottom bottom", //when the top of the trigger hits bottom of vw

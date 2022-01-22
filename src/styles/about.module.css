@@ -73,7 +73,7 @@
     position: absolute;
     right: 0;
     top: 30rem;
-    padding: 10px;
+    padding: 7px;
     color: #fff;
     box-shadow: 0 0 20px -15px var(--main);
     cursor: pointer;
@@ -88,7 +88,7 @@
     height: 133px;
 } */
 .switchNum{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 800;
     margin-bottom: 5px;
 }
@@ -233,6 +233,40 @@ p .line{
     max-width: 100%;
     display: flex;
     overflow: hidden;
+    margin-bottom: -25vh;
+}
+.videoHolder iframe, 
+.videoHolder object, 
+.videoHolder embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+.videoHolder { 
+    position: relative; 
+    padding-bottom: 46.25%; 
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden; 
+    width: 95vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 5px 25px -8px rgb(8, 21, 51);
+    border-radius: var(--borderRadiusDesktop);
+    overflow: hidden;
+}
+.grayBackdrop{
+    background:var(--lightBackground);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 500px;
+    width: 100%;
+    z-index: -1;
 }
 @media (min-width: 1000px) {
     .sectionContainer{
@@ -321,5 +355,11 @@ p .line{
         line-height: 1.8rem;
         font-size: 15px;
         color: var(--black);
+    }
+    .videoHolder { 
+        width: 85vw;
+        margin: auto;
+        margin-top: 10rem;
+        margin-bottom: 8rem;
     }
 }

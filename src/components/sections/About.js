@@ -50,7 +50,7 @@ const About = (props) => {
     };
 
     gsap.to(DOM.scrolltext, {
-      xPercent: -110,
+      xPercent: -70,
       ease: Power3.easeOut,
       scrollTrigger: {
         trigger: DOM.scrolltext,
@@ -60,7 +60,7 @@ const About = (props) => {
       },
     }); 
 
-    gsap.to(DOM.scrolltext, {
+/*     gsap.to(DOM.scrolltext, {
       xPercent: -110,
       ease: Power3.easeOut,
       scrollTrigger: {
@@ -69,7 +69,7 @@ const About = (props) => {
         start: "top bottom", //when the top of the trigger hits bottom of vw
         end: "+=200%"
       },
-    }); 
+    });  */
 
     gsap.to(DOM.slideSwitcher, {
       y: 300,
@@ -121,7 +121,7 @@ const About = (props) => {
       }, "-=1")
 
   }, []);
-  console.log(nextIndex)
+
   return (
     <section ref={aboutContainer} className={classes.aboutSection}>
       <div className={classes.aboutTopHolder}>
@@ -172,9 +172,16 @@ const About = (props) => {
           </div>
         </div>
       </div>
-      <div className={classes.scrolltextHolder}>
-        <h2 id="scrolltext" className={classes.scrolltext}>Beat of ordinary madness</h2> 
+       <div className={classes.scrolltextHolder}>
+        <h2 id="scrolltext" className={classes.scrolltext}>AFTErmovie</h2> 
+      </div> 
+      <div className={classes.videoHolder}>
+        <iframe className={classes.videoIframe} src="https://www.youtube-nocookie.com/embed/0ajlLKc3N1A?controls=0&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+      <div className={classes.grayBackdrop}></div>
+   {/*    <div className={classes.scrolltextHolder}>
+        <h2 id="scrolltext" className={classes.scrolltext}>Beat of ordinary madness</h2> 
+      </div> */}
     </section>
   );
 };

@@ -72,6 +72,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%);
+    display: none;
 }
 .navContainer div:first-of-type svg{
     transform: rotate(180deg);
@@ -168,7 +169,8 @@
     .galleryTitle{
         font-size: 45px;
         font-weight: 800;
-        margin-bottom: 3rem;
+        margin-bottom: 6rem;
+        margin-top: -3rem;
     }
     
 }
