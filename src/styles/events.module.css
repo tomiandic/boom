@@ -1,0 +1,129 @@
+.eventsSection{
+    padding-top: 5rem;
+    background: var(--lightBackground)
+}
+
+.eventsSection h1{
+    color: var(--black);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 5rem;
+    
+}
+
+.eventsHolder{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-gap: 2.5rem;
+    width: 90%;
+    max-width: 1300px;
+    margin:  5rem auto;
+}
+
+.event{
+    background: #fff;
+    border-radius: var(--borderRadiusDesktop);
+    color: var(--black);
+    box-shadow: 0 10px 40px -10px #e1e5e8;
+    position: relative;
+    cursor: pointer;
+    transition: 200ms ease-out box-shadow;
+}
+.event:hover{
+    box-shadow: 0 20px 40px -10px #c7d2dd;
+}
+.event:hover .eventDeco{
+    width: 100%;
+}
+.eventDeco{
+    height: 3px;
+    width: 0;
+    background: var(--secondary);
+    position: absolute;
+    top:0;
+    left:0;
+    transition: 250ms width ease-out ;
+}
+.eventImage{
+    height: 150px;
+    border-radius: var(--borderRadiusDesktop);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.eventTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Syne", sans-serif;
+}
+.eventSubDetails{
+    font-size: .75rem;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;;
+}
+.eventSubDetails img{
+    height: 19px;
+    width: 19px;
+}
+.eventSubDetails p{
+    opacity: .7;
+    margin-right: 1rem;
+    margin-left: 5px;
+    margin-top: 4px;
+}
+.eventDetails{
+    padding: 1rem;
+    position: relative;
+}
+
+.earlyBird{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--main);
+    z-index: 1;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: .8rem;
+    font-family: "Syne", sans-serif;
+    font-weight: 500;
+}
+
+.priceContainer{
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid lightgray;
+}
+.priceContainer span{
+    opacity: .7;
+    font-size: .7rem;
+    margin-bottom: 13px;
+}
+.priceContainer p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+@media (min-width: 1000px) {
+
+    .eventImage{
+        height: 200px;
+    }
+    .eventTitle{
+        font-size: 1.1rem;
+    }
+
+    .eventSubDetails {
+       font-size: .8rem;
+    }
+    .priceContainer{
+        margin-top: 18px;
+        padding-top: 18px;
+        border-top: 1px solid lightgray;
+    }
+    .eventDetails{
+        padding: 1.2rem;
+        position: relative;
+    }
+}

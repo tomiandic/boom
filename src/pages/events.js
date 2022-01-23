@@ -2,17 +2,17 @@ import React, { useEffect, useRef } from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/sections/Footer";
-import BlogPost from "../components/BlogPost";
+import Events from "../components/Events";
 
 
-const post = () => {
+const events = () => {
     return(
         <>
             <Header />
-            <BlogPost />
+            <Events />
             <Footer />
         </>
     )
 }
 
-export default post;
+export default events;
