@@ -1,0 +1,127 @@
+.titleHolder .postImage{
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.titleHolder{
+    height: 80vh;
+    position: relative;
+}
+.postArticle{
+    width: 100%;
+    margin: auto;
+}
+.postArticle h2{
+    text-align:center;
+    color: lightgray;
+    font-size: 32px;
+    margin-top: 11rem;
+    font-weight: 500;
+    letter-spacing: 10px;
+}
+.imgOverlay{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem;
+    color: #fff;
+}
+.imgOverlay h1{
+    font-size: 2.5rem;
+    font-family: 'Syne', sans-serif!important;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+/* .imgOverlay p{
+    color: var(--main-color);
+    font-size:.8rem;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+ */
+.articleDetails{
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    background: #fff;
+    z-index: 1;
+    position: relative;
+    padding: 1rem;
+    height: 4rem;
+    box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.1);
+    margin-top: -2rem;
+    border-top: 5px solid var(--secondary-color);
+    border-radius: var(--borderRadiusDesktop);
+}
+.postCat{
+    font-size:.60rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    color:var(--black);
+    font-style: italic;
+    line-height: 1rem;
+}
+.postCat:nth-of-type(2){
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    padding: 0 1.5rem;
+    margin: 0 1.5rem;
+}
+.articleText{
+    width: 90%;
+    max-width: 750px;
+    margin:auto;
+    color: var(--black);
+    margin-top: 6rem;
+    user-select: text;
+    line-height: 1.8rem;
+    margin-bottom: 25rem;
+}
+
+
+@media(max-width:800px){
+
+    .articleDetails{
+        padding: 20px;
+        border:none;
+    }
+    .postCat{
+        font-size: .6rem;
+
+    }
+    .articleText{
+        font-size: .8rem;
+        margin-top: 3rem;
+    }
+}
+
+@media(max-width:600px){
+    .titleHolder{
+        height: 40vh;
+    }
+    .postCat{
+        font-size: .5rem;
+    }
+    .postArticle h2{
+        margin-top: 6rem;
+        line-height:3rem;
+    }
+    .titleHolder h1{
+        font-size: 1.2rem;
+    }
+    .imgOverlay{
+        padding: 1rem;
+    }
+}

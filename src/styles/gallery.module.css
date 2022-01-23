@@ -160,8 +160,8 @@
         width: 70vw;
         height: 700px; 
     }
-    .navContainer div{
-        display: inline-block;
+    .navContainer{
+        display: flex;
     }
     .quoteHolder{
         margin-bottom: 10rem;

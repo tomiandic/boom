@@ -50,13 +50,13 @@ const About = (props) => {
     };
 
     gsap.to(DOM.scrolltext, {
-      xPercent: -70,
+      xPercent: -80,
       ease: Power3.easeOut,
       scrollTrigger: {
         trigger: DOM.scrolltext,
         scrub: 1,
         start: "top bottom", //when the top of the trigger hits bottom of vw
-        end: "+=200%"
+        end: "+=150%"
       },
     }); 
 

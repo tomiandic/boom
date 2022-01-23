@@ -76,21 +76,27 @@ const Blog = (props) => {
         className={classes.swiperContainer}
       >
        
-        <SwiperSlide className={classes.article}>
-          <div className={classes.articleOverlay} />
-          <img src="/gallery/1.jpg" />
-          <div className={classes.articleDetails}>
-            <p className={classes.articleDate}>22 July 2022</p>
-            <h3>Article title about some event or other info about boom events </h3>
-            <p className={classes.articleTooltip}>Click to open article</p>
-          </div>
-          <div className={classes.postArrow}>
-            <svg width="20" height="20" viewBox="0 0 24 24">
-              <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-            </svg>
-          </div>
+        <SwiperSlide >
+          <Link to="/post">
+          <article className={classes.article}>
+            <div className={classes.articleOverlay} />
+            <img src="/gallery/1.jpg" />
+            <div className={classes.articleDetails}>
+              <p className={classes.articleDate}>22 July 2022</p>
+              <h3>Article title about some event or other info about boom events </h3>
+              <p className={classes.articleTooltip}>Click to open article</p>
+            </div>
+            <div className={classes.postArrow}>
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+              </svg>
+            </div>
+            </article>
+          </Link> 
         </SwiperSlide>
-        <SwiperSlide className={classes.article}>
+        <SwiperSlide>
+        <Link to="/post">
+          <article className={classes.article}>
           <div className={classes.articleOverlay} />
           <img src="/gallery/2.jpg" />
           <div className={classes.articleDetails}>
@@ -104,8 +110,12 @@ const Blog = (props) => {
               <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
             </svg>
           </div>
+          </article>
+          </Link>
         </SwiperSlide>{" "}
-        <SwiperSlide className={classes.article}>
+        <SwiperSlide>
+        <Link to="/post">
+          <article className={classes.article}>
           <div className={classes.articleOverlay} />
           <img src="/gallery/6.jpg" />
           <div className={classes.articleDetails}>
@@ -119,8 +129,12 @@ const Blog = (props) => {
               <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
             </svg>
           </div>
+          </article>
+          </Link>
         </SwiperSlide>{" "}
-        <SwiperSlide className={classes.article}>
+        <SwiperSlide>
+        <Link to="/post">
+          <article className={classes.article}>
           <div className={classes.articleOverlay} />
           <img src="/gallery/4.jpg" />
           <div className={classes.articleDetails}>
@@ -134,8 +148,12 @@ const Blog = (props) => {
               <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
             </svg>
           </div>
+          </article>
+          </Link>
         </SwiperSlide>
-        <SwiperSlide className={classes.article}>
+        <SwiperSlide>
+        <Link to="/post">
+          <article className={classes.article}>
           <div className={classes.articleOverlay} />
           <img src="/gallery/4.jpg" />
           <div className={classes.articleDetails}>
@@ -149,8 +167,12 @@ const Blog = (props) => {
               <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
             </svg>
           </div>
+          </article>
+          </Link>
         </SwiperSlide>
-        <SwiperSlide className={classes.article}>
+        <SwiperSlide>
+        <Link to="/post">
+          <article className={classes.article}>
           <div className={classes.articleOverlay} />
           <img src="/gallery/4.jpg" />
           <div className={classes.articleDetails}>
@@ -164,6 +186,8 @@ const Blog = (props) => {
               <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
             </svg>
           </div>
+          </article>
+          </Link>
         </SwiperSlide>
         <SwiperSlide></SwiperSlide>
         <div className={classes.sliderNavigation}>

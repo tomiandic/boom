@@ -6,7 +6,7 @@ module.exports = {
         {
             resolve: `gatsby-source-instagram`,
             options: {
-              username: `usernameId`,
+              username: `11629345558`,
             },
         },
         `gatsby-plugin-image`,

@@ -82,7 +82,7 @@ const Header = ({ pageIsLoaded }) => {
 
   return (
     <nav ref={mobileNav} className={classes.headerContainer}>
-      <img className={classes.logo} src="/boom_all_white.svg" />
+      <Link to="/"><img className={classes.logo} src="/boom_all_white.svg" /></Link>
       <div className={classes.navLinks}>
         <Link
           className={classes.navLink}

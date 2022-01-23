@@ -225,7 +225,7 @@ p .line{
     text-transform: uppercase;
     font-weight: 800;
     color: var(--black);
-    font-size: 6rem;
+    font-size: 4rem;
     white-space: nowrap;
     transform: translateX(50%);
 }
@@ -233,7 +233,7 @@ p .line{
     max-width: 100%;
     display: flex;
     overflow: hidden;
-    margin-bottom: -25vh;
+    margin-bottom: -22vh;
 }
 .videoHolder iframe, 
 .videoHolder object, 
@@ -251,7 +251,7 @@ p .line{
     height: 0; 
     overflow: hidden; 
     width: 95vw;
-    height: 50vh;
+    height: 30vh;
     margin: auto;
     margin-top: 10rem;
     margin-bottom: 4rem;
@@ -358,6 +358,7 @@ p .line{
     }
     .videoHolder { 
         width: 85vw;
+        height: 50vh;
         margin: auto;
         margin-top: 10rem;
         margin-bottom: 8rem;
