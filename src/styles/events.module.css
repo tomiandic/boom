@@ -1,14 +1,6 @@
 .eventsSection{
     padding-top: 5rem;
-    background: var(--lightBackground)
-}
-
-.eventsSection h1{
-    color: var(--black);
-    font-size: 30px;
-    text-align: center;
-    margin-top: 5rem;
-    
+    background: rgb(242, 246, 248);
 }
 
 .eventsHolder{
@@ -27,10 +19,14 @@
     box-shadow: 0 10px 40px -10px #e1e5e8;
     position: relative;
     cursor: pointer;
-    transition: 200ms ease-out box-shadow;
+    transition: 200ms ease-out all;
 }
 .event:hover{
     box-shadow: 0 20px 40px -10px #c7d2dd;
+    transform: scale(1.01) translateY(-2px);
+}
+.event:hover .eventImage img{
+    transform: scale(1.03) rotate(.3deg);
 }
 .event:hover .eventDeco{
     width: 100%;
@@ -50,10 +46,13 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
-
+.eventImage img{
+    transition: 250ms all ease-out!important;
+}
 .eventTitle{
     font-size: 1rem;
     font-weight: 600;
+    min-height: 40px;
     font-family: "Syne", sans-serif;
 }
 .eventSubDetails{
@@ -103,6 +102,41 @@
 .priceContainer p{
     font-size: 1.2rem;
     font-weight: 600;
+}
+.svgWave{
+    stroke: var(--secondary);
+    position: absolute;
+    width: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 21vh;
+}
+.eventsSection h1{
+    color: var(--black);
+    font-size: 35px;
+    margin-top: 5rem;
+}
+.eventsTitle{
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+}
+.eventsTitle p{
+    opacity: .6;
+}
+.openSign{
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--main);
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+}
+.openSign svg{
+    height: 20px;
+    fill: var(--main);
 }
 
 @media (min-width: 1000px) {
