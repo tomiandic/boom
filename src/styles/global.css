@@ -9,11 +9,9 @@
     box-sizing: border-box;
     user-select: none;
 }
-
 html, body{
     min-height: 100%;
 }
-
 :root{
     /* --main: #ff7b00; */
     --main: #ff5200;
@@ -24,9 +22,7 @@ html, body{
     --white: #f3f0f0;
     --lightBackground: #f0f5f5;
     --borderRadiusDesktop: 8px;
-
 }
-
 .sectionContent{
     width: 90vw;
     margin: auto;

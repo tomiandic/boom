@@ -1,0 +1,172 @@
+.eventSection{
+    background: rgb(250, 250, 250);
+}
+.bookingDetails{
+    width: 350px;
+    height: 450px;
+    background: #fff;
+    position: sticky;
+    top: 6rem;
+    position: -webkit-sticky;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.eventHolder{
+    display:flex;
+    max-width: 1350px;
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+    position: relative;
+    min-height: 100vh;
+    z-index: 1;
+}
+.bookingPrice{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--main);
+}
+.bookingDetail{
+    color: gray;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    font-size: 14px;
+}
+.bookingDetailInfo{
+    font-weight: 700;
+    color: var(--black);
+    font-size: 14px;
+}
+.bookingButton{
+    padding: 20px 50px;
+    width: 100%;
+    align-items: center;
+    border: none;
+    background-color: var(--main);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    font-weight: 800;
+    transition: transform 300ms;
+    font-size: 16px;
+    margin-top: auto;
+}
+.bookingButton:hover{
+    transform: scale(1.03);
+}
+.itineraryNavigation{
+    margin-top: 4rem;
+    margin-bottom: -1.3rem;
+}
+.itineraryNavigation a{
+    padding: 11px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    border-bottom: 2px solid #fff;
+    cursor:pointer;
+}
+.itineraryNavigation a:hover,
+.itineraryNavigation a.active{
+    color: var(--main);
+    border-bottom: 2px solid var(--main);
+}
+.itineraryPart{
+    background: #fff;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 8px;
+}
+.overviewGrid{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+.overviewGridItem img{
+    height: 2.2rem;
+    width: 2.2rem;
+    margin-right: 10px;
+}
+.overviewGridItem{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+    .eventBanner{
+        height: 750px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    .eventImage{
+        position: absolute;
+        z-index: -1;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .eventItineraryHolder{
+        margin-right: 1rem;
+        color: var(--black);
+        position: relative;
+        flex: 1;
+    }
+    .eventHeader h1{
+        font-size: 26px;
+        font-weight: 800;
+    }
+    .headerDetails{
+        opacity: .5;
+        display: flex;
+        color: var(--black);
+        margin-top: 10px;
+    }
+    .headerDetails svg{
+        height: 1rem;
+        width: 1rem;
+        fill: var(--black);
+    }
+    .headerDetails p{
+        font-size: 12px!important;
+        font-weight: 600;
+        margin-right: 1.5rem;
+        margin-left: 5px;
+        text-transform: uppercase;
+    }
+    .bookingOverview{
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .bookingOverview p{
+        flex: 1.5;
+    }
+.eventHolder p{
+    font-size: 14px;
+    line-height: 23px;
+}
+.bookingRoute{
+    margin-top: 2rem;
+}
+.bookingRoute>div{
+    width: 100%;
+    border-radius: 8px;
+}
+.itineraryPart h6{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    min-width: 100%;
+}
