@@ -31,6 +31,7 @@ html, body{
 .swiper-button-disabled{
     opacity: .3;
 }
+
 .swiper-horizontal > .swiper-pagination-progressbar{
     width: 65%!important;
     height: 2px!important;
@@ -41,6 +42,26 @@ html, body{
 }
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
     background: var(--secondary);
+}
+/* TIMELINE MODIFICATION */
+.event .markdown{
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--black);
+}
+.event img{
+    border-radius: 6px;
+    margin-bottom: 1rem!important;
+}
+.event .card{
+    flex-direction: column-reverse!important;
+}
+.event .date-container{
+    position: absolute!important;
+    top: 25px;
+    left: 40px;
+    transform: translateY(-50%);
+    z-index: 10;
 }
 
 @media (min-width: 900px) {

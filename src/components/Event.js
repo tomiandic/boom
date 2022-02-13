@@ -12,27 +12,27 @@ import {
 const customTheme = createTheme(themes.default, {
   card: {
     maxWidth: "100%",
-    flexDirection: "column-reverse",
     flexFlow: "column-reverse",
     padding: "1.5rem",
-    boxShadow: "0 2px 15px 0 hsla(0, 0%, 0%, 0.1)",
-    "&.markdown": {
-      background: "red",
-    },
+    boxShadow: "0 10px 25px -8px hsl(0deg 0% 0% / 10%)",
+    borderRadius: "6px"
   },
   date: {
-    backgroundColor: "#ff5200",
-    fontSize: "13px",
+    backgroundColor: "#25373f",
+    fontSize: "10px",
+    padding: "5px 12px",
+    borderRadius: "15px"
+ 
   },
   imageAtom: {
     maxHeight: "300px",
     borderRadius: "8px",
   },
   marker: {
-    borderColor: "#ff5200",
+    borderColor: "gray",
   },
   timelineTrack: {
-    backgroundColor: "#ff5200",
+    backgroundColor: "lightgray",
   },
   event: {
     margin: "3rem 0",
@@ -45,7 +45,7 @@ const Event = () => {
       <div className={classes.eventBanner}>
         <StaticImage
           className={classes.eventImage}
-          src="../images/ab.jpg"
+          src="../images/b-top.jpg"
           alt="123321"
         />
       </div>
@@ -206,6 +206,9 @@ const Event = () => {
               </Events>
             </Timeline>
           </div>
+          <div className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
+
+            </div>
         </div>
         <div className={classes.bookingDetails}>
           <div className={classes.bookingDetail}>
