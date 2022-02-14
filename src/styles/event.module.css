@@ -12,6 +12,9 @@
     border-radius: 4px;
     box-shadow: 0 10px 50px -25px rgb(158, 158, 158);
 }
+.vertical-timeline-element--work{
+    box-shadow: 0 0 20px 2px black;
+}
 .eventHolder{
     display:flex;
     max-width: 1350px;

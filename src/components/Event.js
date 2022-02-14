@@ -1,43 +1,8 @@
 import React from "react";
 import * as classes from "../styles/event.module.css";
 import { StaticImage } from "gatsby-plugin-image";
-import {
-  Timeline,
-  Events,
-  ImageEvent,
-  themes,
-  createTheme,
-} from "@merc/react-timeline";
-
-const customTheme = createTheme(themes.default, {
-  card: {
-    maxWidth: "100%",
-    flexFlow: "column-reverse",
-    padding: "1.5rem",
-    boxShadow: "0 10px 25px -8px hsl(0deg 0% 0% / 10%)",
-    borderRadius: "6px"
-  },
-  date: {
-    backgroundColor: "#25373f",
-    fontSize: "10px",
-    padding: "5px 12px",
-    borderRadius: "15px"
- 
-  },
-  imageAtom: {
-    maxHeight: "300px",
-    borderRadius: "8px",
-  },
-  marker: {
-    borderColor: "gray",
-  },
-  timelineTrack: {
-    backgroundColor: "lightgray",
-  },
-  event: {
-    margin: "3rem 0",
-  },
-});
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
 
 const Event = () => {
   return (
@@ -168,47 +133,87 @@ const Event = () => {
           </div>
           <div className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
             <h6>Itinerary</h6>
-            <Timeline
-              opts={{ layout: "inline-evts-inline-date" }}
-              theme={customTheme}
-            >
-              <Events>
-                <ImageEvent
-                  date="16:00"
-                  text=" Vestibulum faucibus nunc massa, tincidunt mollis quam vulputate
-                  vitae. Nulla sagittis, purus vel tincidunt efficitur, nulla nulla
-                  commodo ligula, at faucibus erat erat vitae ipsum. Maecenas
-                  euismod pellentesque odio, at feugiat urna finibus in. Ut vitae
-                  mollis sapien. Curabitur vestibulum at metus eget gravida. Fusce
-                  porta quam vel lacus sodales, sit amet accumsan nunc porta. Duis
-                  dignissim justo in lacus semper tempor. Mauris ut mi rhoncus,
-                  malesuada lacus a, faucibus eros. Fusce eu vehicula enim, in
-                  tincidunt ipsum. Maecenas scelerisque augue id laoreet convallis.
-                  Vivamus dapibus sollicitudin nunc non malesuada. Praesent id orci
-                  varius, mattis tellus at, pretium lectus. "
+            <VerticalTimeline layout="1-column-left" lineColor="lightgray">
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+                iconStyle={{ background: '#ff5200', color: '#fff' }}
+              >
+                <h4 className="vertical-timeline-element-title">Meetup at the dock</h4>
+                <br/>
+                <img
                   src="/about.jpg"
-                ></ImageEvent>
-                <ImageEvent
-                  date="16:00"
-                  text=" Vestibulum faucibus nunc massa, tincidunt mollis quam vulputate
+                />
+                <p>
+                  Vestibulum faucibus nunc massa, tincidunt mollis quam vulputate
                   vitae. Nulla sagittis, purus vel tincidunt efficitur, nulla nulla
                   commodo ligula, at faucibus erat erat vitae ipsum. Maecenas
                   euismod pellentesque odio, at feugiat urna finibus in. Ut vitae
                   mollis sapien. Curabitur vestibulum at metus eget gravida. Fusce
                   porta quam vel lacus sodales, sit amet accumsan nunc porta. Duis
                   dignissim justo in lacus semper tempor. Mauris ut mi rhoncus,
-                  malesuada lacus a, faucibus eros. Fusce eu vehicula enim, in
-                  tincidunt ipsum. Maecenas scelerisque augue id laoreet convallis.
-                  Vivamus dapibus sollicitudin nunc non malesuada. Praesent id orci
-                  varius, mattis tellus at, pretium lectus. "
-                  src="/loading-pic.jpg"
-                ></ImageEvent>
-              </Events>
-            </Timeline>
+                  malesuada lacus a, faucibus eros.
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+                date="16:00 - 18:00"
+                iconStyle={{ background: '#ff5200', color: '#fff' }}
+              >
+                <h3 className="vertical-timeline-element-title">Start</h3>
+                <p>
+                  Vestibulum faucibus nunc massa, tincidunt mollis quam vulputate
+                  vitae. Nulla sagittis, purus vel tincidunt efficitur, nulla nulla
+                  commodo ligula, at faucibus erat erat vitae ipsum. Maecenas
+                  euismod pellentesque odio, at feugiat urna finibus in. Ut vitae
+                  mollis sapien. Curabitur vestibulum at metus eget gravida. Fusce
+                  porta quam vel lacus sodales, sit amet accumsan nunc porta. Duis
+                  dignissim justo in lacus semper tempor. Mauris ut mi rhoncus,
+                  malesuada lacus a, faucibus eros.
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+                date="16:00 - 18:00"
+                iconStyle={{ background: '#ff5200', color: '#fff' }}
+              >
+                <h3 className="vertical-timeline-element-title">Start</h3>
+                <p>
+                  Vestibulum faucibus nunc massa, tincidunt mollis quam vulputate
+                  vitae. Nulla sagittis, purus vel tincidunt efficitur, nulla nulla
+                  commodo ligula, at faucibus erat erat vitae ipsum. Maecenas
+                  euismod pellentesque odio, at feugiat urna finibus in. Ut vitae
+                  mollis sapien. Curabitur vestibulum at metus eget gravida. Fusce
+                  porta quam vel lacus sodales, sit amet accumsan nunc porta. Duis
+                  dignissim justo in lacus semper tempor. Mauris ut mi rhoncus,
+                  malesuada lacus a, faucibus eros.
+                </p>
+              </VerticalTimelineElement>
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentArrowStyle={{ borderRight: '7px solid  #fff' }}
+                date="16:00 - 18:00"
+                iconStyle={{ background: '#ff5200', color: '#fff' }}
+              >
+                <h3 className="vertical-timeline-element-title">Start</h3>
+                <p>
+                  Vestibulum faucibus nunc massa, tincidunt mollis quam vulputate
+                  vitae. Nulla sagittis, purus vel tincidunt efficitur, nulla nulla
+                  commodo ligula, at faucibus erat erat vitae ipsum. Maecenas
+                  euismod pellentesque odio, at feugiat urna finibus in. Ut vitae
+                  mollis sapien. Curabitur vestibulum at metus eget gravida. Fusce
+                  porta quam vel lacus sodales, sit amet accumsan nunc porta. Duis
+                  dignissim justo in lacus semper tempor. Mauris ut mi rhoncus,
+                  malesuada lacus a, faucibus eros.
+                </p>
+              </VerticalTimelineElement>
+            </VerticalTimeline>
           </div>
           <div className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
 
-            </div>
+          </div>
         </div>
         <div className={classes.bookingDetails}>
           <div className={classes.bookingDetail}>

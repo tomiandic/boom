@@ -43,25 +43,17 @@ html, body{
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
     background: var(--secondary);
 }
-/* TIMELINE MODIFICATION */
-.event .markdown{
+.vertical-timeline-element-content{
+    box-shadow: 5px 0 30px -5px rgb(221, 224, 228);
+}
+.vertical-timeline-element--work img{
+    width: 100%;
+    border-radius: 5px;
+    max-height: 300px;
+    object-fit: cover;
+}
+.vertical-timeline-element--work p{
     font-size: 14px;
-    line-height: 22px;
-    color: var(--black);
-}
-.event img{
-    border-radius: 6px;
-    margin-bottom: 1rem!important;
-}
-.event .card{
-    flex-direction: column-reverse!important;
-}
-.event .date-container{
-    position: absolute!important;
-    top: 25px;
-    left: 40px;
-    transform: translateY(-50%);
-    z-index: 10;
 }
 
 @media (min-width: 900px) {
