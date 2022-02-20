@@ -16,7 +16,6 @@ const Landing = () => {
 
     const navPrev = useRef();
     const navNext = useRef();
-  
     const landingContainer = useRef();
     const landingVideo = useRef();
     const slidesContainer = useRef();
@@ -349,6 +348,15 @@ const Landing = () => {
       </div>
       </div>
     </SwiperSlide>
+    <SwiperSlide><div className={classes.swiperSlide}><div className={classes.swiperButton}>Show all events    <svg
+      style={{ marginLeft: 10 }}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+    </svg></div></div></SwiperSlide>
+    <SwiperSlide></SwiperSlide>
   </Swiper>
 </div>
 </section>)}
