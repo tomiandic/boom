@@ -29,7 +29,7 @@
 }
 .bookingPrice{
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--black);
 }
 .bookingDetail{
@@ -56,16 +56,18 @@
     background: #fff;
     color: var(--main);
     cursor: pointer;
-    border-radius: 2px;
+    border-radius: 3px;
     letter-spacing: 1px;
     white-space: nowrap;
     font-weight: 600;
     transition: transform 300ms;
     font-size: 16px;
     margin-top: 20px;
+    transition: all 130ms ease-in;
 }
 .bookingButton:hover{
-    transform: scale(1.03);
+    background: var(--main);
+    color: #fff;
 }
 .itineraryNavigation{
     margin-top: 4rem;
@@ -178,7 +180,6 @@
 .itineraryPart h6{
     margin-bottom: 1rem;
     font-size: 1.3rem;
-    min-width: 100%;
     font-weight: 600;
 }
 .inclusionPart{
@@ -216,30 +217,53 @@
     border-radius: 3px;
 }
 .ticketCategoryBox h6{
-    font-size: 17px;
+    font-size: 20px;
     margin-bottom: 5px;
 }
 .ticketPrice{
     font-size: 13px;
+    margin-left: auto;
     font-weight: 500;
+    text-align: right;
 }
 .ticketCategoryBox{
     padding: 18px;
     border: 1px solid lightgray;
     margin-top: 13px;
     position: relative;
+    display: flex;
+}
+.ticketCategoryBoxDisabled{
+    opacity: .4;
 }
 .ticketCategoryBox span{
-    font-size: 16px;
-    position:absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgb(240, 240, 240);
-    padding: 10px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     border-radius: 5px;
+    display: inline-block;
+}
+.ticketCategoryBox i{
+    display: block;
+    font-size: 12px;
+    margin-top: 8px;
+    opacity: .7;
 }
 .soldOut{
     color: gray!important;
+}
+.bookTicketButton{
+    padding: 10px 15px;
+    margin-top: 20px;
+    background: var(--main);
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 100ms all ease-out;
+}
+
+.bookTicketButton:hover{
+    background: var(--mainDark);
 }

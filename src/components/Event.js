@@ -355,27 +355,28 @@ const Event = () => {
           </div>
           <div className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
             <h6>Tickets</h6>
-            <div className={classes.ticketCategoryBox}>
+            <div className={`${classes.ticketCategoryBox} ${classes.ticketCategoryBoxDisabled}`}>
               <h6>Boat Party Ticket - Early Bird</h6>
               <div className={classes.ticketPrice}>
-                5.00$ booking fee
-              </div>
               <span className={classes.soldOut}>SOLD OUT</span>
+              </div>
             </div>
             <div className={classes.ticketCategoryBox}>
               <h6>Boat Party Ticket - Regular</h6>
               <div className={classes.ticketPrice}>
-                 + 5.00$ booking fee
-              </div>
               <span>55.00$</span>
+              <i>+ 5.00$ booking fee</i> 
+              <button className={classes.bookTicketButton}>Add to basket</button>
+              </div>
 
             </div>
             <div className={classes.ticketCategoryBox}>
               <h6>Boat Party Ticket - VIP</h6>
               <div className={classes.ticketPrice}>
-                + 5.00$ booking fee
-              </div>
               <span>65.00$</span>
+               <i>+ 5.00$ booking fee</i> 
+               <button className={classes.bookTicketButton}>Add to basket</button>
+              </div>
 
             </div>
           </div>
