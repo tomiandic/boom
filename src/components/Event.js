@@ -358,7 +358,8 @@ const Event = () => {
             <div className={`${classes.ticketCategoryBox} ${classes.ticketCategoryBoxDisabled}`}>
               <h6>Boat Party Ticket - Early Bird</h6>
               <div className={classes.ticketPrice}>
-              <span className={classes.soldOut}>SOLD OUT</span>
+              <span>45.00$</span><br/>
+              <span className={classes.soldOut}>Sold out</span>
               </div>
             </div>
             <div className={classes.ticketCategoryBox}>
@@ -366,20 +367,19 @@ const Event = () => {
               <div className={classes.ticketPrice}>
               <span>55.00$</span>
               <i>+ 5.00$ booking fee</i> 
-              <button className={classes.bookTicketButton}>Add to basket</button>
+              <button className={classes.bookTicketButton}>Book a Ticket</button>
               </div>
-
             </div>
             <div className={classes.ticketCategoryBox}>
               <h6>Boat Party Ticket - VIP</h6>
               <div className={classes.ticketPrice}>
               <span>65.00$</span>
                <i>+ 5.00$ booking fee</i> 
-               <button className={classes.bookTicketButton}>Add to basket</button>
+               <button className={classes.bookTicketButton}>Book a Ticket</button>
               </div>
-
             </div>
           </div>
+          <br/>
         </div>
         <div className={classes.bookingDetails}>
           <div className={classes.bookingDetail}>
