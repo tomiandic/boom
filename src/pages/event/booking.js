@@ -8,12 +8,12 @@ import StepWizard from "react-step-wizard";
 const Booking = () => {
   return (
     <section className={classes.bookingSection}>
-    <StepWizard>
-        <BookingStep />
-        <BookingStep />
-        <BookingStep />
-        <BookingStep />
-    </StepWizard>
+      <StepWizard>
+          <BookingStep />
+          <BookingStep />
+          <BookingStep />
+          <BookingStep />
+      </StepWizard>
     </section>
   );
 };
