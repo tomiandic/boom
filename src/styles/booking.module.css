@@ -68,3 +68,34 @@
     align-self: flex-end;
     cursor: pointer;
 }
+
+.bookingLogo{
+    width: 120px;
+    margin-bottom: 2rem;
+}
+.bookingEventImage{
+    height: 160px;
+    width: 280px;
+    border-radius: 3px;
+    margin-right: 1.5rem;
+    box-shadow: 0 20px 50px -20px #a2aeba;
+}
+.eventHolder{
+    display: flex;
+    margin-bottom: 3rem;
+}
+.eventHolder h6{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.eventHolder p{
+    font-size: 15px;
+    font-weight: 500;
+}
+.eventHolder span:not(:last-of-type){
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid gray;
+}

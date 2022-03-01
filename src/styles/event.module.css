@@ -145,7 +145,7 @@
     .headerDetails svg{
         height: 1rem;
         width: 1rem;
-        fill: var(--main);
+        fill: var(--black);
     }
     .headerDetails p{
         line-height: unset;
@@ -220,7 +220,7 @@
     border-radius: 3px;
 }
 .ticketCategoryBox h6{
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 .ticketPrice{
