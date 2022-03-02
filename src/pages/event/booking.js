@@ -6,7 +6,19 @@ import StepWizard from "react-step-wizard";
 import Header from "../../components/Header";
 import Countdown from "react-countdown";
 
-
+const renderer = ({ hours, minutes, seconds, completed }) => {
+  if (completed) {
+    // Render a complete state
+    return "Ticket booking expired";
+  } else {
+    // Render a countdown
+    return (
+      <span>
+        {minutes}:{seconds}
+      </span>
+    );
+  }
+};
 
 const Booking = () => {
   return (
@@ -16,10 +28,12 @@ const Booking = () => {
         <div className={classes.eventHolder}>
           <StaticImage className={classes.bookingEventImage} src="../images/b-top.jpg" />
           <div>
-            <h6>Party Boom Boat Party</h6>
+            <h6>Event: Party Boom Boat Party</h6>
             <p><span>Jan 6. </span> <span> Pula </span><span> 18:00</span></p>
           </div>
-          <Countdown date={Date.now() + 10000}  />
+          <div className={classes.countdown}>
+          <Countdown renderer={renderer} date={Date.now() + 600000}  />
+          </div>
         </div>
         <StepWizard>
             <BookingStep />

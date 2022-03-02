@@ -36,7 +36,9 @@ const BookingStep = (props) => {
             <PeopleCounter initialValue={1} />
             </div>
             
-           
+            <div className={classes.ticketType}>
+              Total ticket price: <span className={classes.ticketTotal}>500.00$</span>
+            </div>
             <button className={classes.mainButtonWizard} onClick={props.nextStep}>Next Step</button>
         </div>
     );

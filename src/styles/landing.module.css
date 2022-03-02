@@ -288,7 +288,7 @@ section{
         font-size: 11px;
     }
     .backdropGradient{
-        background: linear-gradient(185deg,#004d8bad, rgb(58 19 1 / 0%), #000);
+        background: linear-gradient(185deg, transparent, rgb(58 19 1 / 0%), #000);
     }
     .landingContent{
         width: 75vw;

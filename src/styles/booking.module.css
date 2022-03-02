@@ -8,7 +8,6 @@
 
 .bookingStepHolder{
     background: #fff;
-    height: 500px;
     width: 80vw;
     border-radius: 3px;
     padding: 2rem;
@@ -64,7 +63,7 @@
     border-radius: 3px;
     font-weight: 600;
     color: #fff;
-    margin-top: auto;
+    margin-top: 5rem;
     align-self: flex-end;
     cursor: pointer;
 }
@@ -83,6 +82,7 @@
 .eventHolder{
     display: flex;
     margin-bottom: 3rem;
+    position: relative;
 }
 .eventHolder h6{
     font-size: 1.3rem;
@@ -98,4 +98,26 @@
     margin-right: 10px;
     padding-right: 10px;
     border-right: 1px solid gray;
+}
+.countdown{
+    color: red;
+    height: 32px;
+    width: 70px;
+    border: 1px solid rgb(255, 127, 127);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding-top: 3px;
+    font-weight: 500;
+    float: right;
+    position: absolute;
+    right: 5px;
+    top:5px;
+}
+.ticketTotal{
+    font-size:20px;
+    padding: 10px 0;
+    font-weight: 500;
 }
