@@ -109,7 +109,6 @@ const Landing = () => {
 <div className={classes.backdropGradient}>
   <video
     className={classes.videoBackdrop}
-    src="/1.mp4"
     ref={landingVideo}
     muted
     playsInline
