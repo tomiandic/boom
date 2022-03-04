@@ -23,6 +23,7 @@ const Landing = () => {
   
     useEffect(() => {
       initTimelines();
+      whichSizeVideo()
     }, []);
   
     function initTimelines() {
@@ -47,11 +48,6 @@ const Landing = () => {
   
   
       landingTL.current
-        .from(landingVideo.current, {
-          duration: 1.5,
-          scale: 3,
-          skewX: 30,
-        })
         .from(
           DOM.title,
           {
@@ -62,7 +58,6 @@ const Landing = () => {
             stagger: 0.2,
             ease: Power3.easeOut,
           },
-          "-=1"
         )
         .to(
           DOM.svg,
@@ -96,6 +91,15 @@ const Landing = () => {
           "-=3"
         );
   
+    }
+
+    function whichSizeVideo() {
+      var windowWidth = window.innerWidth;
+      if (windowWidth > 800 ) {
+        landingVideo.current.src = "/1.mp4";
+      } else {
+        landingVideo.current.src =  "/mobile.mp4";
+      }
     }
 
     return(

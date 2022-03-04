@@ -8,8 +8,9 @@ const Loader = ({ landingTL, landingVideoRef }) => {
   const strokeLogo = useRef([]);
   const strokeLogoPart = useRef([]);
   var loaderTL = useRef(gsap.timeline());
-
   useEffect(() => {
+  landingVideoRef.current.playbackRate = .9;
+
     loaderTL.current
       .to(strokeLogo.current, {
         strokeDashoffset: 0,
@@ -25,9 +26,6 @@ const Loader = ({ landingTL, landingVideoRef }) => {
           opacity: 1,
           duration: 1,
           ease: Power3.easeOut,
-          onComplete: () => {
-            landingVideoRef.current.play();
-          },
         },
         "-=.8"
       )
@@ -37,6 +35,7 @@ const Loader = ({ landingTL, landingVideoRef }) => {
         ease: Power3.easeInOut,
         onComplete: () => {
           landingTL.current.play();
+          landingVideoRef.current.play();
         },
       })
 
@@ -56,7 +55,7 @@ const Loader = ({ landingTL, landingVideoRef }) => {
     if (el && !refArray.current.includes(el)) {
       refArray.current.push(el);
     }
-  };
+  }; 
 
   return (
     <div ref={loaderContainer} className={classes.landingLoader}>
