@@ -97,9 +97,7 @@ const Landing = () => {
       var windowWidth = window.innerWidth;
       if (windowWidth > 800 ) {
         landingVideo.current.src = "/1.mp4";
-      } else {
-        landingVideo.current.src =  "/mobile.mp4";
-      }
+      } 
     }
 
     return(
@@ -109,10 +107,12 @@ const Landing = () => {
 <div className={classes.backdropGradient}>
   <video
     className={classes.videoBackdrop}
+    src="/mobile.mp4"
     ref={landingVideo}
     muted
     playsInline
     loop
+    preload
   />
 </div>
 
