@@ -26,6 +26,9 @@ const Loader = ({ landingTL, landingVideoRef }) => {
           opacity: 1,
           duration: 1,
           ease: Power3.easeOut,
+          onComplete: () => {
+            setTimeout(()=>landingVideoRef.current.play(), 800);
+          }
         },
         "-=.8"
       )
@@ -35,7 +38,6 @@ const Loader = ({ landingTL, landingVideoRef }) => {
         ease: Power3.easeInOut,
         onComplete: () => {
           landingTL.current.play();
-          landingVideoRef.current.play();
         },
       })
 
