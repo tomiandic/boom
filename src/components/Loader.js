@@ -27,7 +27,7 @@ const Loader = ({ landingTL, landingVideoRef }) => {
           duration: 1,
           ease: Power3.easeOut,
           onComplete: () => {
-            setTimeout(()=>landingVideoRef.current.play(), 800);
+            setTimeout(()=>{console.log("start video"); console.log(landingVideoRef.current); landingVideoRef.current.play()}, 800);
           }
         },
         "-=.8"
