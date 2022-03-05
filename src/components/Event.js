@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 
 const Event = () => {
   return (
-    <section className={classes.eventSection}>
+    <section className={classes.eventSection}>x
       <div className={classes.eventBanner}>
         <StaticImage
           className={classes.eventImage}
@@ -86,7 +86,6 @@ const Event = () => {
               <a>Route</a>
               <a>Itinerary</a>
               <a>Pricing</a>
-              <a>Other Info</a>
             </div>
           </div>
           <div
@@ -206,7 +205,7 @@ const Event = () => {
             <h6>Inclusions</h6>
             <Swiper
               spaceBetween={15}
-              slidesPerView={3}
+              slidesPerView={1}
               navigation={true}
               modules={[Navigation]}
               breakpoints={{

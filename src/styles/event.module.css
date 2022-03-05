@@ -330,6 +330,7 @@
 @media (max-width: 850px) {
     .eventHolder{
         flex-direction: column-reverse;
+        width: 93%;
     }
     .bookingDetails{
         display: none;
@@ -354,6 +355,27 @@
     }
     .itineraryNavigation a{
         font-size: 11px;
+        padding: 18px 16px;
+    }
+    .eventBanner{
+        height: 50vh;
+    }
+    .eventHeader{
+        padding: 1.5rem;
+    }
+    .itineraryPart{
+        padding: 1.5rem;
+    }
+
+
+}
+
+@media (max-width: 700px) {
+    .eventHolder{
+        width: 100%;
+    }
+    .ticketPrice{
+        min-width: 125px;
     }
 
 }
