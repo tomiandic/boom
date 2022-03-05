@@ -47,6 +47,11 @@ html, body{
 .vertical-timeline-element-content{
     box-shadow: 5px 0 70px -20px rgb(221, 225, 228);
     padding: 2rem;
+    margin-left: 45px;
+}
+.vertical-timeline-element-title{
+    font-weight: 600;
+    font-size: 15px;
 }
 .vertical-timeline-element-content p {
     color: hsl(220, 8%, 55%);
@@ -65,6 +70,7 @@ html, body{
     width: 23px;
     height: 23px;
     left: 8px;
+    top: 10px;
     background: white;
     box-shadow: 0 2px 15px -5px rgb(173, 173, 173);
 }

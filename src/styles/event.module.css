@@ -285,10 +285,75 @@
     background: var(--mainDark);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .eventHeader h1 {
-        font-size: 15px!important;
+        font-size: 20px!important;
+    }
+    .itineraryNavigation a{
+        font-size: 12px;
+    }
+    .itineraryPart > h6 {
+        font-size: 16px;
+    }
+    .overviewGrid {
+        min-width: 100%;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid rgb(221, 221, 221);
+        border-top: 1px solid rgb(221, 221, 221);
+        justify-content: space-around;
+    }
+    .inclusionPartHeader{
+        letter-spacing: 1px;
+        font-size: 12px;
+    }
+    .inclusionPart ul li{
+        font-size: 13px;
+    }
+    .swiperContainer{
+        max-width: 55vw;
+    }
+    .bookingButton,
+    .bookTicketButton{
+        padding: 10px 15px;
+        font-size: 13px;
+        letter-spacing: 0;
+    }
+    .bookingPrice,
+    .ticketCategoryBox span,
+    .ticketCategoryBox h6{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .eventHolder{
+        flex-direction: column-reverse;
+    }
+    .bookingDetails{
+        display: none;
+    }
+    .eventItineraryHolder{
+        margin-right: 0;
+    }
+    .swiperContainer{
+        max-width: fit-content;
+    }
+    .itineraryNavigation{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        z-index: 10;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.15);
+        border-top: 1px solid rgb(238, 238, 238);
+        padding: 1.2rem 0;
+    }
+    .itineraryNavigation a{
+        font-size: 11px;
     }
 
 }
