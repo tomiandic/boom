@@ -127,15 +127,15 @@ const GallerySection = (props) => {
                 y2="10.79"
                 fill="none"
                 stroke="#000"
-                stroke-miterlimit="10"
-                stroke-width="2"
+                strokeMiterlimit="10"
+                strokeWidth="2"
               />
               <polyline
                 points="79.5 0.71 89.5 10.71 79.5 20.71"
                 fill="none"
                 stroke="#000"
-                stroke-miterlimit="10"
-                stroke-width="2"
+                strokeMiterlimit="10"
+                strokeWidth="2"
               />
             </svg>
           </div>
@@ -147,15 +147,15 @@ const GallerySection = (props) => {
                 y2="10.79"
                 fill="none"
                 stroke="#000"
-                stroke-miterlimit="10"
-                stroke-width="2"
+                strokeMiterlimit="10"
+                strokeWidth="2"
               />
               <polyline
                 points="79.5 0.71 89.5 10.71 79.5 20.71"
                 fill="none"
                 stroke="#000"
-                stroke-miterlimit="10"
-                stroke-width="2"
+                strokeMiterlimit="10"
+                strokeWidth="2"
               />
             </svg>
           </div>

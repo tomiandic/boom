@@ -231,50 +231,22 @@ const Event = () => {
                   </div>
                   <ul>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  8 hours of party</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  Welcome drink</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  Snacks & Drinks</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  8 hours of party</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  Welcome drink</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
-                    </svg>  Snacks & Drinks</li>
-                  </ul>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={classes.inclusionPart}>
-                  <div className={classes.inclusionPartHeader}>
-                    <StaticImage src="../images/boat.svg"></StaticImage><br />
-                    General
-                  </div>
-                  <ul>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
-                    </svg>  8 hours of party</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
-                    </svg>  Welcome drink</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
-                    </svg>  Snacks & Drinks</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
-                    </svg>  8 hours of party</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
-                    </svg>  Welcome drink</li>
-                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  Snacks & Drinks</li>
                   </ul>
                 </div>
@@ -287,22 +259,50 @@ const Event = () => {
                   </div>
                   <ul>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  8 hours of party</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  Welcome drink</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  Snacks & Drinks</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  8 hours of party</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  Welcome drink</li>
                     <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
-                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" stroke-width="3"></path>
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
+                    </svg>  Snacks & Drinks</li>
+                  </ul>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={classes.inclusionPart}>
+                  <div className={classes.inclusionPartHeader}>
+                    <StaticImage src="../images/boat.svg"></StaticImage><br />
+                    General
+                  </div>
+                  <ul>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
+                    </svg>  8 hours of party</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
+                    </svg>  Welcome drink</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
+                    </svg>  Snacks & Drinks</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
+                    </svg>  8 hours of party</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
+                    </svg>  Welcome drink</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18.421" height="14.129" viewBox="0 0 18.421 14.129" class="">
+                      <path id="Path_670" data-name="Path 670" d="M4933,3265.246l5.353,5.353,10.947-10.947" transform="translate(-4931.939 -3258.592)" fill="none" stroke="#00bc8f" strokeWidth="3"></path>
                     </svg>  Snacks & Drinks</li>
                   </ul>
                 </div>
@@ -319,32 +319,32 @@ const Event = () => {
                     <li>
                       <svg xmlns="http://www.w3.org/2000/svg" width="13.068" height="13.068" viewBox="0 0 13.068 13.068" class="">
                         <g id="Group_1013" data-name="Group 1013" transform="translate(-326.643 -4005.993)">
-                          <path id="Path_685" data-name="Path 685" d="M4938.353,3270.6l10.947-10.947" transform="translate(-4610.65 747.401)" fill="none" stroke="#e61515" stroke-width="3"></path>
-                          <path id="Path_686" data-name="Path 686" d="M4938.353,3270.6l10.947-10.947" transform="translate(3598.303 -931.3) rotate(90)" fill="none" stroke="#e61515" stroke-width="3"></path>
+                          <path id="Path_685" data-name="Path 685" d="M4938.353,3270.6l10.947-10.947" transform="translate(-4610.65 747.401)" fill="none" stroke="#e61515" strokeWidth="3"></path>
+                          <path id="Path_686" data-name="Path 686" d="M4938.353,3270.6l10.947-10.947" transform="translate(3598.303 -931.3) rotate(90)" fill="none" stroke="#e61515" strokeWidth="3"></path>
                         </g>
                       </svg>
                       8 hours of party</li>
                     <li>
                       <svg xmlns="http://www.w3.org/2000/svg" width="13.068" height="13.068" viewBox="0 0 13.068 13.068" class="">
                         <g id="Group_1013" data-name="Group 1013" transform="translate(-326.643 -4005.993)">
-                          <path id="Path_685" data-name="Path 685" d="M4938.353,3270.6l10.947-10.947" transform="translate(-4610.65 747.401)" fill="none" stroke="#e61515" stroke-width="3"></path>
-                          <path id="Path_686" data-name="Path 686" d="M4938.353,3270.6l10.947-10.947" transform="translate(3598.303 -931.3) rotate(90)" fill="none" stroke="#e61515" stroke-width="3"></path>
+                          <path id="Path_685" data-name="Path 685" d="M4938.353,3270.6l10.947-10.947" transform="translate(-4610.65 747.401)" fill="none" stroke="#e61515" strokeWidth="3"></path>
+                          <path id="Path_686" data-name="Path 686" d="M4938.353,3270.6l10.947-10.947" transform="translate(3598.303 -931.3) rotate(90)" fill="none" stroke="#e61515" strokeWidth="3"></path>
                         </g>
                       </svg>
                       Welcome drink</li>
                     <li>
                       <svg xmlns="http://www.w3.org/2000/svg" width="13.068" height="13.068" viewBox="0 0 13.068 13.068" class="">
                         <g id="Group_1013" data-name="Group 1013" transform="translate(-326.643 -4005.993)">
-                          <path id="Path_685" data-name="Path 685" d="M4938.353,3270.6l10.947-10.947" transform="translate(-4610.65 747.401)" fill="none" stroke="#e61515" stroke-width="3"></path>
-                          <path id="Path_686" data-name="Path 686" d="M4938.353,3270.6l10.947-10.947" transform="translate(3598.303 -931.3) rotate(90)" fill="none" stroke="#e61515" stroke-width="3"></path>
+                          <path id="Path_685" data-name="Path 685" d="M4938.353,3270.6l10.947-10.947" transform="translate(-4610.65 747.401)" fill="none" stroke="#e61515" strokeWidth="3"></path>
+                          <path id="Path_686" data-name="Path 686" d="M4938.353,3270.6l10.947-10.947" transform="translate(3598.303 -931.3) rotate(90)" fill="none" stroke="#e61515" strokeWidth="3"></path>
                         </g>
                       </svg>
                       Snacks & Drinks</li>
                     <li>
                       <svg xmlns="http://www.w3.org/2000/svg" width="13.068" height="13.068" viewBox="0 0 13.068 13.068" class="">
                         <g id="Group_1013" data-name="Group 1013" transform="translate(-326.643 -4005.993)">
-                          <path id="Path_685" data-name="Path 685" d="M4938.353,3270.6l10.947-10.947" transform="translate(-4610.65 747.401)" fill="none" stroke="#e61515" stroke-width="3"></path>
-                          <path id="Path_686" data-name="Path 686" d="M4938.353,3270.6l10.947-10.947" transform="translate(3598.303 -931.3) rotate(90)" fill="none" stroke="#e61515" stroke-width="3"></path>
+                          <path id="Path_685" data-name="Path 685" d="M4938.353,3270.6l10.947-10.947" transform="translate(-4610.65 747.401)" fill="none" stroke="#e61515" strokeWidth="3"></path>
+                          <path id="Path_686" data-name="Path 686" d="M4938.353,3270.6l10.947-10.947" transform="translate(3598.303 -931.3) rotate(90)" fill="none" stroke="#e61515" strokeWidth="3"></path>
                         </g>
                       </svg>
                       8 hours of party</li>

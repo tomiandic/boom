@@ -112,7 +112,7 @@ const Landing = () => {
     muted
     playsInline
     loop
-    preload
+    autoPlay
   />
 </div>
 

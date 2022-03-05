@@ -176,7 +176,7 @@ const About = (props) => {
         <h2 id="scrolltext" className={classes.scrolltext}>AFTErmovie</h2> 
       </div> 
       <div className={classes.videoHolder}>
-        <iframe className={classes.videoIframe} src="https://www.youtube-nocookie.com/embed/0ajlLKc3N1A?controls=0&amp;start=13" title="Boom Events Aftermovie" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe className={classes.videoIframe} src="https://www.youtube-nocookie.com/embed/0ajlLKc3N1A?controls=0&amp;start=13" title="Boom Events Aftermovie" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
       <div className={classes.grayBackdrop}></div>
    {/*    <div className={classes.scrolltextHolder}>
