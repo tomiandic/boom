@@ -20,10 +20,13 @@ const Landing = () => {
     const landingVideo = useRef();
     const slidesContainer = useRef();
     const landingTL = useRef(gsap.timeline({ paused: true }));
+
+    const [loaderShowed, setLoaderShowed] = useState(false);
   
     useEffect(() => {
       initTimelines();
-      whichSizeVideo()
+      whichSizeVideo();
+      checkIfLoaderShowed()
     }, []);
   
     function initTimelines() {
@@ -98,12 +101,40 @@ const Landing = () => {
       if (windowWidth > 800 ) {
         landingVideo.current.src = "/1.mp4";
       } 
+      landingVideo.current.playbackRate = .85;
+    }
+
+    function getCookie(cname) {
+      let name = cname + "=";
+      let ca = document.cookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function checkIfLoaderShowed() {
+      let isShowed = getCookie("loaderShowed")
+      if(isShowed){
+        setLoaderShowed(true);
+        landingTL.current.play();
+      }
     }
 
     return(
 
 <section ref={landingContainer} className={classes.landing}>
-<Loader landingVideoRef={landingVideo} landingTL={landingTL} />
+
+  {
+    !loaderShowed&&<Loader landingVideoRef={landingVideo} landingTL={landingTL} />
+  }
+
 <div className={classes.backdropGradient}>
   <video
     className={classes.videoBackdrop}
@@ -112,7 +143,7 @@ const Landing = () => {
     muted
     playsInline
     loop
-    preload="auto"
+    autoPlay
   />
 </div>
 

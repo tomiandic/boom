@@ -12,28 +12,28 @@ const BookingStep = (props) => {
                     <p className={classes.ticketTitle}>Boat Party Ticket - Regular</p>
                     <p className={classes.ticketPrice}>$55.00/Person</p>
                 </div>
-            <PeopleCounter initialValue={1} />
+            <PeopleCounter initialValue={1} maxValue={11} />
             </div>
             <div className={classes.ticketType}>
                 <div>
                     <p className={classes.ticketTitle}>Boat Party Ticket - Regular</p>
                     <p className={classes.ticketPrice}>$55.00/Person</p>
                 </div>
-            <PeopleCounter initialValue={1} />
+            <PeopleCounter initialValue={1} maxValue={11} />
             </div>
             <div className={classes.ticketType}>
                 <div>
                     <p className={classes.ticketTitle}>Boat Party Ticket - Regular</p>
                     <p className={classes.ticketPrice}>$55.00/Person</p>
                 </div>
-            <PeopleCounter initialValue={1} />
+            <PeopleCounter initialValue={1} maxValue={11} />
             </div>
             <div className={classes.ticketType}>
                 <div>
                     <p className={classes.ticketTitle}>Boat Party Ticket - Regular</p>
                     <p className={classes.ticketPrice}>$55.00/Person</p>
                 </div>
-            <PeopleCounter initialValue={1} />
+            <PeopleCounter initialValue={1} maxValue={11} />
             </div>
             
             <div className={classes.ticketType}>

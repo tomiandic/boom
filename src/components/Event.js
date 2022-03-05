@@ -1,10 +1,11 @@
 import React from "react";
 import * as classes from "../styles/event.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 import { StaticImage } from "gatsby-plugin-image";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import SwiperCore from 'swiper';
+import "swiper/css/navigation";
 
 
 const Event = () => {
@@ -206,6 +207,8 @@ const Event = () => {
             <Swiper
               spaceBetween={15}
               slidesPerView={3}
+              navigation={true}
+              modules={[Navigation]}
               breakpoints={{
                 700: {
                   slidesPerView: 1,

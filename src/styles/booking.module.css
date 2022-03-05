@@ -9,6 +9,7 @@
 .bookingStepHolder{
     background: #fff;
     width: 80vw;
+    max-width: 1000px;
     border-radius: 3px;
     padding: 2rem;
     display: flex;
@@ -24,12 +25,20 @@
     padding: 5px;
 }
 .counterIcon{
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2.2rem;
+    width: 2.2rem;
     padding: 8px;
     border: 1px solid gray;
     border-radius: 35px;
     cursor: pointer;
+    transition: 50ms border ease-in;
+}
+.counterIcon:hover{
+    border: 1px solid rgb(0, 0, 0);
+}
+.counterIcon.disabled{
+    border: 1px solid lightgray;
+
 }
 .countNumber{
     width: 2.5rem;
@@ -82,7 +91,9 @@
 .eventHolder{
     display: flex;
     margin-bottom: 3rem;
+    margin-top: 7rem;
     position: relative;
+    color: var(--black);
 }
 .eventHolder h6{
     font-size: 1.3rem;

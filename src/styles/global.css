@@ -46,6 +46,10 @@ html, body{
 }
 .vertical-timeline-element-content{
     box-shadow: 5px 0 70px -20px rgb(221, 225, 228);
+    padding: 2rem;
+}
+.vertical-timeline-element-content p {
+    color: hsl(220, 8%, 55%);
 }
 .vertical-timeline-element--work img{
     width: 100%;
@@ -61,18 +65,33 @@ html, body{
     width: 23px;
     height: 23px;
     left: 8px;
-    background: rgb(226, 226, 226);
-    box-shadow: unset;
+    background: white;
+    box-shadow: 0 2px 15px -5px rgb(173, 173, 173);
 }
 .vertical-timeline-element-date{
     font-size: 10px!important;
     font-weight: 800!important;
     color: var(--main);
-    background: var(--mainLight);
     border-radius: 5px;
-    padding: 5px 10px!important;
     margin-top: 1rem;
     opacity: 1!important;
+}
+.vertical-timeline::before{
+    width: 2px;
+    background: var(--main);
+}
+.swiper-button-next,
+.swiper-button-prev{
+    background: #fff;
+    box-shadow: 0 1px 10px -2px rgb(200, 200, 200);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 15px;
+    color: var(--main);
 }
 
 @media (min-width: 900px) {

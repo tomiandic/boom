@@ -2,14 +2,13 @@ import React, { useEffect, useRef } from "react";
 import { gsap, Power3, Sine } from "gsap";
 import * as classes from "../styles/loader.module.css";
 
-const Loader = ({ landingTL, landingVideoRef }) => {
+const Loader = ({ landingTL }) => {
   const circles = useRef();
   const loaderContainer = useRef();
   const strokeLogo = useRef([]);
   const strokeLogoPart = useRef([]);
   var loaderTL = useRef(gsap.timeline());
   useEffect(() => {
-  landingVideoRef.current.playbackRate = .9;
 
     loaderTL.current
       .to(strokeLogo.current, {
@@ -26,9 +25,6 @@ const Loader = ({ landingTL, landingVideoRef }) => {
           opacity: 1,
           duration: 1,
           ease: Power3.easeOut,
-          onComplete: () => {
-            setTimeout(()=>{console.log("start video"); console.log(landingVideoRef.current); landingVideoRef.current.play()}, 800);
-          }
         },
         "-=.8"
       )
@@ -47,7 +43,7 @@ const Loader = ({ landingTL, landingVideoRef }) => {
           duration: 1.5,
           clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
           ease: Power3.easeOut,
-          onComplete: () => loaderTL.current.pause(),
+          onComplete: () => {loaderTL.current.pause(); document.cookie = "loaderShowed=true";}
         },
         "-=.3"
       );
