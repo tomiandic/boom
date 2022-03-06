@@ -1,7 +1,8 @@
 import React from "react";
 import * as classes from "../../styles/booking.module.css";
 import { StaticImage } from "gatsby-plugin-image";
-import BookingStep from "../../components/BookingStep";
+import BookingTicketStep from "../../components/BookingTicketStep";
+import BookingRegistrationStep from "../../components/BookingRegistrationStep";
 import StepWizard from "react-step-wizard";
 import Header from "../../components/Header";
 import Countdown from "react-countdown";
@@ -29,17 +30,20 @@ const Booking = () => {
           <StaticImage className={classes.bookingEventImage} src="../images/b-top.jpg" />
           <div>
             <h6>Event: Party Boom Boat Party</h6>
-            <p><span>Jan 6. </span> <span> Pula </span><span> 18:00</span></p>
+            <p>
+              <span>Jan 6. </span>
+              <span> Pula </span>
+              <span> 18:00</span>
+            </p>
           </div>
           <div className={classes.countdown}>
           <Countdown renderer={renderer} date={Date.now() + 600000}  />
           </div>
         </div>
+     
         <StepWizard>
-            <BookingStep />
-            <BookingStep />
-            <BookingStep />
-            <BookingStep />
+            <BookingTicketStep />
+            <BookingRegistrationStep />
         </StepWizard>
       </div>
     </section>

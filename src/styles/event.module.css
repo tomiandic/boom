@@ -92,6 +92,7 @@
 }
 .itineraryPart{
     width: 100%;
+    overflow-x: hidden;
     padding: 2rem;
 }
 .overviewGrid{
@@ -356,7 +357,7 @@
     }
     .itineraryNavigation a{
         font-size: 11px;
-        padding: 18px 16px;
+        padding: 23px 16px;
     }
     .eventBanner{
         height: 50vh;
@@ -367,7 +368,11 @@
     .itineraryPart{
         padding: 1.5rem;
     }
-
+    .itineraryNavigation a.active,
+    .itineraryNavigation a:hover{
+        border-top: 3px solid var(--main);
+        border-bottom: none;
+    }
 
 }
 
@@ -378,5 +383,6 @@
     .ticketPrice{
         min-width: 125px;
     }
+  
 
 }

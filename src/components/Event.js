@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 
 const Event = () => {
   return (
-    <section className={classes.eventSection}>x
+    <section className={classes.eventSection}>
       <div className={classes.eventBanner}>
         <StaticImage
           className={classes.eventImage}
