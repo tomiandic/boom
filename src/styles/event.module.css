@@ -99,7 +99,8 @@
     flex-wrap: wrap;
     flex: 1;
 }
-.overviewGridItem img{
+
+.overviewGridItemIcon{
     height: 2rem;
     width: 2rem;
     margin-right: 14px;
@@ -207,7 +208,7 @@
     margin: 1rem 0;
     margin-bottom: 2rem;
 }
-.inclusionPartHeader img{
+.inclusionIcon{
     height: 2.2rem;
     width: 2.2rem;
     margin-bottom: 1rem;

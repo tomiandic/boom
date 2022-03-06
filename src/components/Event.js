@@ -95,19 +95,19 @@ const Event = () => {
 
             <div className={classes.overviewGrid}>
               <div className={classes.overviewGridItem}>
-                <StaticImage src="../images/boat.svg"></StaticImage>
+                <StaticImage className={classes.overviewGridItemIcon} src="../images/boat.svg"></StaticImage>
                 <p>Lorem ipsum dolor amet</p>
               </div>
               <div className={classes.overviewGridItem}>
-                <StaticImage src="../images/ship.svg"></StaticImage>
+                <StaticImage className={classes.overviewGridItemIcon} src="../images/ship.svg"></StaticImage>
                 <p>Lorem ipsum dolor amet</p>
               </div>
               <div className={classes.overviewGridItem}>
-                <StaticImage src="../images/car.svg"></StaticImage>
+                <StaticImage className={classes.overviewGridItemIcon} src="../images/car.svg"></StaticImage>
                 <p>Lorem ipsum dolor amet</p>
               </div>
               <div className={classes.overviewGridItem}>
-                <StaticImage src="../images/moto.svg"></StaticImage>
+                <StaticImage className={classes.overviewGridItemIcon} src="../images/moto.svg"></StaticImage>
                 <p>Lorem ipsum dolor amet</p>
               </div>
             </div>
@@ -228,7 +228,7 @@ const Event = () => {
               <SwiperSlide>
                 <div className={classes.inclusionPart}>
                   <div className={classes.inclusionPartHeader}>
-                    <StaticImage src="../images/boat.svg"></StaticImage><br />
+                    <StaticImage className={classes.inclusionIcon} src="../images/boat.svg"></StaticImage><br />
                     General
                   </div>
                   <ul>
@@ -256,7 +256,7 @@ const Event = () => {
               <SwiperSlide>
                 <div className={classes.inclusionPart}>
                   <div className={classes.inclusionPartHeader}>
-                    <StaticImage src="../images/boat.svg"></StaticImage><br />
+                    <StaticImage className={classes.inclusionIcon} src="../images/boat.svg"></StaticImage><br />
                     General
                   </div>
                   <ul>
@@ -284,7 +284,7 @@ const Event = () => {
               <SwiperSlide>
                 <div className={classes.inclusionPart}>
                   <div className={classes.inclusionPartHeader}>
-                    <StaticImage src="../images/boat.svg"></StaticImage><br />
+                    <StaticImage className={classes.inclusionIcon} src="../images/boat.svg"></StaticImage><br />
                     General
                   </div>
                   <ul>
@@ -314,7 +314,7 @@ const Event = () => {
                 <div className={classes.inclusionPart}>
 
                   <div className={classes.inclusionPartHeader}>
-                    <StaticImage src="../images/boat.svg"></StaticImage><br />
+                    <StaticImage className={classes.inclusionIcon} src="../images/boat.svg"></StaticImage><br />
                     Not included
                   </div>
                   <ul className={classes.notIncluded}>
