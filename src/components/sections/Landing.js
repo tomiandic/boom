@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Loader from "../Loader";
 import { Swiper, SwiperSlide } from "swiper/react";
 import * as classes from "../../styles/landing.module.css";
+import { Link } from "gatsby";
 import SwiperCore, {
     FreeMode
   } from 'swiper';
@@ -194,8 +195,8 @@ const Landing = () => {
       strokeWidth="2"
     />
   </svg>
-  <button className={classes.button}>
-    CHECK TICKETS{" "}
+  <Link to="/events" className={classes.button}>
+    CHECK EVENTS
     <svg
       style={{ marginLeft: 10 }}
       width="24"
@@ -204,7 +205,7 @@ const Landing = () => {
     >
       <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
     </svg>
-  </button>
+  </Link>
 </div>
 
 <div ref={slidesContainer} className={classes.landingBottomContainer}>
@@ -244,7 +245,7 @@ const Landing = () => {
     freeMode={true}
   >
     <SwiperSlide>
-      <div className={classes.swiperSlide}>
+      <Link to="/event" className={classes.swiperSlide}>
       <div className={classes.eventDate}>
         <p>
           24<span>September</span>
@@ -268,10 +269,10 @@ const Landing = () => {
         <div className={classes.slideArrowHolder}>
         </div>
       </div>
-    </div>
+    </Link>
     </SwiperSlide>
     <SwiperSlide>
-      <div className={classes.swiperSlide}>
+      <Link to="/event" className={classes.swiperSlide}>
       <div className={classes.eventDate}>
         <p>
           24<span>Jully</span>
@@ -296,7 +297,35 @@ const Landing = () => {
         <div className={classes.slideArrowHolder}>
         </div>
       </div>
+      </Link>
+    </SwiperSlide>
+    <SwiperSlide>
+      <Link to="/event" className={classes.swiperSlide}>
+      <div className={classes.eventDate}>
+        <p>
+          24<span>Jully</span>
+        </p>
       </div>
+      <div className={classes.eventDetails}>
+        <p className={classes.eventName}>Giant Party Boom Boat in Pula</p>
+        <div className={classes.bottomDetails}>
+          <div className={classes.dash}></div>
+
+          <div className={classes.eventDetail}>
+            <p>
+              Pula
+            </p>
+          </div>
+          <div className={classes.eventDetail}>
+            <p>
+              16:00 - 22:00
+            </p>
+          </div>
+        </div>
+        <div className={classes.slideArrowHolder}>
+        </div>
+      </div>
+      </Link>
     </SwiperSlide>
     <SwiperSlide>
       <div className={classes.swiperSlide}>
@@ -354,42 +383,14 @@ const Landing = () => {
       </div>
       </div>
     </SwiperSlide>
-    <SwiperSlide>
-      <div className={classes.swiperSlide}>
-      <div className={classes.eventDate}>
-        <p>
-          24<span>Jully</span>
-        </p>
-      </div>
-      <div className={classes.eventDetails}>
-        <p className={classes.eventName}>Giant Party Boom Boat in Pula</p>
-        <div className={classes.bottomDetails}>
-          <div className={classes.dash}></div>
-
-          <div className={classes.eventDetail}>
-            <p>
-              Pula
-            </p>
-          </div>
-          <div className={classes.eventDetail}>
-            <p>
-              16:00 - 22:00
-            </p>
-          </div>
-        </div>
-        <div className={classes.slideArrowHolder}>
-        </div>
-      </div>
-      </div>
-    </SwiperSlide>
-    <SwiperSlide><div className={classes.swiperSlide}><div className={classes.swiperButton}>Show all events    <svg
+    <SwiperSlide><Link to="/events" className={classes.swiperSlide}><div className={classes.swiperButton}>Show all events    <svg
       style={{ marginLeft: 10 }}
       width="24"
       height="24"
       viewBox="0 0 24 24"
     >
       <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-    </svg></div></div></SwiperSlide>
+    </svg></div></Link></SwiperSlide>
     <SwiperSlide></SwiperSlide>
   </Swiper>
 </div>

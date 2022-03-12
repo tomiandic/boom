@@ -2,18 +2,17 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link } from "gatsby";
 import { gsap, Power3, Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Gallery, Item } from "react-photoswipe-gallery";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/dist/default-skin/default-skin.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
-import SwiperCore, { EffectCards, Navigation } from "swiper";
+import SwiperCore, { EffectCards } from "swiper";
 import * as classes from "../../styles/gallery.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 // install Swiper modules
-SwiperCore.use([EffectCards, Navigation]);
+SwiperCore.use([EffectCards]);
 const GallerySection = (props) => {
   const navNext = useRef();
   const navPrev = useRef();
@@ -90,10 +89,6 @@ const GallerySection = (props) => {
       <Swiper
         effect={"cards"}
         grabCursor={true}
-        navigation={{
-          prevEl: navPrev.current,
-          nextEl: navNext.current,
-        }}
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = navPrev.current;
           swiper.params.navigation.nextEl = navNext.current;

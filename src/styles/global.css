@@ -17,12 +17,12 @@ html, body{
     --main: #ff5200;
     --mainLight: #ffeee7;
     --mainDark: #b93500;
-    --secondary: #00E8FC;
+    --secondary: #00d3da;
     --secondaryDark: #09cadb;
     --black: #25373f;
     --white: #f3f0f0;
     --lightBackground: #f0f5f5;
-    --borderRadiusDesktop: 8px;
+    --borderRadiusDesktop: 4px;
 }
 .sectionContent{
     width: 90vw;
