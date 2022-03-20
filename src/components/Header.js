@@ -14,7 +14,7 @@ const Header = ({ pageIsLoaded }) => {
   useEffect(() => {
     sidebarTL.current
       .to(mobileNav.current, {
-        height: "100%",
+        height: "100vh",
         backgroundColor: "#fff",
         duration: 1,
         ease: Power3.easeOut,
@@ -23,10 +23,9 @@ const Header = ({ pageIsLoaded }) => {
         hamburgerLines.current[0],
         {
           rotate: 45,
-          backgroundColor: "#d5d5d5",
           y: 10,
           duration: 0.6,
-          width: 35,
+          width: 45,
         },
         "-=.8"
       )
@@ -34,18 +33,17 @@ const Header = ({ pageIsLoaded }) => {
         hamburgerLines.current[1],
         {
           rotate: -45,
-          backgroundColor: "#d7d7d7",
           duration: 0.6,
-          width: 35,
-        },"-=.8"
-        )
-        .to(
-          hamburgerLines.current[2],
-          {
-            opacity: 0,
-            duration: 0.6,
-          },"-=.8"
-          )
+          width: 45,
+        }, "-=.8"
+      )
+      .to(
+        hamburgerLines.current[2],
+        {
+          opacity: 0,
+          duration: 0.1,
+        }, "-=.8"
+      )
       .to(
         navLinks.current,
         {
@@ -66,7 +64,7 @@ const Header = ({ pageIsLoaded }) => {
           ease: Power3.easeOut,
           stagger: 0.1,
         },
-        "-=.8"
+        "-=1.2"
       );
   }, []);
 
@@ -77,117 +75,112 @@ const Header = ({ pageIsLoaded }) => {
   };
 
   useEffect(() => {
-    sidebarOpen ? sidebarTL.current.play() : sidebarTL.current.reverse();
+    sidebarOpen ? sidebarTL.current.timeScale(.8).play() : sidebarTL.current.timeScale(2).reverse();
   }, [sidebarOpen]);
 
-  return (
-    <nav ref={mobileNav} className={classes.headerContainer}>
-      <Link to="/"><img className={classes.logo} src="/boom_all_white.svg" /></Link>
-      <div className={classes.navLinks}>
-        <Link
-          className={classes.navLink}
-          ref={(el) => addToRefs(el, navLinks)}
-          to="/"
-        >
-          Gallery
-        </Link>
-        <Link
-          className={classes.navLink}
-          ref={(el) => addToRefs(el, navLinks)}
-          to="/"
-        >
-          Events
-        </Link>
-        <Link
-          className={classes.navLink}
-          ref={(el) => addToRefs(el, navLinks)}
-          to="/"
-        >
-          About
-        </Link>
-        <Link
-          className={classes.navLink}
-          ref={(el) => addToRefs(el, navLinks)}
-          to="/"
-        >
-          F.A.Q
-        </Link>
-        <Link
-          className={classes.navLink}
-          ref={(el) => addToRefs(el, navLinks)}
-          to="/"
-        >
-          Book Tickets
-          <svg
-            style={{ marginLeft: 10 }}
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
-          </svg>
-        </Link>
-      </div>
-      <span
-        onClick={() => setSidebarOpen(!sidebarOpen)}
-        className={classes.hamburger}
-      >
-        <span ref={(el) => addToRefs(el, hamburgerLines)}></span>
-        <span ref={(el) => addToRefs(el, hamburgerLines)}></span>
-        <p ref={(el) => addToRefs(el, hamburgerLines)}>MENU</p>
-      </span>
 
-      <div className={classes.socialMediaContainer}>
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://www.instagram.com/instaboom.pula/?hl=hr"
-          ref={(el) => addToRefs(el, socialMedia)}
-        >
-          <img src="icons/instagram.svg" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://www.facebook.com/BOOMeventsPula/"
-          ref={(el) => addToRefs(el, socialMedia)}
-        >
-          <img src="icons/facebook.svg" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://api.whatsapp.com/send?phone=385957766909"
-          ref={(el) => addToRefs(el, socialMedia)}
-        >
-          <img src="icons/whatsapp.svg" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener"
-          href="tel:+385957766909"
-          ref={(el) => addToRefs(el, socialMedia)}
-        >
-          <img src="icons/phone.svg" />
-        </a>
+
+  return (
+    <nav className={classes.headerContainer}>
+      <Link to="/"><img className={classes.logo} src="/boom_all_white.svg" /></Link>
+      <div className={classes.menuInner} ref={mobileNav}>
+        <div className={classes.navLinks}>
+          <Link
+            className={classes.navLink}
+            ref={(el) => addToRefs(el, navLinks)}
+            onClick={() => setSidebarOpen(false)}
+            to="/#about"
+          >
+            About
+          </Link>
+          <Link
+            className={classes.navLink}
+            ref={(el) => addToRefs(el, navLinks)}
+            onClick={() => setSidebarOpen(false)}
+            to="/#blog"
+          >
+            Blog
+          </Link>
+          <Link
+            className={`${classes.navLink} ${classes.active}`}
+            ref={(el) => addToRefs(el, navLinks)}
+            onClick={() => setSidebarOpen(false)}
+            to="/#gallery"
+          >
+            Gallery
+          </Link>
+          <Link
+            className={classes.navLink}
+            ref={(el) => addToRefs(el, navLinks)}
+            onClick={() => setSidebarOpen(false)}
+            to="/faq"
+          >
+            F.A.Q
+          </Link>
+          <Link
+            className={classes.navLink}
+            ref={(el) => addToRefs(el, navLinks)}
+            onClick={() => setSidebarOpen(false)}
+            to="/events"
+          >
+            Events
+            <svg
+              style={{ marginLeft: 10 }}
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
+            </svg>
+          </Link>
+        </div>
+        <div className={classes.socialMediaContainer}>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.instagram.com/instaboom.pula/?hl=hr"
+            ref={(el) => addToRefs(el, socialMedia)}
+          >
+            <img src="icons/instagram.svg" />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.facebook.com/BOOMeventsPula/"
+            ref={(el) => addToRefs(el, socialMedia)}
+          >
+            <img src="icons/facebook.svg" />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://api.whatsapp.com/send?phone=385957766909"
+            ref={(el) => addToRefs(el, socialMedia)}
+          >
+            <img src="icons/whatsapp.svg" />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="tel:+385957766909"
+            ref={(el) => addToRefs(el, socialMedia)}
+          >
+            <img src="icons/phone.svg" />
+          </a>
+        </div>
       </div>
-      <div className={classes.headerSocialMediaContainer}>
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://www.instagram.com/instaboom.pula/?hl=hr"
-          ref={(el) => addToRefs(el, socialMedia)}
+      <Link to="/events" className={classes.button}>
+        CHECK EVENTS
+      </Link>
+      <div className={classes.hamburgerHolder}
+        onClick={() => setSidebarOpen(!sidebarOpen)}>
+        <span
+          className={classes.hamburger}
         >
-          <img src="icons/instagramWhite.svg" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://www.facebook.com/BOOMeventsPula/"
-          ref={(el) => addToRefs(el, socialMedia)}
-        >
-          <img src="icons/facebookWhite.svg" />
-        </a>
+          <span ref={(el) => addToRefs(el, hamburgerLines)}></span>
+          <span ref={(el) => addToRefs(el, hamburgerLines)}></span>
+          <p ref={(el) => addToRefs(el, hamburgerLines)}>MENU</p>
+        </span>
       </div>
     </nav>
   );

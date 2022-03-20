@@ -123,7 +123,7 @@ const About = (props) => {
   }, []);
 
   return (
-    <section ref={aboutContainer} className={classes.aboutSection}>
+    <section id="about" ref={aboutContainer} className={classes.aboutSection}>
       <div className={classes.aboutTopHolder}>
         <div className={classes.sectionContainer}>
           <p>

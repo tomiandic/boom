@@ -1,15 +1,12 @@
 import React from "react";
 import * as classes from "../styles/booking.module.css";
 import PeopleCounter from "./PeopleCounter";
-import Stepper from 'stepper-component'
 
 
 
 const BookingTicketStep = (props) => {
     return (
         <div className={classes.bookingStepHolder}>
-               <Stepper steps={4} 
-            currentStep={1}/>
             <div className={classes.ticketType}>
                 <div>
                     <p className={classes.ticketTitle}>Boat Party Ticket - Regular</p>

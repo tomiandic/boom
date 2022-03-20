@@ -43,7 +43,7 @@ const Booking = () => {
      
         <StepWizard>
             <BookingTicketStep />
-            <BookingRegistrationStep />
+     {/*        <BookingRegistrationStep /> */}
         </StepWizard>
       </div>
     </section>

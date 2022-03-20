@@ -8,32 +8,6 @@
     max-width: 100vw; 
     position:relative;
 }
-.button{
-    margin: 20px auto;
-    padding: 15px 50px;
-    align-items: center;
-    border: none;
-    background-color:var(--main);
-    color: #fff;
-    fill: #fff;
-    cursor: pointer;
-    border-radius: 3px;
-    letter-spacing: 1px;
-    white-space: nowrap;
-    font-weight: 800;
-    display: none;
-    transition: transform 300ms;
-}
-.button svg{
-    transform: translateX(10px);
-    transition: transform 0.5s;
-}
-.button:hover svg{
-    transform: translateX(20px)
-}
-.button:hover{
-    transform: scale(1.02);
-}
 .videoBackdrop{
     position: absolute;
     top:0;

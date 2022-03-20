@@ -1,13 +1,10 @@
 import React from "react";
 import * as classes from "../styles/booking.module.css";
-import Stepper from 'stepper-component'
 
 
 const BookingRegistrationStep = (props) => {
     return (
         <div className={classes.bookingStepHolder}>
-                <Stepper steps={4} 
-            currentStep={2}/>
             <form>
                 <label>
                     Full Name

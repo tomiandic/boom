@@ -10,7 +10,7 @@ const Reviews = (props) => {
     const navNext = useRef();
 
     return (
-        <section className={classes.reviewSection}>
+        <section id="reviews" className={classes.reviewSection}>
             <div className={classes.sectionContainer}>
                 <div> 
                 <h2>

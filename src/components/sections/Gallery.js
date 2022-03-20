@@ -67,7 +67,7 @@ const GallerySection = (props) => {
   }, []);
 
   return (
-    <section ref={galleryContainer} className={classes.gallerySection}>
+    <section id="gallery" ref={galleryContainer} className={classes.gallerySection}>
       <div id="backdropImage" className={classes.quoteHolder}>
         <img src="./gallery/30.jpg"></img>
 
