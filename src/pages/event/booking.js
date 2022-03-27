@@ -1,7 +1,7 @@
 import React from "react";
 import * as classes from "../../styles/booking.module.css";
 import { StaticImage } from "gatsby-plugin-image";
-import BookingStep from "../../components/BookingStep";
+import BookingStep from "../../components/BookingTicketStep";
 import BookingRegistrationStep from "../../components/BookingRegistrationStep";
 import StepWizard from "react-step-wizard";
 import Header from "../../components/Header";
@@ -42,7 +42,7 @@ const Booking = () => {
         </div>
      
         <StepWizard>
-            <BookingTicketStep />
+            <BookingStep />
      {/*        <BookingRegistrationStep /> */}
         </StepWizard>
       </div>
