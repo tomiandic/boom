@@ -4,7 +4,7 @@ import PeopleCounter from "./PeopleCounter";
 
 
 
-const BookingTicketStep = (props) => {
+const BookingStep = (props) => {
     return (
         <div className={classes.bookingStepHolder}>
             <div className={classes.ticketType}>
@@ -44,4 +44,4 @@ const BookingTicketStep = (props) => {
     );
 };
 
-export default BookingTicketStep;
+export default BookingStep;

@@ -1,7 +1,7 @@
 import React from "react";
 import * as classes from "../../styles/booking.module.css";
 import { StaticImage } from "gatsby-plugin-image";
-import BookingTicketStep from "../../components/BookingTicketStep";
+import BookingStep from "../../components/BookingStep";
 import BookingRegistrationStep from "../../components/BookingRegistrationStep";
 import StepWizard from "react-step-wizard";
 import Header from "../../components/Header";
