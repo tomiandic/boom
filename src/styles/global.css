@@ -8,6 +8,7 @@
     font-family: 'Spartan', sans-serif;
     box-sizing: border-box;
     user-select: none;
+    scroll-behavior: smooth;
 }
 html, body{
     min-height: 100%;
@@ -83,7 +84,8 @@ html, body{
     opacity: 1!important;
 }
 .vertical-timeline::before{
-    width: 2px;
+    width: 1px;
+    opacity: .2;
     background: var(--main);
 }
 .swiper-button-next,

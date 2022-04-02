@@ -1,13 +1,18 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "gatsby";
 import { gsap, Power3, Sine } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as classes from "../styles/header.module.css";
 
-const Header = ({ pageIsLoaded }) => {
+gsap.registerPlugin(ScrollTrigger);
+
+const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const mobileNav = useRef();
+  const nav = useRef();
   const hamburgerLines = useRef([]);
   const navLinks = useRef([]);
+  const navLinksDesktop = useRef([]);
   const socialMedia = useRef([]);
   const sidebarTL = useRef(gsap.timeline({ paused: true }));
 
@@ -55,7 +60,7 @@ const Header = ({ pageIsLoaded }) => {
           y: 10,
           ease: Power3.easeOut,
         },
-        "-=.4"
+        "-=.6"
       )
       .to(
         socialMedia.current,
@@ -66,6 +71,33 @@ const Header = ({ pageIsLoaded }) => {
         },
         "-=1.2"
       );
+
+
+    gsap.to(nav.current, {
+      background: "#ffffffb3",
+      boxShadow: "0 0 30px -20px #97a6c7",
+      ease: Power3.easeOut,
+      scrollTrigger: {
+        trigger: "#about",
+        scrub: 1,
+        start: "top bottom", //when the top of the trigger hits bottom of vw
+        end: "+=100%"
+      },
+    });
+
+    gsap.to(navLinksDesktop.current, {
+      color: "#25373f",
+      ease: Power3.easeOut,
+      scrollTrigger: {
+        trigger: "#about",
+        scrub: 1,
+        start: "top bottom", //when the top of the trigger hits bottom of vw
+        end: "+=100%"
+      },
+    });
+
+    
+
   }, []);
 
   const addToRefs = (el, refArray) => {
@@ -81,8 +113,10 @@ const Header = ({ pageIsLoaded }) => {
 
 
   return (
-    <nav className={classes.headerContainer}>
-      <Link to="/"><img className={classes.logo} src="/boom_all_white.svg" /></Link>
+    <nav className={classes.headerContainer} ref={nav}>
+      <Link to="/">
+        <img className={classes.logo} src="/boom_final_black.svg" />
+      </Link>
       <div className={classes.menuInner} ref={mobileNav}>
         <div className={classes.navLinks}>
           <Link
@@ -169,9 +203,44 @@ const Header = ({ pageIsLoaded }) => {
           </a>
         </div>
       </div>
-      <Link to="/events" className={classes.button}>
-        CHECK EVENTS
-      </Link>
+      <div className={classes.navLinksDesktop}>
+        <Link
+          className={classes.navLinkDesktop}
+          ref={(el) => addToRefs(el, navLinksDesktop)}
+          onClick={() => setSidebarOpen(false)}
+          to="/#about"
+        >
+          About
+        </Link>
+        <Link
+          className={classes.navLinkDesktop}
+          ref={(el) => addToRefs(el, navLinksDesktop)}
+          onClick={() => setSidebarOpen(false)}
+          to="/#blog"
+        >
+          Blog
+        </Link>
+        <Link
+          className={`${classes.navLinkDesktop} ${classes.active}`}
+          ref={(el) => addToRefs(el, navLinksDesktop)}
+          onClick={() => setSidebarOpen(false)}
+          to="/#gallery"
+        >
+          Gallery
+        </Link>
+        <Link
+          className={classes.navLinkDesktop}
+          ref={(el) => addToRefs(el, navLinksDesktop)}
+          onClick={() => setSidebarOpen(false)}
+          to="/faq"
+        >
+          F.A.Q
+        </Link>
+        <Link to="/events" className={classes.button}>
+          CHECK EVENTS
+        </Link>
+      </div>
+
       <div className={classes.hamburgerHolder}
         onClick={() => setSidebarOpen(!sidebarOpen)}>
         <span

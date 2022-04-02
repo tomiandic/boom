@@ -74,19 +74,20 @@
     color: #fff;
 }
 .itineraryNavigation{
-    padding: 1rem 0;
+    padding: 12px 0;
     box-shadow: 0 5px 8px -10px black;
     position: sticky;
-    top: 5rem;
+    top: 4.5rem;
     background: #fff;
     z-index: 10;
 }
 .itineraryNavigation a{
-    padding: 16px 20px;
+    padding: 12px 20px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 12px;
     border-bottom: 2px solid #fff;
     cursor:pointer;
+    color: var(--black);
 }
 .itineraryNavigation a:first-of-type{
     margin-left: 2rem;
@@ -155,15 +156,12 @@
     .headerDetails{
         display: flex;
         align-items: center;
-        margin-top: 10px;
+        margin-top: 15px;
     }
     .headerDetails svg{
-        height: 1.8rem;
-        width: 1.8rem;
+        height: 1rem;
+        width: 1rem;
         fill: var(--main);
-        background: rgba(255, 131, 74, 0.1);
-        padding: 6px;
-        border-radius: 50%;
     }
     .headerDetails p{
         line-height: unset;

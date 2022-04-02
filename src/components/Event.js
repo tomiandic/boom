@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as classes from "../styles/event.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
@@ -10,6 +10,43 @@ import "swiper/css/navigation";
 
 
 const Event = () => {
+
+  const [activeNav, setActiveNav] = useState("");
+
+  useEffect(() => {
+
+    const sections = [
+      selectElementById("overview"),
+      selectElementById("route"),
+      selectElementById("itinerary"),
+      selectElementById("inclusions"),
+      selectElementById("tickets")
+    ];
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3
+    }
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    sections.forEach((sec) => observer.observe(sec));
+  }, [])
+
+  function selectElementById(id) {
+    return document.querySelector(`#${id}`);
+  }
+
+  function observerCallback(entries, observer) {
+    entries.forEach((entry) => {
+      console.log("entry", entry)
+      if (entry.isIntersecting) {
+        console.log("section", entry.target.id)
+        setActiveNav(entry.target.id);
+      }
+    });
+  }
+
+
   return (
     <section className={classes.eventSection}>
       <div className={classes.eventBanner}>
@@ -23,9 +60,7 @@ const Event = () => {
         <div className={classes.eventItineraryHolder}>
           <div className={`${classes.itineraryPart} ${classes.eventHeader}`}>
             <h1>Pula Party Boom Boat </h1>
-
             <div className={classes.headerDetails}>
-
               <svg version="1.1" x="0px" y="0px"
                 viewBox="0 0 512 512" enableBackground="new 0 0 512 512;">
                 <g>
@@ -84,13 +119,14 @@ const Event = () => {
             </div>
           </div>
           <div className={classes.itineraryNavigation}>
-              <a className={classes.active}>Overview</a>
-              <a>Route</a>
-              <a>Itinerary</a>
-              <a>Pricing</a>
-            </div>
+            <a href="#overview" className={`${activeNav === "overview" && classes.active}`}>Overview</a>
+            <a href="#route" className={`${activeNav === "route" && classes.active}`}>Route</a>
+            <a href="#itinerary" className={`${activeNav === "itinerary" && classes.active}`}>Itinerary</a>
+            <a href="#inclusions" className={`${activeNav === "inclusions" && classes.active}`}>Inclusions</a>
+            <a href="#tickets" className={`${activeNav === "tickets" && classes.active}`}>Pricing</a>
+          </div>
           <div
-            className={`${classes.itineraryPart} ${classes.bookingOverview}`}
+            id="overview" className={`${classes.itineraryPart} ${classes.bookingOverview}`}
           >
             <h6>Overview</h6>
 
@@ -126,11 +162,11 @@ const Event = () => {
               varius, mattis tellus at, pretium lectus.
             </p>
           </div>
-          <div className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
+          <div id="route" className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
             <h6>Route</h6>
             <StaticImage src="../images/route.jpg"></StaticImage>
           </div>
-          <div className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
+          <div id="itinerary" className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
             <h6>Itinerary</h6>
             <VerticalTimeline layout="1-column-left" lineColor="#f1f2f3">
               <VerticalTimelineElement
@@ -202,7 +238,7 @@ const Event = () => {
               </VerticalTimelineElement>
             </VerticalTimeline>
           </div>
-          <div className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
+          <div id="inclusions" className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
             <h6>Inclusions</h6>
             <Swiper
               spaceBetween={15}
@@ -356,7 +392,7 @@ const Event = () => {
               </SwiperSlide>
             </Swiper>
           </div>
-          <div className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
+          <div id="tickets" className={`${classes.itineraryPart} ${classes.bookingRoute}`}>
             <h6>Tickets</h6>
             <div className={`${classes.ticketCategoryBox} ${classes.ticketCategoryBoxDisabled}`}>
               <h6>Boat Party Ticket - Early Bird</h6>

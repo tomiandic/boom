@@ -2,20 +2,21 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background: rgb(242, 243, 245);
+    align-items: flex-start;
+    background: rgb(248 248 248);
+    padding-bottom: 15rem;
 }
 
 .bookingStepHolder{
     background: #fff;
     width: 80vw;
-    max-width: 900px;
+    max-width: 700px;
     border-radius: 3px;
     padding: 2rem;
     display: flex;
     flex-direction: column;
 }
-.counterHolder{
+.counterHolder{ 
     display: flex;
     align-items: center;
     width: fit-content;
@@ -38,7 +39,6 @@
 }
 .counterIcon.disabled{
     border: 1px solid lightgray;
-
 }
 .countNumber{
     width: 2.5rem;
@@ -60,6 +60,7 @@
 }
 .ticketTitle{
     font-weight: 600;
+    color: var(--black);
 }
 .ticketPrice{
     margin-top: 10px;
@@ -72,10 +73,10 @@
     border-radius: 3px;
     font-weight: 600;
     color: #fff;
-    margin-top: 5rem;
+    margin-top: 4rem;
     align-self: flex-end;
     cursor: pointer;
-}
+} 
 
 .bookingLogo{
     width: 120px;
@@ -86,45 +87,46 @@
     width: 280px;
     border-radius: 3px;
     margin-right: 1.5rem;
-    box-shadow: 0 20px 50px -20px #a2aeba;
 }
 .eventHolder{
     display: flex;
-    margin-bottom: 3rem;
-    margin-top: 7rem;
+    margin-bottom: 1rem;
+    margin-top: 10rem;
     position: relative;
-    color: var(--black);
+    color: #fff;
+    background: rgb(3, 10, 39);
+    padding: 1rem;
+    border-radius: 3px;
 }
 .eventHolder h6{
     font-size: 1.3rem;
     margin-bottom: 10px;
     margin-top: 5px;
 }
-
 .eventHolder p{
     font-size: 15px;
     font-weight: 500;
+    opacity: .8;
 }
 .eventHolder span:not(:last-of-type){
-    margin-right: 10px;
-    padding-right: 10px;
+    margin-right: 13px;
+    padding-right: 13px;
     border-right: 1px solid gray;
 }
 .countdown{
     color: red;
-    height: 32px;
-    border: 1px solid rgb(255, 127, 127);
+    height: 30px;
+    border: 1px solid rgb(255, 0, 0);
     border-radius: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 11px;
-    padding: 3px 10px;
+    width: 50px;
     font-weight: 600;
-    float: right;
     position: absolute;
-    right: 5px;
-    top:5px;
+    right: 15px;
+    bottom: 15px;
 }
 .ticketTotal{
     font-size:20px;
@@ -157,5 +159,12 @@ form button{
 }
 form button:hover{
     background: var(--mainDark);
-
+}
+.eventBackdrop{
+    background: rgb(0, 28, 65);
+    width: 100%;
+    left:0;
+    top:0;
+    position: absolute;
+    height: 500px;
 }

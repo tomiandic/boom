@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import * as classes from "../../styles/booking.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import BookingStep from "../../components/BookingStep";
 import BookingRegistrationStep from "../../components/BookingRegistrationStep";
+import BookingPaymentStep from "../../components/BookingPaymentStep";
+import BookingSummary from "../../components/BookingSummary";
 import StepWizard from "react-step-wizard";
 import Header from "../../components/Header";
 import Countdown from "react-countdown";
@@ -10,7 +12,7 @@ import Countdown from "react-countdown";
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
     // Render a complete state
-    return "Ticket booking expired";
+    alert("Ticket booking expired, you will be redirected to event page.")
   } else {
     // Render a countdown
     return (
@@ -21,10 +23,24 @@ const renderer = ({ hours, minutes, seconds, completed }) => {
   }
 };
 
+
 const Booking = () => {
+  const [step, setStep] = useState();
+  useEffect(()=>{
+    let currentStep = localStorage.getItem("wizardStep");
+    setStep(currentStep);
+    console.log(currentStep);
+  }, [])
+
+  const setWizardStep = (step, callback) => {
+    console.log("set step", step)
+    localStorage.setItem('wizardStep', step);
+    callback();
+  }
+
   return (
     <section className={classes.bookingSection}>
-      <Header/>
+      <Header />
       <div>
         <div className={classes.eventHolder}>
           <StaticImage className={classes.bookingEventImage} src="../images/b-top.jpg" />
@@ -37,14 +53,19 @@ const Booking = () => {
             </p>
           </div>
           <div className={classes.countdown}>
-          <Countdown renderer={renderer} date={Date.now() + 600000}  />
+            <Countdown renderer={renderer} date={Date.now() + 600000} />
           </div>
         </div>
-     
-        <StepWizard>
-            <BookingStep />
-     {/*        <BookingRegistrationStep /> */}
+
+        {step&&<StepWizard initialStep={step}>
+          <BookingStep setWizardStep={setWizardStep} />
+          <BookingRegistrationStep setWizardStep={setWizardStep}  />
+          <BookingPaymentStep setWizardStep={setWizardStep}  />
         </StepWizard>
+        
+        }<br/>
+        <BookingSummary />
+
       </div>
     </section>
   );

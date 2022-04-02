@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Link } from "gatsby";
 import { gsap, Power3, Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { aboutSliderData } from "../../data/data";
@@ -56,7 +55,7 @@ const About = (props) => {
         trigger: DOM.scrolltext,
         scrub: 1,
         start: "top bottom", //when the top of the trigger hits bottom of vw
-        end: "+=150%"
+        end: "+=140%"
       },
     }); 
 
@@ -121,7 +120,7 @@ const About = (props) => {
       }, "-=1")
 
   }, []);
-
+ 
   return (
     <section id="about" ref={aboutContainer} className={classes.aboutSection}>
       <div className={classes.aboutTopHolder}>
@@ -143,7 +142,7 @@ const About = (props) => {
         <img className={classes.seaDeco} src="/sea.png"></img>
 
       </div>
-      <div className={classes.contentHolder}>
+      <div id="#about" className={classes.contentHolder}>
         <div className={classes.aboutSliderHolder}>
           <div id="aboutImage" className={classes.imageHolder}>
             <img className={classes.desktopImage} src={aboutSliderData[sliderIndex].imageSrc} />

@@ -5,6 +5,9 @@ import PeopleCounter from "./PeopleCounter";
 
 
 const BookingStep = (props) => {
+    console.log(props.currentStep)
+
+
     return (
         <div className={classes.bookingStepHolder}>
             <div className={classes.ticketType}>
@@ -35,11 +38,8 @@ const BookingStep = (props) => {
                 </div>
             <PeopleCounter initialValue={1} maxValue={11} />
             </div>
-            
-            <div className={classes.ticketType}>
-              Total ticket price: <span className={classes.ticketTotal}>500.00$</span>
-            </div>
-            <button className={classes.mainButtonWizard} onClick={props.nextStep}>Continue</button>
+
+            <button className={classes.mainButtonWizard} onClick={() => props.setWizardStep(props.currentStep+1, props.nextStep)}>Continue</button>
         </div>
     );
 };
