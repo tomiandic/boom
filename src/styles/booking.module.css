@@ -1,0 +1,170 @@
+.bookingSection{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgb(248 248 248);
+    padding-bottom: 15rem;
+}
+
+.bookingStepHolder{
+    background: #fff;
+    width: 80vw;
+    max-width: 700px;
+    border-radius: 3px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+.counterHolder{ 
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 3px;
+    background: #fff;
+    border-radius: 30px;
+    padding: 5px;
+}
+.counterIcon{
+    height: 2.2rem;
+    width: 2.2rem;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: 50ms border ease-in;
+}
+.counterIcon:hover{
+    border: 1px solid rgb(0, 0, 0);
+}
+.counterIcon.disabled{
+    border: 1px solid lightgray;
+}
+.countNumber{
+    width: 2.5rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica;
+    padding: 10px 0;
+    border-radius: 10px;
+    background: #fff;
+    color: black;
+    margin: 0 5px;
+}
+.ticketType{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5px;
+    border-bottom: 1px solid #ededed;
+}
+.ticketTitle{
+    font-weight: 600;
+    color: var(--black);
+}
+.ticketPrice{
+    margin-top: 10px;
+}
+.mainButtonWizard{
+    background: var(--main);
+    border: none;
+    font-family: inherit;
+    padding: 10px 1rem;
+    border-radius: 3px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 4rem;
+    align-self: flex-end;
+    cursor: pointer;
+} 
+
+.bookingLogo{
+    width: 120px;
+    margin-bottom: 2rem;
+}
+.bookingEventImage{
+    height: 160px;
+    width: 280px;
+    border-radius: 3px;
+    margin-right: 1.5rem;
+}
+.eventHolder{
+    display: flex;
+    margin-bottom: 1rem;
+    margin-top: 10rem;
+    position: relative;
+    color: #fff;
+    background: rgb(3, 10, 39);
+    padding: 1rem;
+    border-radius: 3px;
+}
+.eventHolder h6{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.eventHolder p{
+    font-size: 15px;
+    font-weight: 500;
+    opacity: .8;
+}
+.eventHolder span:not(:last-of-type){
+    margin-right: 13px;
+    padding-right: 13px;
+    border-right: 1px solid gray;
+}
+.countdown{
+    color: red;
+    height: 30px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    width: 50px;
+    font-weight: 600;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+.ticketTotal{
+    font-size:20px;
+    padding: 10px 0;
+    font-weight: 500;
+}
+input,
+select{
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e6e9ee;
+    border-radius: 3px;
+    margin-bottom: 2rem;
+    margin-top: 5px;
+}
+label{
+    font-size: 12px;
+    font-weight: 500;
+}
+form button{
+    background: var(--main);
+    border: none;
+    color: #fff;
+    width: 100%;
+    border-radius: 3px;
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+form button:hover{
+    background: var(--mainDark);
+}
+.eventBackdrop{
+    background: rgb(0, 28, 65);
+    width: 100%;
+    left:0;
+    top:0;
+    position: absolute;
+    height: 500px;
+}

@@ -14,7 +14,7 @@
 .article{
     position: relative;
     cursor: pointer;
-    box-shadow: 0 15px 40px -8px rgba(1, 6, 29, 0.5); 
+    box-shadow: 0 15px 23px -8px rgb(1 6 29 / 50%);
     border-radius: var(--borderRadiusDesktop);
     overflow: hidden;
 }

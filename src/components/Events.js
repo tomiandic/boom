@@ -1,6 +1,7 @@
 import React from 'react';
 import * as classes from "../styles/events.module.css"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 
 const Events = () => {
@@ -27,7 +28,7 @@ const Events = () => {
                 />
             </svg> */}
             <div className={classes.eventsHolder}>
-                <div className={classes.event}>
+                <Link to="/event" className={classes.event}>
                     <StaticImage className={classes.eventImage} src="../images/b.jpg"></StaticImage>
                     <div className={classes.eventDetails}>
                         <p className={classes.eventTitle}>Crazy Summer Party Boom Boat starting in Medulin </p>
@@ -50,8 +51,8 @@ const Events = () => {
                             </g>
                         </svg>
                     </div>
-                </div>
-                <div className={classes.event}>
+                </Link>
+                <Link to="/event" className={classes.event}>
                     <div className={classes.earlyBird}>Early Bird Offer</div>
                     <StaticImage className={classes.eventImage} src="../images/b.jpg"></StaticImage>
                     <div className={classes.eventDetails}>
@@ -65,8 +66,7 @@ const Events = () => {
                             <p>44 EUR</p>
                         </div>
                     </div>
-
-                </div>
+                </Link>
                 <div className={classes.event}>
                     <StaticImage className={classes.eventImage} src="../images/b.jpg"></StaticImage>
                     <div className={classes.eventDetails}>

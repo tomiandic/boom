@@ -8,6 +8,7 @@
     font-family: 'Spartan', sans-serif;
     box-sizing: border-box;
     user-select: none;
+    scroll-behavior: smooth;
 }
 html, body{
     min-height: 100%;
@@ -15,13 +16,14 @@ html, body{
 :root{
     /* --main: #ff7b00; */
     --main: #ff5200;
+    --mainLight: #ffeee7;
     --mainDark: #b93500;
-    --secondary: #00E8FC;
+    --secondary: #00d3da;
     --secondaryDark: #09cadb;
     --black: #25373f;
     --white: #f3f0f0;
     --lightBackground: #f0f5f5;
-    --borderRadiusDesktop: 8px;
+    --borderRadiusDesktop: 4px;
 }
 .sectionContent{
     width: 90vw;
@@ -31,6 +33,7 @@ html, body{
 .swiper-button-disabled{
     opacity: .3;
 }
+
 .swiper-horizontal > .swiper-pagination-progressbar{
     width: 65%!important;
     height: 2px!important;
@@ -42,6 +45,61 @@ html, body{
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
     background: var(--secondary);
 }
+.vertical-timeline-element-content{
+    box-shadow: 5px 0 70px -20px rgb(221, 225, 228);
+    padding: 2rem;
+    margin-left: 45px;
+}
+.vertical-timeline-element-title{
+    font-weight: 600;
+    font-size: 15px;
+}
+.vertical-timeline-element-content p {
+    color: hsl(220, 8%, 55%);
+}
+.vertical-timeline-element--work img{
+    width: 100%;
+    border-radius: 5px;
+    max-height: 300px;
+    object-fit: cover;
+}
+.vertical-timeline-element--work p{
+    font-size: 13px;
+    font-weight: 400;
+}
+.vertical-timeline-element-icon{
+    width: 13px;
+    height: 13px;
+    left: 12px;
+    top: 10px;
+    background: var(--main);
+    box-shadow: 0 2px 5px -2px rgb(88, 88, 88);
+}
+.vertical-timeline-element-date{
+    font-size: 10px!important;
+    font-weight: 800!important;
+    color: var(--main);
+    border-radius: 5px;
+    margin-top: 1rem;
+    opacity: 1!important;
+}
+.vertical-timeline::before{
+    width: 1px;
+    background: rgb(238, 238, 238);
+}
+.swiper-button-next,
+.swiper-button-prev{
+    background: #fff;
+    box-shadow: 0 1px 10px -2px rgb(200, 200, 200);
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size: 15px;
+    color: var(--main);
+}
 
 @media (min-width: 900px) {
 
@@ -49,7 +107,23 @@ html, body{
         width: 80vw;
         padding: 10rem 0;
     }
+}
 
+@media (max-width: 700px) {
+
+    .vertical-timeline-element-content{
+        padding: 1rem;
+        margin-left: 10px;
+    }
+    .vertical-timeline::before{
+        left: -5px;
+    }
+    .vertical-timeline-element-icon{
+        width: 10px;
+        height: 10px;
+        left: -10px;
+        top: 15px;
+    }
 }
 
 

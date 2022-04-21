@@ -49,7 +49,7 @@ const Blog = (props) => {
     }, []); */
 
   return (
-    <section ref={aboutContainer} className={classes.blogSection}>
+    <section id="blog" ref={aboutContainer} className={classes.blogSection}>
       <div className={classes.titleHolder}>
         <h2>Latest News</h2>
         <img src="/sea_vertical.jpg" />

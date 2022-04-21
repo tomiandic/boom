@@ -2,18 +2,17 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link } from "gatsby";
 import { gsap, Power3, Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Gallery, Item } from "react-photoswipe-gallery";
 import "photoswipe/dist/photoswipe.css";
 import "photoswipe/dist/default-skin/default-skin.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
-import SwiperCore, { EffectCards, Navigation } from "swiper";
+import SwiperCore, { EffectCards } from "swiper";
 import * as classes from "../../styles/gallery.module.css";
 gsap.registerPlugin(ScrollTrigger);
 
 // install Swiper modules
-SwiperCore.use([EffectCards, Navigation]);
+SwiperCore.use([EffectCards]);
 const GallerySection = (props) => {
   const navNext = useRef();
   const navPrev = useRef();
@@ -68,7 +67,7 @@ const GallerySection = (props) => {
   }, []);
 
   return (
-    <section ref={galleryContainer} className={classes.gallerySection}>
+    <section id="gallery" ref={galleryContainer} className={classes.gallerySection}>
       <div id="backdropImage" className={classes.quoteHolder}>
         <img src="./gallery/30.jpg"></img>
 
@@ -90,10 +89,6 @@ const GallerySection = (props) => {
       <Swiper
         effect={"cards"}
         grabCursor={true}
-        navigation={{
-          prevEl: navPrev.current,
-          nextEl: navNext.current,
-        }}
         onBeforeInit={(swiper) => {
           swiper.params.navigation.prevEl = navPrev.current;
           swiper.params.navigation.nextEl = navNext.current;
@@ -127,15 +122,15 @@ const GallerySection = (props) => {
                 y2="10.79"
                 fill="none"
                 stroke="#000"
-                stroke-miterlimit="10"
-                stroke-width="2"
+                strokeMiterlimit="10"
+                strokeWidth="2"
               />
               <polyline
                 points="79.5 0.71 89.5 10.71 79.5 20.71"
                 fill="none"
                 stroke="#000"
-                stroke-miterlimit="10"
-                stroke-width="2"
+                strokeMiterlimit="10"
+                strokeWidth="2"
               />
             </svg>
           </div>
@@ -147,15 +142,15 @@ const GallerySection = (props) => {
                 y2="10.79"
                 fill="none"
                 stroke="#000"
-                stroke-miterlimit="10"
-                stroke-width="2"
+                strokeMiterlimit="10"
+                strokeWidth="2"
               />
               <polyline
                 points="79.5 0.71 89.5 10.71 79.5 20.71"
                 fill="none"
                 stroke="#000"
-                stroke-miterlimit="10"
-                stroke-width="2"
+                strokeMiterlimit="10"
+                strokeWidth="2"
               />
             </svg>
           </div>

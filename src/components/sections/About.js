@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import { Link } from "gatsby";
 import { gsap, Power3, Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { aboutSliderData } from "../../data/data";
@@ -50,13 +49,13 @@ const About = (props) => {
     };
 
     gsap.to(DOM.scrolltext, {
-      xPercent: -80,
+      xPercent: -90,
       ease: Power3.easeOut,
       scrollTrigger: {
         trigger: DOM.scrolltext,
         scrub: 1,
         start: "top bottom", //when the top of the trigger hits bottom of vw
-        end: "+=150%"
+        end: "+=140%"
       },
     }); 
 
@@ -121,9 +120,9 @@ const About = (props) => {
       }, "-=1")
 
   }, []);
-
+ 
   return (
-    <section ref={aboutContainer} className={classes.aboutSection}>
+    <section id="about" ref={aboutContainer} className={classes.aboutSection}>
       <div className={classes.aboutTopHolder}>
         <div className={classes.sectionContainer}>
           <p>
@@ -143,7 +142,7 @@ const About = (props) => {
         <img className={classes.seaDeco} src="/sea.png"></img>
 
       </div>
-      <div className={classes.contentHolder}>
+      <div id="#about" className={classes.contentHolder}>
         <div className={classes.aboutSliderHolder}>
           <div id="aboutImage" className={classes.imageHolder}>
             <img className={classes.desktopImage} src={aboutSliderData[sliderIndex].imageSrc} />
@@ -176,7 +175,7 @@ const About = (props) => {
         <h2 id="scrolltext" className={classes.scrolltext}>AFTErmovie</h2> 
       </div> 
       <div className={classes.videoHolder}>
-        <iframe className={classes.videoIframe} src="https://www.youtube-nocookie.com/embed/0ajlLKc3N1A?controls=0&amp;start=13" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe className={classes.videoIframe} src="https://www.youtube-nocookie.com/embed/0ajlLKc3N1A?controls=0&amp;start=13" title="Boom Events Aftermovie" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
       <div className={classes.grayBackdrop}></div>
    {/*    <div className={classes.scrolltextHolder}>
