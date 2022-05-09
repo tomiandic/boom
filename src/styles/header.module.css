@@ -6,7 +6,7 @@
     z-index: 10;
     backdrop-filter: blur(10px);
     text-align: right;
-    color: rgba(255, 255, 255, 0.781);
+    color: #fff;
 }
 .hamburgerHolder{
     background: #fff;
@@ -150,4 +150,15 @@
 .button:hover{
     transform: scale(1.02);
     background: var(--mainDark);
+}
+
+@media (max-width: 850px) {
+
+    
+.navLinksDesktop{
+    display: none;
+}
+.hamburgerHolder{
+    display: flex;
+}
 }

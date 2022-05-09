@@ -90,7 +90,7 @@
     color: var(--black);
 }
 .itineraryNavigation a:first-of-type{
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 .itineraryNavigation a:hover,
 .itineraryNavigation a.active{
@@ -341,10 +341,12 @@
     .ticketCategoryBox h6{
         font-size: 16px;
     }
-
 }
 
 @media (max-width: 850px) {
+    .itineraryNavigation a:first-of-type{
+        margin-left: unset;
+    }
     .eventHolder{
         flex-direction: column-reverse;
         width: 93%;
@@ -362,6 +364,7 @@
         position: fixed;
         bottom: 0;
         left: 0;
+        top: unset;
         background: #fff;
         z-index: 10;
         width: 100%;
@@ -371,7 +374,7 @@
         padding: 1.2rem 0;
     }
     .itineraryNavigation a{
-        font-size: 11px;
+        font-size: 9px;
         padding: 23px 16px;
     }
     .eventBanner{

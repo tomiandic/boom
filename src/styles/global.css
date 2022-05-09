@@ -68,12 +68,12 @@ html, body{
     font-weight: 400;
 }
 .vertical-timeline-element-icon{
-    width: 23px;
-    height: 23px;
-    left: 8px;
+    width: 13px;
+    height: 13px;
+    left: 12px;
     top: 10px;
-    background: white;
-    box-shadow: 0 2px 15px -5px rgb(173, 173, 173);
+    background: var(--main);
+    box-shadow: 0 2px 5px -2px rgb(88, 88, 88);
 }
 .vertical-timeline-element-date{
     font-size: 10px!important;
@@ -85,8 +85,7 @@ html, body{
 }
 .vertical-timeline::before{
     width: 1px;
-    opacity: .2;
-    background: var(--main);
+    background: rgb(238, 238, 238);
 }
 .swiper-button-next,
 .swiper-button-prev{
@@ -108,22 +107,21 @@ html, body{
         width: 80vw;
         padding: 10rem 0;
     }
-
 }
 
 @media (max-width: 700px) {
 
     .vertical-timeline-element-content{
         padding: 1rem;
-        margin-left: 25px;
+        margin-left: 10px;
     }
     .vertical-timeline::before{
-        left: 5px;
+        left: -5px;
     }
     .vertical-timeline-element-icon{
-        width: 15px;
-        height: 15px;
-        left: 0px;
+        width: 10px;
+        height: 10px;
+        left: -10px;
         top: 15px;
     }
 }
