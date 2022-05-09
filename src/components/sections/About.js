@@ -126,16 +126,13 @@ const About = (props) => {
       <div className={classes.aboutTopHolder}>
         <div className={classes.sectionContainer}>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            malesuada id ex nec rutrum. Donec vitae metus sollicitudin, pharetra
-            mauris in, venenatis mi. Nulla viverra augue purus, ac commodo orci
-            porttitor rutrum. Nam sodales, massa a pharetra imperdiet, lorem metus
-            facilisis nibh, id dignissim ligula neque eu ante. Aliquam lacinia,
-            enim quis semper euismod, risus ipsum ullamcorper quam, quis vulputate
-            mauris lacus pulvinar mauris.
+          Be amused by magnificent views of Brijuni islands and the Istrian archipelago while taking pleasure in our wide range of 
+          bar bevarages and food. Gin, summer cocktails, shooters and everything you please.
+          Visit the astonishing vacation destinations and cross off the list of places you’ve always wanted to visit while partying 
+          like crazy for 6 hours.
           </p>
             <h2>
-              Enjoy your <span>summer</span> <br />with Boom
+              Let us <br /><span>entertain </span> you.
             </h2>
 
         </div>
@@ -156,7 +153,11 @@ const About = (props) => {
                 <p className={classes.paragraph}>
                   {aboutSliderData[sliderIndex].text}
                 </p>
+            {aboutSliderData[sliderIndex].buttonText?
                 <button className={classes.sectionButton}>{aboutSliderData[sliderIndex].buttonText}<span></span></button>
+                :
+                null
+            }
               </div>
             </div>
           </div>

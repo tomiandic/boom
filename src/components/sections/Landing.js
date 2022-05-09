@@ -144,7 +144,7 @@ const Landing = () => {
           </div>
           <div className={classes.line}>
             <span data-animate="reveal">
-              Now Available!
+              Available Now
             </span>
           </div>
         </h1>
@@ -152,17 +152,12 @@ const Landing = () => {
         <p className={classes.landingParagraph}>
           <div className={classes.line}>
             <span data-animate="reveal">
-              Order your boat party ticket on time
+              Order now and sail away with us
             </span>
           </div>
           <div className={classes.line}>
             <span data-animate="reveal">
-              to get the early bird prices,
-            </span>
-          </div>
-          <div className={classes.line}>
-            <span data-animate="reveal">
-              and much more.
+              to the best adventure of a lifetime!
             </span>
           </div>
         </p>

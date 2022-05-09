@@ -47,16 +47,11 @@
 .reviewDetails p{
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: 8px;
-    margin-right: 20px;
-    margin-top: 1rem;
-}
-.reviewDetails p:first-of-type{
+    font-size: 9px;
+    margin-right: 10px;
+    margin-top: .5rem;
     color: var(--main);
-}
-.reviewDetails p:last-of-type{
-    color: rgb(200, 200, 200);
+    font-weight: 600!important;
 }
 .reviewContainer img{
     border-radius: 50%;

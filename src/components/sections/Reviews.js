@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import * as classes from "../../styles/reviews.module.css";
 import SwiperCore, { Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from "swiper/react";
+import {reviewData} from "../../data/data";
 SwiperCore.use([Navigation, Pagination])
 
 
@@ -44,70 +45,22 @@ const Reviews = (props) => {
                   spaceBetween={30}
                   className={classes.swiperContainer}
                   >
+                    {reviewData.map(review => 
                   <SwiperSlide>
                     <div className={classes.reviewContainer}>
                     <img src="./gallery/1.jpg"></img>
 
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                            malesuada id ex nec rutrum. Donec vitae metus sollicitudin, pharetra
-                            mauris in, venenatis mi. Nulla viverra augue purus, ac commodo orci
-                            porttitor rutrum.
+                           {review.review}
                         </p>
                         <div className={classes.reviewDetails}>
-                            <p>Reviewer Name</p> 
-                            <p>Review Source</p>
+                            <p>{review.name}</p> 
+                            <p>&#8226;</p>
+                            <p>{review.source}</p>
                         </div>
                     </div>
                   </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={classes.reviewContainer}>
-                    <img src="./gallery/1.jpg"></img>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                            malesuada id ex nec rutrum. Donec vitae metus sollicitudin, pharetra
-                            mauris in, venenatis mi. Nulla viverra augue purus, ac commodo orci
-                            porttitor rutrum.
-                        </p>
-                        <div className={classes.reviewDetails}>
-                            <p>Reviewer Name</p> 
-                            <p>Review Source</p>
-                        </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={classes.reviewContainer}>
-                    <img src="./gallery/1.jpg"></img>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                            malesuada id ex nec rutrum. Donec vitae metus sollicitudin, pharetra
-                            mauris in, venenatis mi. Nulla viverra augue purus, ac commodo orci
-                            porttitor rutrum.
-                        </p>
-                        <div className={classes.reviewDetails}>
-                            <p>Reviewer Name</p> 
-                            <p>Review Source</p>
-                        </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={classes.reviewContainer}>
-                    <img src="./gallery/1.jpg"></img>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-                            malesuada id ex nec rutrum. Donec vitae metus sollicitudin, pharetra
-                            mauris in, venenatis mi. Nulla viverra augue purus, ac commodo orci
-                            porttitor rutrum.
-                        </p>
-                        <div className={classes.reviewDetails}>
-                            <p>Reviewer Name</p> 
-                            <p>Review Source</p>
-                        </div>
-                    </div>
-                  </SwiperSlide>
+                    )}
                 </Swiper>
             </div>
         </section>
