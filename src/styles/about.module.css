@@ -10,6 +10,7 @@
 .sectionContainer h2 span{
     font-weight: 800;
     color: var(--secondary);
+    font-weight: 100;
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
     font-weight: 800;
