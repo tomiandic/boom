@@ -15,7 +15,6 @@ const Header = () => {
   const navLinksDesktop = useRef([]);
   const socialMedia = useRef([]);
   const sidebarTL = useRef(gsap.timeline({ paused: true }));
-  const blackLogo = useRef();
 
   useEffect(() => {
     sidebarTL.current
@@ -97,19 +96,6 @@ const Header = () => {
       },
     });
 
-    gsap.to(blackLogo.current, {
-      opacity: 1,
-      ease: Power3.easeOut,
-      scrollTrigger: {
-        trigger: "#about",
-        scrub: 1,
-        start: "top bottom", //when the top of the trigger hits bottom of vw
-        end: "+=100%"
-      },
-    })
-
-    
-
   }, []);
 
   const addToRefs = (el, refArray) => {
@@ -127,8 +113,7 @@ const Header = () => {
   return (
     <nav className={classes.headerContainer} ref={nav}>
       <Link to="/">
-        <img className={classes.logo} src="/boom_all_white.svg" />
-        <img style={{opacity: 0}} ref={blackLogo} className={classes.logo} src="/boom_final_black.svg" />
+        <img style={{opacity:.95}} className={classes.logo} src="/boom_final_black.svg" />
       </Link>
       <div className={classes.menuInner} ref={mobileNav}>
         <div className={classes.navLinks}>

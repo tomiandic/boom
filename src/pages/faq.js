@@ -20,9 +20,8 @@ const FAQ = () => {
             <br/>
             <br/>
             <br/>
-            <br/>
                 {faqData.map(faq =>
-                    <Accordion >
+                    <Accordion>
                         <AccordionSummary expandIcon={<img style={{height: "1.6rem"}} src={ArrowDown}/>}>
                             <p className={classes.faqQuestion}>{faq.question}</p>
                         </AccordionSummary>

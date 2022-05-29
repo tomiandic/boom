@@ -1,22 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import * as classes from "../styles/booking.module.css";
+import { BookingContext } from "../pages/event/booking";
 
 
 
 const PeopleCounter = (props) => {
 
+    const { selectedTickets, setSelectedTickets } = useContext(BookingContext);
     const [countNumber, setCountNumber] = useState(0);
 
     useEffect(() => props.initialValue && setCountNumber(props.initialValue), [])
 
     const increaseCount = () => {
         let newCount = countNumber === props.maxValue ? props.maxValue : countNumber + 1;
-        setCountNumber(newCount, () => props.countIncreased(newCount));
+        setCountNumber(newCount);
+        setSelectedTickets({...selectedTickets, [props.id]:newCount})
     }
 
     const decreaseCount = () => {
         let newCount = countNumber === 0 ? 0 : countNumber - 1;
-        setCountNumber(newCount, () => props.countDecreased(newCount));
+        setCountNumber(newCount);
+        setSelectedTickets({...selectedTickets, [props.id]:newCount})
     }
 
     let button1Classes = countNumber === 0 ? `${classes.counterIcon} ${classes.disabled}`: classes.counterIcon;

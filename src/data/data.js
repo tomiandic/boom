@@ -139,11 +139,77 @@ export const faqData = [{
   },{
   question:"Where can I buy Boom events merchandise?",
   answer: "Our merchandise is available to purchase on site at our events. "
-  
-  
-  
-  
-  
-  
-
 }]
+
+export const eventData = {
+  title: "Pula Party Boom Boat Volume 1",
+  location: "Pula", 
+  date: "22.06.2022",
+  time: "16:00 - 22:00",
+  overviewText: "If you are coming to Pula by a car you can park it on Karolina parking lot (located between Arena and Riva) and the price is…. Check in is at Pietas Julia (address: Riva 20), a 3 minute walk away from the parking lot. Our staff will be at the Pietas Julia at 5 PM to scan tickets to provide you with boarding passes and then boarding guests onto the boat will begin approx at 5:30 PM;. We recommend arriving before the approx 5PM boarding time to have your tickets scanned for your boarding passes. The boat is anchored across from the Pietas Julia club where we will also have an after party.",
+  drinkShortText: "Great drinks & snacks offer",
+  swimShortText: "Sunset swim stop ",
+  islandShortText: "Passing near multiple islands",
+  musicShortText: "R&B, hip-hop, reaggeton",
+  itinerary: [
+    {
+      title: "Check in: Pietas Julia Pula", 
+      text: "We check in at Pietas Julia where our beautiful hostess scan your tickets.", 
+      image: "/about.jpg",
+      time: "17:00"
+    },
+    {
+      title: "Departure: riva Pula", 
+      text: "We board on Riva Pula from where we sail off and the adventure of the lifetime begins.", 
+      time: "17:30"
+    },
+    {
+      title: "Sailing & partying", 
+      image: "/ab.jpg",
+      text: "We sail through the beautiful Pula archipelago and near Brijuni islands which are also a beautiful National park. We continue to sail to Barbariga, which is well known for its long and tame coast where we take a swim stop. Our hostess serve you with our special free shooters.", 
+      time: "17:30 - 18:30"
+    },
+    {
+      title: "Sunset swim stop", 
+      text: "We take a beautiful sunset swim stop and enjoy the sunbathing.", 
+      time: "18:30 - 20:00"
+    },
+    {
+      title: "Night party", 
+      text: "The sun goes down, but we go up. Co2, MC & confetti show, twerk contest & many more that are not polite enough for the internet. What happens on the boat, stays on the boat.", 
+      time: "20:00 - 23:30"
+    },
+    {
+      title: "Return", 
+      text: "We return to Pula from where we go to an organized after party", 
+      time: "23:30"
+    },
+    {
+      title: "After party", 
+      image: "/about3.jpg",
+      text: "Bright lights and late nights", 
+      time: "23:00 - dawn"
+    },
+  ],
+  tickets: [
+    { id: 1,
+      name: "Boat Party Ticket - Early Bird",
+      price: 35,
+      available: 10
+    },
+    {
+      id: 2,
+      name: "Boat Party Ticket - Regular",
+      price: 55,
+      available: 150
+    },
+    {
+      id: 3,
+      name: "Boat Party Ticket - VIP",
+      price: 55,
+      available: 30
+    }
+  ]
+}
+
+

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState, createContext } from "react";
 import * as classes from "../../styles/booking.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import BookingStep from "../../components/BookingStep";
@@ -8,6 +8,10 @@ import BookingSummary from "../../components/BookingSummary";
 import StepWizard from "react-step-wizard";
 import Header from "../../components/Header";
 import Countdown from "react-countdown";
+import { eventData } from "../../data/data";
+
+export const BookingContext = createContext(null);
+
 
 const renderer = ({ hours, minutes, seconds, completed }) => {
   if (completed) {
@@ -26,48 +30,52 @@ const renderer = ({ hours, minutes, seconds, completed }) => {
 
 const Booking = () => {
   const [step, setStep] = useState();
-  useEffect(()=>{
+  const [selectedTickets, setSelectedTickets] = useState({});
+
+  useEffect(() => {
     let currentStep = localStorage.getItem("wizardStep");
     setStep(currentStep);
-    console.log(currentStep);
   }, [])
 
   const setWizardStep = (step, callback) => {
-    console.log("set step", step)
     localStorage.setItem('wizardStep', step);
     callback();
   }
 
+  let count = Object.entries(selectedTickets).reduce((prevVal, curVal) => prevVal+curVal[1], 0)
+
   return (
-    <section className={classes.bookingSection}>
-      <Header />
-      <div>
-        <div className={classes.eventHolder}>
-          <StaticImage className={classes.bookingEventImage} src="../images/b-top.jpg" />
-          <div>
-            <h6>Event: Party Boom Boat Party</h6>
-            <p>
-              <span>Jan 6. </span>
-              <span> Pula </span>
-              <span> 18:00</span>
-            </p>
+    <BookingContext.Provider value={{ selectedTickets, setSelectedTickets }}>
+      <section className={classes.bookingSection}>
+        <Header />
+        <div className={classes.bookingContainer}>
+          <div className={classes.eventHolder}>
+            <StaticImage className={classes.bookingEventImage} src="../images/b-top.jpg" />
+            <div>
+              <h6>{eventData.title}</h6>
+              <p style={{ fontSize: "13px" }}>
+                <span>{eventData.date} </span>
+                <span>{eventData.location} </span>
+                <span> {eventData.time}</span>
+              </p>
+            </div>
+            <div className={classes.countdown}>
+              <Countdown renderer={renderer} date={Date.now() + 600000} />
+            </div>
           </div>
-          <div className={classes.countdown}>
-            <Countdown renderer={renderer} date={Date.now() + 600000} />
-          </div>
+          {
+            step && <StepWizard initialStep={step}>
+              <BookingStep showButton={count>0} tickets={eventData.tickets} setWizardStep={setWizardStep} />
+              <BookingRegistrationStep setWizardStep={setWizardStep} />
+              <BookingPaymentStep setWizardStep={setWizardStep} />
+            </StepWizard>
+          }<br />
+          {
+          count ? <BookingSummary tickets={eventData.tickets} /> : null}
+
         </div>
-
-        {step&&<StepWizard initialStep={step}>
-          <BookingStep setWizardStep={setWizardStep} />
-          <BookingRegistrationStep setWizardStep={setWizardStep}  />
-          <BookingPaymentStep setWizardStep={setWizardStep}  />
-        </StepWizard>
-        
-        }<br/>
-        <BookingSummary />
-
-      </div>
-    </section>
+      </section>
+    </BookingContext.Provider>
   );
 };
 

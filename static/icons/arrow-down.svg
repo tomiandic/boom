@@ -1,3 +1,15 @@
-<svg width="32px" height="32px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M1.99951 16C1.99951 8.26801 8.26753 2 15.9995 2C23.7315 2 29.9995 8.26801 29.9995 16C29.9995 23.732 23.7315 30 15.9995 30C8.26753 30 1.99951 23.732 1.99951 16ZM11.7066 15.2929C11.3161 14.9024 10.6829 14.9024 10.2924 15.2929C9.90188 15.6834 9.90188 16.3166 10.2924 16.7071L15.2924 21.7071C15.6829 22.0976 16.3161 22.0976 16.7066 21.7071L21.7066 16.7071C22.0971 16.3166 22.0971 15.6834 21.7066 15.2929C21.3161 14.9024 20.6829 14.9024 20.2924 15.2929L16.9995 18.5858V11C16.9995 10.4477 16.5518 10 15.9995 10C15.4472 10 14.9995 10.4477 14.9995 11V18.5858L11.7066 15.2929Z" fill="#3A52EE"/>
+<svg width="24px" height="24px" viewBox="0 0 24 24" id="arrow_down" data-name="arrow down" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Mask" width="24" height="24" fill="none" stroke="#000" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="_20x20_arrow-back--grey" data-name="20x20/arrow-back--grey" transform="translate(0 24) rotate(-90)">
+    <rect id="Mask-2" data-name="Mask" width="24" height="24" fill="none"/>
+    <g id="_20x20_arrow-back--grey-2" data-name="20x20/arrow-back--grey" clip-path="url(#clip-path)">
+      <g id="Group_2" data-name="Group 2" transform="translate(8 7)">
+        <path id="Rectangle" d="M0,6.586V0H6.586" transform="translate(0.686 5.157) rotate(-45)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
 </svg>
