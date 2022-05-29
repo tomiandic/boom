@@ -53,7 +53,7 @@ const Booking = () => {
             <StaticImage className={classes.bookingEventImage} src="../images/b-top.jpg" />
             <div>
               <h6>{eventData.title}</h6>
-              <p style={{ fontSize: "13px" }}>
+              <p>
                 <span>{eventData.date} </span>
                 <span>{eventData.location} </span>
                 <span> {eventData.time}</span>
