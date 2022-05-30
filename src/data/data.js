@@ -62,88 +62,88 @@ export const reviewData = [
 ]
 
 export const faqData = [{
-  question:"Where to meet?",
-  answer:"We meet at Pietas Julia Pula (address: Riva 20, Pula) at 5PM where we do check in.",
-  },{
-  question:"What's the price?",
+  question: "Where to meet?",
+  answer: "We meet at Pietas Julia Pula (address: Riva 20, Pula) at 5PM where we do check in.",
+}, {
+  question: "What's the price?",
   answer: "The price of the regular ticket is €39 and VIP ticket is €69. Regular ticket includes Party Boom Boat exclusive entrance wristband, entrance to the party, after party, welcome drink and entrance to all our other events and VIP ticket includes VIP Party Boom Boat exclusive entrance wristband, authentic istrian plate, security guard for your VIP area, VIP seating space, DJ's backstage, VIP priority boarding, VIP service hostess, special treatment + all regular ticket benefits."
-  },{
-  question:"How to buy tickets?",
+}, {
+  question: "How to buy tickets?",
   answer: "Tickets can be purchased by card on our website here, on Entrio website (link) or directly from us in person."
-  },{
-  question:"What if I'm late?",
+}, {
+  question: "What if I'm late?",
   answer: "The boat leaves at 5:30 PM, we can eventually wait for you for a couple of minutes if you let us know on time."
-  },{
-  question:"How often are the boat parties?",
+}, {
+  question: "How often are the boat parties?",
   answer: "The Boom boat party runs every Thursday from June to September, and some selected Wednesday. All our events can be checked on our home page."
-  },{
-  question:"Do we offer private parties?",
+}, {
+  question: "Do we offer private parties?",
   answer: "Yes of course, if you’re looking for something extra special, we can host a private boat party just for you."
-  },{
-  question:"Is there food on the boat?",
+}, {
+  question: "Is there food on the boat?",
   answer: "If you get hungry we have great food offer (hot dogs, sandwiches and Istrian plate) that you can purchase on the boat."
-  },{
-  question:"What is your on-site COVID policy?",
+}, {
+  question: "What is your on-site COVID policy?",
   answer: ""
-  },{
-  question:"Why should I book my tickets here?",
+}, {
+  question: "Why should I book my tickets here?",
   answer: "We recommend that you book your tickets online directly with US! We are the original ticket source so you can ensure that you get the latest and best prices for our boat parties."
-  },{
-  question:"What do I need to check in?",
+}, {
+  question: "What do I need to check in?",
   answer: "You need your ticket which you can show on your phone or print for admission and some ID documents (which you can also show on your phone)"
-  },{
-  question:"What type of music do you play on Boom boat party?",
+}, {
+  question: "What type of music do you play on Boom boat party?",
   answer: "We mostly play house, commercial, reggaeton, R'n'B and techno music but depending on the atmosphere we can add a little bit of German rap, Schlager or Balkan music."
-  },{
-  question:"What are the methods of payment on the boat?",
+}, {
+  question: "What are the methods of payment on the boat?",
   answer: "You can pay with cash or credit card."
-  },{
-  question:"Do you accept credit cards at the bar for drinks or food?",
+}, {
+  question: "Do you accept credit cards at the bar for drinks or food?",
   answer: "Yes, we accept credit cards."
-  },{
-  question:"How do I recieve my tickets?",
+}, {
+  question: "How do I recieve my tickets?",
   answer: "You will receive an email with your e-tickets after your purchase, which you can show on your phone or print for admission. In other case you can buy tickets directly from us in person."
-  },{
-  question:"Are there Processing Fees for Ticket Purchases?",
+}, {
+  question: "Are there Processing Fees for Ticket Purchases?",
   answer: "Yes, Processing Fees will be applied to the total. The fees will appear after you click the Buy Now button on the event webpage. Please advise that it does list ** Fees applied in the information below the 'buy now' button."
-  },{
-  question:"What is the route?",
+}, {
+  question: "What is the route?",
   answer: "We sail through the beautiful Pula archipelago and near Brijuni islands which are also a beautiful National park. We continue to sail to Barbariga, which is well known for its long and tame coast where we take a swim stop."
-  },{
-  question:"What if the weather is terrible?",
+}, {
+  question: "What if the weather is terrible?",
   answer: "Unfortunately, the weather is the only thing that can stop us. In that case you get a full refund or you can transfer your ticket to some other date."
-  },{
-  question:"Are you able to refund me if I have to cancel?",
+}, {
+  question: "Are you able to refund me if I have to cancel?",
   answer: ""
-  },{
-  question:"What is the capacity of the boat?",
+}, {
+  question: "What is the capacity of the boat?",
   answer: "There can be up to 250 people on the Boom Boat."
-  },{
-  question:"Can I bring my own food or drink?",
+}, {
+  question: "Can I bring my own food or drink?",
   answer: "You are not permitted to bring your own food and drinks, but we can assure you that you will not need anything because we have a very well equipped bar and great food offer"
-  },{
-  question:"Do you have any age restrictions?",
+}, {
+  question: "Do you have any age restrictions?",
   answer: "You must be 18 years old (or turning 18 in the year of travel) in order to participate on Boom boat party! Aside from this, there are no restrictions on age! "
-  },{
-  question:"What should I wear?",
+}, {
+  question: "What should I wear?",
   answer: "We have no dress code HOWEVER it will be best to pick out your sexiest swimsuit or swimming trunks. Try not to bring many valuables."
-  },{
-  question:"What is the Boom wristband?",
+}, {
+  question: "What is the Boom wristband?",
   answer: "The wristband grants you access to all Boom events and parties throughout your stay."
-  },{
-  question:"Are your events in nightclubs exclusive to Boom Boat Party guests?",
+}, {
+  question: "Are your events in nightclubs exclusive to Boom Boat Party guests?",
   answer: "Our events are open for everyone, however you get a free entry if you participated on Boom Boat Party."
-  },{
-  question:"How can I get hold of the photos that were taken of me during the event?",
+}, {
+  question: "How can I get hold of the photos that were taken of me during the event?",
   answer: "We post daily uploads from our events on our Instagram page (instaboom.pula), Facebook page (Boom events) and on our Google page"
-  },{
-  question:"Where can I buy Boom events merchandise?",
+}, {
+  question: "Where can I buy Boom events merchandise?",
   answer: "Our merchandise is available to purchase on site at our events. "
 }]
 
 export const eventData = {
   title: "Pula Party Boom Boat Volume 1",
-  location: "Pula", 
+  location: "Pula",
   date: "22.06.2022",
   time: "16:00 - 22:00",
   overviewText: "If you are coming to Pula by a car you can park it on Karolina parking lot (located between Arena and Riva) and the price is…. Check in is at Pietas Julia (address: Riva 20), a 3 minute walk away from the parking lot. Our staff will be at the Pietas Julia at 5 PM to scan tickets to provide you with boarding passes and then boarding guests onto the boat will begin approx at 5:30 PM;. We recommend arriving before the approx 5PM boarding time to have your tickets scanned for your boarding passes. The boat is anchored across from the Pietas Julia club where we will also have an after party.",
@@ -153,46 +153,47 @@ export const eventData = {
   musicShortText: "R&B, hip-hop, reaggeton",
   itinerary: [
     {
-      title: "Check in: Pietas Julia Pula", 
-      text: "We check in at Pietas Julia where our beautiful hostess scan your tickets.", 
+      title: "Check in: Pietas Julia Pula",
+      text: "We check in at Pietas Julia where our beautiful hostess scan your tickets.",
       image: "/about.jpg",
       time: "17:00"
     },
     {
-      title: "Departure: riva Pula", 
-      text: "We board on Riva Pula from where we sail off and the adventure of the lifetime begins.", 
+      title: "Departure: riva Pula",
+      text: "We board on Riva Pula from where we sail off and the adventure of the lifetime begins.",
       time: "17:30"
     },
     {
-      title: "Sailing & partying", 
+      title: "Sailing & partying",
       image: "/ab.jpg",
-      text: "We sail through the beautiful Pula archipelago and near Brijuni islands which are also a beautiful National park. We continue to sail to Barbariga, which is well known for its long and tame coast where we take a swim stop. Our hostess serve you with our special free shooters.", 
+      text: "We sail through the beautiful Pula archipelago and near Brijuni islands which are also a beautiful National park. We continue to sail to Barbariga, which is well known for its long and tame coast where we take a swim stop. Our hostess serve you with our special free shooters.",
       time: "17:30 - 18:30"
     },
     {
-      title: "Sunset swim stop", 
-      text: "We take a beautiful sunset swim stop and enjoy the sunbathing.", 
+      title: "Sunset swim stop",
+      text: "We take a beautiful sunset swim stop and enjoy the sunbathing.",
       time: "18:30 - 20:00"
     },
     {
-      title: "Night party", 
-      text: "The sun goes down, but we go up. Co2, MC & confetti show, twerk contest & many more that are not polite enough for the internet. What happens on the boat, stays on the boat.", 
+      title: "Night party",
+      text: "The sun goes down, but we go up. Co2, MC & confetti show, twerk contest & many more that are not polite enough for the internet. What happens on the boat, stays on the boat.",
       time: "20:00 - 23:30"
     },
     {
-      title: "Return", 
-      text: "We return to Pula from where we go to an organized after party", 
+      title: "Return",
+      text: "We return to Pula from where we go to an organized after party",
       time: "23:30"
     },
     {
-      title: "After party", 
+      title: "After party",
       image: "/about3.jpg",
-      text: "Bright lights and late nights", 
+      text: "Bright lights and late nights",
       time: "23:00 - dawn"
     },
   ],
   tickets: [
-    { id: 1,
+    {
+      id: 1,
       name: "Boat Party Ticket - Early Bird",
       price: 35,
       available: 10
@@ -208,6 +209,43 @@ export const eventData = {
       name: "Boat Party Ticket - VIP",
       price: 55,
       available: 30
+    }
+  ]
+}
+
+export const accountData = {
+  name: "Denis",
+  surname: "Penis",
+  past_orders: [
+    {
+      title: "Party Boat Opening",
+      date: "22.06.2021",
+      tickets: [
+        {
+          title: "VIP", number: "3",
+          title: "Regular", number: "12"
+        }
+      ]
+    },
+    {
+      title: "Party Boat Opening",
+      date: "12.06.2021",
+      tickets: [
+        {
+          title: "VIP", number: "3",
+          title: "Regular", number: "12"
+        }
+      ]
+    },
+    {
+      title: "Party Boat Opening",
+      date: "02.06.2021",
+      tickets: [
+        {
+          title: "VIP", number: "3",
+          title: "Regular", number: "12"
+        }
+      ]
     }
   ]
 }
