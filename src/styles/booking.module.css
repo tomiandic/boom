@@ -173,14 +173,17 @@ form button:hover{
     height: 500px;
 }
 
+@media (max-width: 1000px){
+    .bookingEventImage{
+        display: none;
+    }
+}
 
 @media (max-width: 700px) {
 .bookingContainer{
     width: 95%;
 }
-.bookingEventImage{
-    display: none;
-}
+
 .eventHolder{
     margin-top: 5rem;
     min-height: 110px;

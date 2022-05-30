@@ -52,7 +52,7 @@
     font-size: 11px;
 }
 .bookingButton{
-    padding: 15px 40px;
+    padding: 12px 40px;
     width: 100%;
     align-items: center;
     border: none;
@@ -65,7 +65,7 @@
     white-space: nowrap;
     font-weight: 600;
     transition: transform 300ms;
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 20px;
     transition: all 130ms ease-in;
     text-align: center;

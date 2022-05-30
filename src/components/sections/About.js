@@ -136,7 +136,6 @@ const About = (props) => {
             </h2>
 
         </div>
-        <img className={classes.seaDeco} src="/sea.png"></img>
 
       </div>
       <div id="#about" className={classes.contentHolder}>

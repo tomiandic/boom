@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import * as classes from "../styles/booking.module.css";
-import { Button, TextField, Link } from "@material-ui/core";
+import { Button } from "gatsby-theme-material-ui";
+import { StaticImage } from "gatsby-plugin-image";
+import { List, ListItemIcon, ListItemText, ListItem, Radio, TextField } from "@mui/material";
 
 
 const BookingPaymentStep = (props) => {
-    const [cardholderInfo, setCardholderInfo] = useState({});
+    const [cardType, setCardType] = useState("visa")
 
-
-    const cardholderInfoHandler = (e) => {
-        setCardholderInfo({ ...cardholderInfo, [e.target.name]: e.target.value });
-    }
 
     const handlePay = () => {
 
@@ -18,13 +16,39 @@ const BookingPaymentStep = (props) => {
     return (
         <div className={classes.bookingStepHolder}>
             <div className={classes.signup}>
-                <p style={{ marginBottom: 20 }}>Payment details</p>
-                <TextField value={cardholderInfo.fullName} name="fullName" onChange={(e) => cardholderInfoHandler(e)} style={{ marginBottom: 20 }} fullWidth variant="outlined" label="Card Owner"></TextField>
-                <TextField value={cardholderInfo.cardNum} name="cardNum" onChange={(e) => cardholderInfoHandler(e)} type="number" style={{ marginBottom: 20 }} fullWidth variant="outlined" label="Card Number"></TextField>
-                <TextField value={cardholderInfo.expDate} name="expDate" onChange={(e) => cardholderInfoHandler(e)} type="date" style={{ marginBottom: 20 }} fullWidth variant="outlined" label="Expiration Date"></TextField>
-                <TextField value={cardholderInfo.secCode} name="secCode" onChange={(e) => cardholderInfoHandler(e)} type="number" style={{ marginBottom: 20 }} fullWidth variant="outlined" label="Card Security code"></TextField>
+                <p style={{ marginBottom: 20 }}>Choose card type</p>
+                <List>
+                    <ListItem divider>
+                        <ListItemIcon>
+                            <StaticImage width={40}  src="../../static/icons/computop_creditcard_visa.svg" />
+                        </ListItemIcon>
+                        <ListItemText primary="Visa">
+                        </ListItemText>
+                        <Radio onChange={() => setCardType("visa")} checked={cardType==="visa"} />
+                    </ListItem>
+                    <ListItem divider>
+                        <ListItemIcon>
+                        <StaticImage  width={40} src="../../static/icons/computop_creditcard_mastercard.svg" />
+                            
+                        </ListItemIcon>
+                        <ListItemText primary="MasterCard">
+                            
+                        </ListItemText>
+                        <Radio onChange={() => setCardType("master")} checked={cardType==="master"} />
+                    </ListItem>
+                    <ListItem >
+                        <ListItemIcon>
+                        <StaticImage  width={40} src="../../static/icons/computop_maestro.svg" />
+                            
+                        </ListItemIcon>
+                        <ListItemText primary="Maestro">
+                            
+                        </ListItemText>
+                        <Radio onChange={() => setCardType("maestro")} checked={cardType==="maestro"} />
+                    </ListItem>
+                </List>
 
-                <Button onClick={() => handlePay()} fullWidth style={{ marginBottom: 20 }} variant="contained" color="primary" type="submit">Pay & Proceed to tickets</Button>
+                <Button onClick={() => handlePay()} fullWidth style={{ marginBottom: 20 }} variant="contained" color="primary" type="submit">Proceed to payment</Button>
             </div>
         </div>
     );

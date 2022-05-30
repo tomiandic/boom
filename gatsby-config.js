@@ -3,6 +3,12 @@ module.exports = {
     siteUrl: `https://www.boomevents.hr`,
   },
   plugins: [
+    { 
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        
+      }
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images

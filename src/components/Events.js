@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import * as classes from "../styles/events.module.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as classes from "../styles/booking.module.css";
-import { Button, TextField, Link } from "@material-ui/core";
+import { Button, TextField, Link } from "@mui/material";
 
 
 const BookingRegistrationStep = (props) => {

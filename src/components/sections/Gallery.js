@@ -29,6 +29,7 @@ const GallerySection = (props) => {
       imageOverlay: galleryContainer.current.querySelector("#imageOverlay"),
     };
 
+
     gsap.to(DOM.image, {
       clipPath: "polygon(0 18%, 100% 20%, 100% 80%, 0 80%)",
       scrollTrigger: {
@@ -78,10 +79,10 @@ const GallerySection = (props) => {
           <path d="M12.96 4.46l-1.42-1.42-3.54 3.55-3.54-3.55-1.42 1.42 3.55 3.54-3.55 3.54 1.42 1.42 3.54-3.55 3.54 3.55 1.42-1.42-3.55-3.54 3.55-3.54z"></path>
         </svg> */}
           <h2 className={classes.galleryQuote}>
-            Some quote related to boom events before gallery section{" "}
+             embrace the Beat of ordinary madness
           </h2>
           <div className={classes.buttonHolder}>
-            <button className={classes.sectionButton}>Check Events</button>
+            <Link to="/events" className={classes.sectionButton}>Check Events</Link>
           </div>
         </div>
       </div>

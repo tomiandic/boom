@@ -213,15 +213,7 @@ p .line{
     width: 100%;
     margin-top: -7rem;
 }
-.seaDeco{
-    position: absolute;
-    bottom:-30px;
-    right:0;
-    width: 60%;
-    height: 60px;
-    object-fit: cover;
-    z-index: 1;
-}
+
 .scrolltext{
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
@@ -275,12 +267,7 @@ p .line{
         width: 85vw;
         flex-direction: row;
     }
-    .seaDeco{
-        bottom:-75px;
-        right:0;
-        width: 70%;
-        height: 150px;
-    }
+
     .sectionContainer h2{
         font-size: 35px;
         line-height: 50px;

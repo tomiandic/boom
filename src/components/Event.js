@@ -13,6 +13,8 @@ import { eventData } from "../data/data";
 const Event = () => {
   const [activeNav, setActiveNav] = useState("");
 
+  useEffect(() => window.scrollTo(0, 0), [])
+  
   useEffect(() => {
 
     const sections = [

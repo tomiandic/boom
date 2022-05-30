@@ -124,6 +124,9 @@ html, body{
         left: -10px;
         top: 15px;
     }
+    :root{
+        --borderRadiusDesktop: 8px;
+    }
 }
 
 

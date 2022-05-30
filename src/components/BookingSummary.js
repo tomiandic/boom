@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import * as classes from "../styles/booking.module.css";
-import { List, ListItem, ListItemText, Divider } from "@material-ui/core";
+import { List, ListItem, ListItemText, Divider } from "@mui/material";
 import { BookingContext } from "../pages/event/booking";
 
 

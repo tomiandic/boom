@@ -30,7 +30,7 @@ const Header = () => {
           rotate: 45,
           y: 10,
           duration: 0.6,
-          width: 45,
+          width: 40,
         },
         "-=.8"
       )
@@ -39,7 +39,7 @@ const Header = () => {
         {
           rotate: -45,
           duration: 0.6,
-          width: 45,
+          width: 40,
         }, "-=.8"
       )
       .to(
