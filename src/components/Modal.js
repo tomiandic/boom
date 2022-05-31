@@ -1,17 +1,13 @@
-import React, { useEffect, useState, useRef } from "react";
-import { gsap, Power3, Sine } from "gsap";
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image"
 import * as classes from "../styles/modal.module.css";
 
 const Modal = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
 
   return (
       <div className={classes.modalBackdrop}>
-    
           <div className={classes.modalContainer}>
-            <StaticImage className={classes.modalImage} src="../images/dj.jpg" />
+            <StaticImage className={classes.modalImage} src="../../static/about2.jpg" />
             <div className={classes.modalDetails}>
             <h2>Get the news first</h2>
             <p>Sign up to our newsletter and be first to get the info about our events and special prices </p>

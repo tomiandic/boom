@@ -42,19 +42,18 @@
     border-radius: 3px;
 }
 .modalDetails button{
-    padding: 1.4rem;
+    padding: 1rem;
     background: var(--main);
     border: none;
     color: #fff;
-    margin-top: 2rem;
     border-radius: 3px;
     float: right;
     cursor: pointer;
     font-weight: 600;
-    transition: 300ms transform ease-out;
+    transition: 100ms transform ease-out;
 }
 .modalDetails button:hover{
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 .closeButton{
     height: 20px;

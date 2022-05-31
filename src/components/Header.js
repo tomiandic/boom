@@ -127,14 +127,6 @@ const Header = () => {
             About
           </Link>
           <Link
-            className={classes.navLink}
-            ref={(el) => addToRefs(el, navLinks)}
-            onClick={() => setSidebarOpen(false)}
-            to="/#blog"
-          >
-            Blog
-          </Link>
-          <Link
             className={`${classes.navLink} ${classes.active}`}
             ref={(el) => addToRefs(el, navLinks)}
             onClick={() => setSidebarOpen(false)}
@@ -212,20 +204,20 @@ const Header = () => {
           About
         </Link>
         <Link
-          className={classes.navLinkDesktop}
-          ref={(el) => addToRefs(el, navLinksDesktop)}
-          onClick={() => setSidebarOpen(false)}
-          to="/#blog"
-        >
-          Blog
-        </Link>
-        <Link
           className={`${classes.navLinkDesktop} ${classes.active}`}
           ref={(el) => addToRefs(el, navLinksDesktop)}
           onClick={() => setSidebarOpen(false)}
           to="/#gallery"
         >
           Gallery
+        </Link>
+        <Link
+          className={classes.navLinkDesktop}
+          ref={(el) => addToRefs(el, navLinksDesktop)}
+          onClick={() => setSidebarOpen(false)}
+          to="/#reviews"
+        >
+          Reviews
         </Link>
         <Link
           className={classes.navLinkDesktop}

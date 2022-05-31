@@ -2,7 +2,9 @@ import React, { useRef } from 'react'
 import * as classes from "../../styles/reviews.module.css";
 import SwiperCore, { Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from "swiper/react";
-import {reviewData} from "../../data/data";
+import { reviewData } from "../../data/data";
+import { Modal } from "../Modal";
+
 SwiperCore.use([Navigation, Pagination])
 
 
@@ -18,7 +20,6 @@ const Reviews = (props) => {
                     What you said <br /> about us
                 </h2>
                 <div className={classes.sliderNavigation}>
-              
           <div ref={navPrev}>
             <svg rotate="90" width="20" height="20" viewBox="0 0 24 24">
               <polygon points="11.293 4.707 17.586 11 4 11 4 13 17.586 13 11.293 19.293 12.707 20.707 21.414 12 12.707 3.293 11.293 4.707" />
