@@ -216,6 +216,8 @@ export const eventData = {
 export const accountData = {
   name: "Denis",
   surname: "Penis",
+  email: "boom@gmail.com",
+  gender: "M",
   past_orders: [
     {
       title: "Party Boat Opening",
@@ -223,6 +225,8 @@ export const accountData = {
       tickets: [
         {
           title: "VIP", number: "3",
+        },
+        {
           title: "Regular", number: "12"
         }
       ]
@@ -233,8 +237,9 @@ export const accountData = {
       tickets: [
         {
           title: "VIP", number: "3",
-          title: "Regular", number: "12"
-        }
+        },
+        { title: "Regular", number: "12" }
+
       ]
     },
     {
@@ -242,7 +247,9 @@ export const accountData = {
       date: "02.06.2021",
       tickets: [
         {
-          title: "VIP", number: "3",
+          title: "VIP", number: "3"
+        },
+        {
           title: "Regular", number: "12"
         }
       ]

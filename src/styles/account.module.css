@@ -1,0 +1,10 @@
+.accountContainer{
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 13rem 0;
+}
+
+.accountSection{
+    background: rgb(249 250 252);
+}
