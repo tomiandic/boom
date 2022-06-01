@@ -14,7 +14,6 @@ const FAQ = () => {
     return (
         <section className={classes.faqSection}>
             <Header />
-            
             <div className={classes.faqContainer}>
             <h2>Frequently Asked Questions</h2>
             <br/>
