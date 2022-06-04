@@ -16,7 +16,7 @@ const ImageGallery = () => {
     const galleryContainer = useRef();
 
 
-    useBottomScrollListener(()=>loadImages());
+    useBottomScrollListener(() => loadImages());
 
     const openLightbox = useCallback((index) => {
         setCurrentImage(index);
@@ -28,16 +28,15 @@ const ImageGallery = () => {
         setViewerIsOpen(false);
     };
 
-
-
     useEffect(() => {
         setIsLoadingImages(false)
     }, [picturesNumber])
 
     const loadImages = () => {
-        if(picturesNumber<photos.length){
-        setIsLoadingImages(true);
-        setTimeout(() => setPicturesNumber(picturesNumber + 12), 1000)}
+        if (picturesNumber < photos.length) {
+            setIsLoadingImages(true);
+            setTimeout(() => setPicturesNumber(picturesNumber + 12), 1000)
+        }
     }
 
 
@@ -45,14 +44,14 @@ const ImageGallery = () => {
         <>
             <Header />
             <div ref={galleryContainer} className={classes.gallerySection}>
-               
-                    <Grid container>
-                        {photos.slice(0, picturesNumber).map((picture, index) =>
-                            <Grid xs={6} sm={4} md={3} sx={{ overflow: "hidden" }} item className={classes.gritItem}>
-                                <img onClick={() => openLightbox(index)} src={picture.src} />
-                            </Grid>
-                        )}
-                    </Grid>
+
+                <Grid container>
+                    {photos.slice(0, picturesNumber).map((picture, index) =>
+                        <Grid xs={6} sm={4} md={3} sx={{ overflow: "hidden" }} item className={classes.gritItem}>
+                            <img onClick={() => openLightbox(index)} src={picture.src} />
+                        </Grid>
+                    )}
+                </Grid>
 
                 <ModalGateway>
                     {viewerIsOpen ? (

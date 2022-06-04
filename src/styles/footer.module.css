@@ -1,5 +1,5 @@
 .footerSection{
-    background: #1b1b1b;
+    background: var(--secondaryDark);
     min-height: 80vh;
     width: 100%;
     display: flex;
@@ -7,12 +7,17 @@
     align-items: center;
     position: relative;
 }
+.footerColumn h2{
+    font-family: "Syne";
+    font-weight: 800;
+    font-size: 35px;
+}
 .footerSection svg{
     position: absolute;
     top:-12rem;
     left:0;
     overflow: hidden;
-    fill: #1b1b1b;
+    fill: var(--secondaryDark);
 }
 .sectionContainer{
     display: flex;

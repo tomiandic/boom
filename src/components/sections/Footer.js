@@ -71,36 +71,33 @@ const Reviews = (props) => {
             </svg>
             <div className={classes.sectionContainer}>
                 <div className={classes.footerColumn}>
-                    <h4>Column title</h4>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
+                    <h2>
+                        BOOM <br/>BOAT<br/> PARTY
+                    </h2><br/>
+                    <p>Made to bring you best experiences bla bla bla .....</p>
                 </div>
                 <div className={classes.footerColumn}>
-                    <h4>Column title</h4>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
+                   {/*  <h4>Column title</h4> */}
+                    <a>Alfreda Stiglicha 26</a>
+                    <a>52100 Pula, Croatia</a>
+                    <br/>
+                    <a>+385 123 354 5432</a>
+                    <a>+3385 93 123 3214 432</a>
+                    <br/>
+                    <a>info@boomboatparty.com</a>
                 </div>
                 <div className={classes.footerColumn}>
-                    <h4>Column title</h4>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
+                    <a>About</a>
+                    <a>Faq</a>
+                    <a>Gallery</a>
+                    <a>Events</a>
                 </div>
                 <div className={classes.footerColumn}>
-                    <h4>Column title</h4>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
-                    <a>Link</a>
+
+                    <a>Instagram</a>
+                    <a>Facebook</a>
+                    <a>LinkedIn</a>
+                    <a>Tripadvisor</a>
                 </div>
             </div>
         </section>

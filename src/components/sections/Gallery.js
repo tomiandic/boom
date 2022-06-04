@@ -29,7 +29,7 @@ const GallerySection = (props) => {
 
 
     gsap.to(DOM.image, {
-      clipPath: "polygon(0 18%, 100% 20%, 100% 80%, 0 80%)",
+      clipPath: "polygon(10% 20%, 90% 20%, 90% 80%, 10% 80%)",
       scrollTrigger: {
         trigger: DOM.image,
         start: "bottom bottom", //when the top of the trigger hits bottom of vw
@@ -68,14 +68,10 @@ const GallerySection = (props) => {
   return (
     <section id="gallery" ref={galleryContainer} className={classes.gallerySection}>
       <div id="backdropImage" className={classes.quoteHolder}>
-        <img src="./gallery/30.jpg"></img>
-
+        <img src="./gallery/46.jpg"></img>
         <div id="imageOverlay" className={classes.imageOverlay}></div>
 
         <div style={{ zIndex: 10 }} id="quoteHolder">
-          {/*  <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1">
-          <path d="M12.96 4.46l-1.42-1.42-3.54 3.55-3.54-3.55-1.42 1.42 3.55 3.54-3.55 3.54 1.42 1.42 3.54-3.55 3.54 3.55 1.42-1.42-3.55-3.54 3.55-3.54z"></path>
-        </svg> */}
           <h2 className={classes.galleryQuote}>
              embrace the Beat of ordinary madness
           </h2>
@@ -111,6 +107,18 @@ const GallerySection = (props) => {
         </SwiperSlide>
         <SwiperSlide>
           <img src="./gallery/25.jpg"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="./gallery/26.jpg"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="./gallery/27.jpg"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="./gallery/28.jpg"></img>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="./gallery/29.jpg"></img>
         </SwiperSlide>
         <div className={classes.navContainer}>
           <div ref={navPrev}>
@@ -155,6 +163,7 @@ const GallerySection = (props) => {
           </div>
         </div>
       </Swiper>
+      <Link className={classes.sectionButton} to="/gallery">Show all photos</Link>
     </section>
   );
 };
