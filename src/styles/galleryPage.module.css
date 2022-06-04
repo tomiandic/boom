@@ -1,6 +1,7 @@
 .gallerySection{
     padding: 5px;
     padding-top:4.5rem;
+    min-height: 100vh;
 }
 .gallerySection img{
     object-fit: cover;
