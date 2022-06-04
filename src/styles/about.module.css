@@ -42,10 +42,9 @@
     display: block;
 }
 .imageHolder{
-    min-height: 400px;
-    max-height: 550px;
-    width: 90%;
-    margin-top: 6rem;
+    min-height: 200px;
+    max-height: 300px;
+    width: 92%;
     position: relative;
     border-radius: var(--borderRadiusDesktop);
     display: flex;
@@ -171,7 +170,7 @@
     text-transform: uppercase;
     font-weight: 800;
     background: #fff;
-    padding: 40px 25px;
+    padding: 20px 25px;
     margin-left: -10px; 
     display: inline-block; 
     margin-bottom: 1.5rem;
@@ -211,7 +210,7 @@ p .line{
     padding: 2rem 1rem;
     max-width: 100%;
     width: 100%;
-    margin-top: -7rem;
+    margin-top: -5rem;
 }
 
 .scrolltext{
@@ -244,13 +243,11 @@ p .line{
     padding-top: 30px; 
     height: 0; 
     overflow: hidden; 
-    width: 95vw;
+    width: 100vw;
     height: 30vh;
     margin: auto;
     margin-top: 10rem;
     margin-bottom: 4rem;
-    box-shadow: 0 5px 25px -8px rgb(8, 21, 51);
-    border-radius: var(--borderRadiusDesktop);
     overflow: hidden;
 }
 .grayBackdrop{
@@ -346,10 +343,10 @@ p .line{
         color: var(--black);
     }
     .videoHolder { 
-        width: 85vw;
+        width: 100vw;
         height: 50vh;
         margin: auto;
         margin-top: 10rem;
-        margin-bottom: 8rem;
+        margin-bottom: 3rem;
     }
 }

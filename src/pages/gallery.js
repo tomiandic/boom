@@ -16,13 +16,14 @@ const ImageGallery = () => {
 
 
     useEffect(() => {
-        window.onscroll = function (ev) {
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        window.onscroll = function(ev) {
+            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
                 if (numOfPictures.current < photos.length) {
                     setIsLoadingImages(true);
                 }
             }
-        }
+        };
+       
     }, [])
 
     const openLightbox = useCallback((index) => {
