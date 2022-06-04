@@ -103,8 +103,8 @@
     color: #fff;
     letter-spacing: 2px;
     margin-top: 2.5rem;
-    padding: 1.5rem 4rem;
-    border-radius: 2px;
+    padding: 1rem 2rem;
+    border-radius: var(--borderRadiusDesktop);
     overflow: hidden;
     position: relative;
     transition: 300ms color;

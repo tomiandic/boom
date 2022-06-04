@@ -1,3 +1,6 @@
+.swiper-slide-active img{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+}
 .sectionContainer{
     width: 90vw;
     margin: auto;
@@ -8,7 +11,6 @@
     color: var(--white);
 }
 .sectionContainer h2 span{
-    font-weight: 800;
     color: var(--secondary);
     font-weight: 100;
     font-family: 'Syne', sans-serif;
@@ -34,7 +36,13 @@
     min-width: 100%;
     min-height: 100%;
     object-fit:cover;
-    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+/*     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); */
+}
+.imageOverlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8))
 }
 .aboutTopHolder{
     position: relative;
@@ -42,15 +50,16 @@
     display: block;
 }
 .imageHolder{
-    min-height: 200px;
-    max-height: 300px;
-    width: 92%;
+   height: 80vh;
+   max-height: 700px;
+    width: 95%;
     position: relative;
     border-radius: var(--borderRadiusDesktop);
     display: flex;
     overflow: hidden;
     box-shadow: 0 10px 30px -15px #0a4583;
     background: rgb(239, 241, 243);
+
 }
 .aboutSection{
     position: relative;
@@ -66,27 +75,6 @@
     justify-content: center;
     position: relative;
 }
-.sliderSwitcher{
-    height: 110px;
-    width: 55px;
-    background: var(--main);
-    position: absolute;
-    right: 0;
-    top: 30rem;
-    padding: 7px;
-    color: #fff;
-    box-shadow: 0 0 20px -15px var(--main);
-    cursor: pointer;
-    transition: 200ms all;
-    z-index: 2;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
-/* .sliderSwitcher:hover{
-    box-shadow: 0 0px 0px 0px #fff;
-    width: 73px;
-    height: 133px;
-} */
 .switchNum{
     font-size: 16px;
     font-weight: 800;
@@ -98,15 +86,13 @@
     font-weight: 800;
 }
 .switchArrow{
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-    fill: #fff;
+    fill: var(--main);
+    margin-top:5px;
 }
 .switchArrow svg{
     width: 1.8rem;
     height: 1.8rem;
-}
+} 
 .sectionButton{
     background: none;
     border: none;
@@ -114,9 +100,9 @@
     font-weight: 700;
     color: var(--main);
     letter-spacing: 2px;
-    margin-top: 2.5rem;
-    padding: 1.5rem 4rem;
-    border-radius: 2px;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border-radius: var(--borderRadiusDesktop);
     overflow: hidden;
     position: relative;
     transition: 300ms color;
@@ -157,10 +143,11 @@
     z-index:11;
     font-size: 20px;
     position: relative;
+    display: none;
 }
 .largeTitle{
-    font-size: 20px;
-    color: var(--black);
+    font-size: 16px;
+    color: #fff;
     font-weight: 900;
     text-transform: uppercase;
     position: relative;
@@ -169,21 +156,17 @@
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
     font-weight: 800;
-    background: #fff;
-    padding: 20px 25px;
-    margin-left: -10px; 
+/*     padding: 20px 25px; */
     display: inline-block; 
-    margin-bottom: 1.5rem;
 }
 
 .paragraph{
     line-height: 1.5rem;
     font-size: 13px;
-    color: var(--black);
+    color: #fff;
 }
 .paraHolder{
     display: flex;
-    margin-left: -30px;
 }
 .line span{
     font-weight: 900;
@@ -203,14 +186,15 @@ p .line{
     min-width: 40px;
     margin-right: 10px;
     margin-top: 5px;
-    background: var(--secondary)
+    background: var(--secondary);
+    display:none;
 }
 .aboutPara{
     z-index: 1;
-    padding: 2rem 1rem;
+    padding: 0 2rem ;
     max-width: 100%;
-    width: 100%;
-    margin-top: -5rem;
+    position: absolute;
+    bottom: 9rem;
 }
 
 .scrolltext{
@@ -260,11 +244,13 @@ p .line{
     z-index: -1;
 }
 @media (min-width: 1000px) {
+    .paraDeco{
+        display: inline;
+    }
     .sectionContainer{
         width: 85vw;
         flex-direction: row;
     }
-
     .sectionContainer h2{
         font-size: 35px;
         line-height: 50px;
@@ -298,25 +284,20 @@ p .line{
         max-width: 40%;
         margin-left: -60px;
         margin-top: 0;
+        position: relative;
     }
     .largeTitle{
         background: transparent;
-        font-size: 50px;
+        font-size: 35px;
         padding: 0;
         margin-left: 0; 
         color: var(--black);
     }
     .sliderSwitcher{
-        height: 300px;
-        width: 140px;
-        padding: 1rem;
-        box-shadow: 0 10px 50px -10px var(--main);
+        height: 150px;
+        width: 150px;
     }
-    .sliderSwitcher:hover{
-        box-shadow: 0 0px 0px 0px #fff;
-        width: 145px;
-        height: 305px;
-    }
+
     .scrolltext{
         font-size: 11rem;
         font-weight: 900;
@@ -338,8 +319,8 @@ p .line{
         right: 15px;
     }
     .paragraph{
-        line-height: 1.8rem;
-        font-size: 15px;
+        line-height: 2.2rem;
+        font-size: 16px;
         color: var(--black);
     }
     .videoHolder { 
@@ -348,5 +329,8 @@ p .line{
         margin: auto;
         margin-top: 10rem;
         margin-bottom: 3rem;
+    }
+    .imageOverlay{
+        background: linear-gradient(to right, rgba(255, 255, 255, 0),rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3))
     }
 }
