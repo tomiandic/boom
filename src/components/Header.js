@@ -228,7 +228,7 @@ const Header = () => {
           F.A.Q
         </Link>
         <Link to="/events" className={classes.button}>
-          CHECK EVENTS
+          BUY TICKETS
         </Link>
         <Divider variant="middle" orientation="vertical" style={{marginLeft: "2rem", marginRight: "2rem"}} />
         <Link to="/account">

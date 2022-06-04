@@ -16,15 +16,18 @@ const ImageGallery = () => {
 
 
     useEffect(() => {
+        
         window.onscroll = function(ev) {
-            if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight) {
-                if (numOfPictures.current < photos.length) {
-                    setIsLoadingImages(true);
-                }
-            }
-        };
-       
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                    console.log("in")
+                    if (numOfPictures.current < photos.length) {
+                       setIsLoadingImages(true);
+                   } 
+               } 
+             }; 
+
     }, [])
+
 
     const openLightbox = useCallback((index) => {
         setCurrentImage(index);
@@ -37,9 +40,10 @@ const ImageGallery = () => {
     };
 
     useEffect(() => {
-        if(isLoadingImages){
-        numOfPictures.current = picturesNumber + 12;
-        setTimeout(()=>setPicturesNumber(picturesNumber + 12),1000)}
+        if (isLoadingImages) {
+            numOfPictures.current = picturesNumber + 12;
+            setTimeout(() => setPicturesNumber(picturesNumber + 12), 1000)
+        }
     }, [isLoadingImages])
 
     useEffect(() => {
@@ -52,7 +56,6 @@ const ImageGallery = () => {
             <Header />
             <div ref={galleryContainer} className={classes.gallerySection}>
                 <Grid container>
-
                     {photos.slice(0, picturesNumber).map((picture, index) =>
                         <Grid xs={6} sm={4} md={3} sx={{ overflow: "hidden" }} item className={classes.gritItem}>
                             <img onClick={() => openLightbox(index)} src={picture.src} />

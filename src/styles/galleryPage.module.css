@@ -19,3 +19,12 @@
 .gritItem{
     border: 3px solid #fff;
 }
+
+@media(max-width: 800px){
+    .gallerySection img:not(:hover){
+        opacity: 1;
+    }
+    .gallerySection{
+        padding-top:3.5rem;
+    }
+}
