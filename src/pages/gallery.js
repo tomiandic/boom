@@ -5,6 +5,8 @@ import Header from "../components/Header"
 import * as classes from "../styles/galleryPage.module.css"
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { Grid, LinearProgress } from "@mui/material"
+import { useBottomScrollListener } from 'react-bottom-scroll-listener';
+
 
 const ImageGallery = () => {
     const [isLoadingImages, setIsLoadingImages] = useState(false);
@@ -12,22 +14,9 @@ const ImageGallery = () => {
     const [picturesNumber, setPicturesNumber] = useState(12);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
     const galleryContainer = useRef();
-    const numOfPictures = useRef(12);
 
 
-    useEffect(() => {
-        
-        window.onscroll = function(ev) {
-                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-                    console.log("in")
-                    if (numOfPictures.current < photos.length) {
-                       setIsLoadingImages(true);
-                   } 
-               } 
-             }; 
-
-    }, [])
-
+    useBottomScrollListener(()=>loadImages());
 
     const openLightbox = useCallback((index) => {
         setCurrentImage(index);
@@ -39,29 +28,32 @@ const ImageGallery = () => {
         setViewerIsOpen(false);
     };
 
-    useEffect(() => {
-        if (isLoadingImages) {
-            numOfPictures.current = picturesNumber + 12;
-            setTimeout(() => setPicturesNumber(picturesNumber + 12), 1000)
-        }
-    }, [isLoadingImages])
+
 
     useEffect(() => {
         setIsLoadingImages(false)
     }, [picturesNumber])
+
+    const loadImages = () => {
+        if(picturesNumber<photos.length){
+        setIsLoadingImages(true);
+        setTimeout(() => setPicturesNumber(picturesNumber + 12), 1000)}
+    }
 
 
     return (
         <>
             <Header />
             <div ref={galleryContainer} className={classes.gallerySection}>
-                <Grid container>
-                    {photos.slice(0, picturesNumber).map((picture, index) =>
-                        <Grid xs={6} sm={4} md={3} sx={{ overflow: "hidden" }} item className={classes.gritItem}>
-                            <img onClick={() => openLightbox(index)} src={picture.src} />
-                        </Grid>
-                    )}
-                </Grid>
+               
+                    <Grid container>
+                        {photos.slice(0, picturesNumber).map((picture, index) =>
+                            <Grid xs={6} sm={4} md={3} sx={{ overflow: "hidden" }} item className={classes.gritItem}>
+                                <img onClick={() => openLightbox(index)} src={picture.src} />
+                            </Grid>
+                        )}
+                    </Grid>
+
                 <ModalGateway>
                     {viewerIsOpen ? (
                         <Modal onClose={closeLightbox}>
