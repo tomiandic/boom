@@ -73,6 +73,73 @@ export const photos = [
       },
       {
         src: "/gallery/26.jpg"
+      },
+      {
+        src: "/gallery/27.jpg"
+      },
+      {
+        src: "/gallery/28.jpg"
+      },
+      {
+        src: "/gallery/29.jpg"
+      },
+      {
+        src: "/gallery/30.jpg"
+      }, {
+        src: "/gallery/31.jpg"
+      },
+      {
+        src: "/gallery/32.jpg"
+      },
+      {
+        src: "/gallery/33.jpg"
+      },
+      {
+        src: "/gallery/34.jpg"
+      },
+      {
+        src: "/gallery/35.jpg"
+      },
+      {
+        src: "/gallery/36.jpg"
+      },
+      {
+        src: "/gallery/37.jpg"
+      },
+      {
+        src: "/gallery/38.jpg"
+      },
+      {
+        src: "/gallery/39.jpg"
+      },
+      {
+        src: "/gallery/40.jpg"
+      },
+      {
+        src: "/gallery/41.jpg"
+      },
+      {
+        src: "/gallery/42.jpg"
+      },
+      {
+        src: "/gallery/43.jpg"
+      },
+      {
+        src: "/gallery/44.jpg"
+      },
+      {
+        src: "/gallery/45.jpg"
+      },{
+        src: "/gallery/46.jpg"
+      },{
+        src: "/gallery/47.jpg"
+      },{
+        src: "/gallery/48.jpg"
+      },{
+        src: "/gallery/49.jpg"
+      },
+      {
+        src: "/gallery/50.jpg"
       }
   ];
   

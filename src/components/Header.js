@@ -130,7 +130,7 @@ const Header = () => {
             className={`${classes.navLink} ${classes.active}`}
             ref={(el) => addToRefs(el, navLinks)}
             onClick={() => setSidebarOpen(false)}
-            to="/#gallery"
+            to="/gallery"
           >
             Gallery
           </Link>

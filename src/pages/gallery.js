@@ -4,32 +4,26 @@ import { photos } from "../data/gallery";
 import Header from "../components/Header"
 import * as classes from "../styles/galleryPage.module.css"
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { Grid } from "@mui/material"
-import { gsap, Power3, Sine } from "gsap";
+import { Grid, LinearProgress } from "@mui/material"
 
 const ImageGallery = () => {
+    const [isLoadingImages, setIsLoadingImages] = useState(false);
     const [currentImage, setCurrentImage] = useState(0);
+    const [picturesNumber, setPicturesNumber] = useState(12);
     const [viewerIsOpen, setViewerIsOpen] = useState(false);
     const galleryContainer = useRef();
-    useEffect(() => {
-        let DOM = {
-            images: galleryContainer.current.querySelectorAll("img"),
-        };
+    const numOfPictures = useRef(12);
 
-        gsap.from(
-            DOM.images,
-            {
-                duration: 1.5,
-                y: 15,
-                stagger: {
-                    each: 0.1,
-                    from: "random"
-                },
-                opacity: 0,
-                ease: Power3.easeInOut,
-            },
-        )
-    })
+
+    useEffect(() => {
+        window.onscroll = function (ev) {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                if (numOfPictures.current < photos.length) {
+                    setIsLoadingImages(true);
+                }
+            }
+        }
+    }, [])
 
     const openLightbox = useCallback((index) => {
         setCurrentImage(index);
@@ -41,14 +35,25 @@ const ImageGallery = () => {
         setViewerIsOpen(false);
     };
 
+    useEffect(() => {
+        if(isLoadingImages){
+        numOfPictures.current = picturesNumber + 12;
+        setTimeout(()=>setPicturesNumber(picturesNumber + 12),1000)}
+    }, [isLoadingImages])
+
+    useEffect(() => {
+        setIsLoadingImages(false)
+    }, [picturesNumber])
+
 
     return (
         <>
             <Header />
             <div ref={galleryContainer} className={classes.gallerySection}>
-                <Grid container spacing={"5px"}>
-                    {photos.map((picture, index) =>
-                        <Grid xs={3} item>
+                <Grid container>
+
+                    {photos.slice(0, picturesNumber).map((picture, index) =>
+                        <Grid xs={6} sm={4} md={3} sx={{ overflow: "hidden" }} item className={classes.gritItem}>
                             <img onClick={() => openLightbox(index)} src={picture.src} />
                         </Grid>
                     )}
@@ -68,6 +73,7 @@ const ImageGallery = () => {
                     ) : null}
                 </ModalGateway>
             </div>
+            {isLoadingImages && <LinearProgress sx={{ height: 8 }} thickness={20} variant="indeterminate" />}
         </>
 
     )
