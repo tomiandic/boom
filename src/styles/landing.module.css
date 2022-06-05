@@ -70,7 +70,7 @@ p .line{
     height: 100%;
     overflow: hidden;
     width: 100%;
-    background: linear-gradient(185deg,transparent, rgba(0, 43, 54, 0.5), rgb(1 18 31 / 75%));
+    background: linear-gradient(185deg,rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.649));
 }
 .svgWave{
     width: 50px;
@@ -265,7 +265,7 @@ section{
         font-size: 11px;
     }
     .backdropGradient{
-        background: linear-gradient(185deg, rgb(0 0 0 / 20%), rgb(0 11 34 / 30%), rgb(0 0 0 / 60%));
+        background: linear-gradient(185deg, rgb(0 0 0 / 70%), rgb(0 11 34 / 30%), rgb(0 0 0 / 60%));
     }
     .landingContent{
         width: 75vw;

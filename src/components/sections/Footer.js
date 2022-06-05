@@ -82,9 +82,7 @@ const Reviews = (props) => {
                     <a target="_blank" href="https://www.google.com/maps/place/Pula+Party+%2F+Boom+events/@44.8719698,13.8545113,19.82z/data=!4m19!1m13!4m12!1m4!2m2!1d15.9776768!2d45.8031104!4e1!1m6!1m2!1s0x477cd3c517dcfc53:0xb9fa9325823b5a68!2sboom+events!2m2!1d13.8541024!2d44.8722474!3m4!1s0x477cd3c517dcfc53:0xb9fa9325823b5a68!8m2!3d44.8722474!4d13.8541024">Ulica Alfreda Stiglicha 26
                     <br/>52100 Pula, Croatia</a>
                     <br/>
-                    <a target="_blank" href="tel:+123321123321">+385 123 354 5432</a>
-                    <a target="_blank" href="tel:+123321321123">+3385 93 123 3214 432</a>
-                    <br/>
+                    <a target="_blank" href="tel:+385992000269">+385 992 000 269</a>
                     <a target="_blank" href="mailto:info@boomboatparty.com">info@boomboatparty.com</a>
                 </div>
                 <div className={classes.footerColumn}>

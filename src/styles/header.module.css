@@ -6,7 +6,8 @@
     z-index: 10;
     backdrop-filter: blur(10px);
     text-align: right;
-    background: #fff;
+    background: transparent;
+    color: #FFF;
 }
 .hamburgerHolder{
     width: 90px;
@@ -42,7 +43,7 @@
     display: block;
     position: absolute;
     height: 2px;
-    background: var(--black);
+    background: #fff;
     transform: rotate(0deg);
     opacity: 1;
     right: 0;
@@ -58,7 +59,7 @@
     min-width: 100%;
     justify-content: center;
     margin-top: 3rem;
-    color: var(--black);
+
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
     font-weight: 800;
@@ -76,9 +77,9 @@
     display: flex;
     align-items: center;
     margin-left: auto;
-    height: 4.5rem;
+    height: 100%;
     float: right;
-    margin-right: 2rem;
+    margin-right: 6rem;
 }
 .navLinkDesktop{
     color: inherit;
@@ -106,7 +107,7 @@
     letter-spacing: 4px;
     font-weight: 800;
     font-family: "Syne", sans-serif;
-    color: var(--black);
+    color: #fff;
 }
 .socialMediaContainer{
     position: absolute;
@@ -154,7 +155,7 @@
 @media (max-width: 850px) {
 
     
-.navLinksDesktop{
+.navLinksDesktop :not(:last-child){
     display: none;
 }
 .hamburgerHolder{

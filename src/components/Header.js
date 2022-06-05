@@ -2,7 +2,6 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link } from "gatsby";
 import { gsap, Power3, Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Divider, IconButton} from "@mui/material";
 import * as classes from "../styles/header.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -16,6 +15,17 @@ const Header = () => {
   const navLinksDesktop = useRef([]);
   const socialMedia = useRef([]);
   const sidebarTL = useRef(gsap.timeline({ paused: true }));
+  const navbarTL = useRef(gsap.timeline({ 
+    paused: true, 
+    duration: 1, 
+    scrollTrigger:{
+    trigger: "#about",
+    toggleActions: "play complete reverse reset"
+  } }));
+
+  
+  
+  const blackLogo = useRef();
 
   useEffect(() => {
     sidebarTL.current
@@ -32,6 +42,7 @@ const Header = () => {
           y: 10,
           duration: 0.6,
           width: 40,
+          background:"#25373f"
         },
         "-=.8"
       )
@@ -41,6 +52,7 @@ const Header = () => {
           rotate: -45,
           duration: 0.6,
           width: 40,
+          background:"#25373f"
         }, "-=.8"
       )
       .to(
@@ -73,29 +85,28 @@ const Header = () => {
         "-=1.2"
       );
 
-
-    gsap.to(nav.current, {
-      background: "rgba(255, 255, 255, 0.9)",
+navbarTL.current
+    .to(nav.current, {
+      background: "#ffffffb3",
       boxShadow: "0 0 30px -20px #97a6c7",
-      ease: Power3.easeOut,
-      scrollTrigger: {
-        trigger: "#about",
-        scrub: 1,
-        start: "top bottom", //when the top of the trigger hits bottom of vw
-        end: "+=100%"
-      },
-    });
+      ease: Power3.easeOut
+    })
 
-    gsap.to(navLinksDesktop.current, {
+    .to([navLinksDesktop.current, hamburgerLines.current[2]], {
       color: "#25373f",
       ease: Power3.easeOut,
-      scrollTrigger: {
-        trigger: "#about",
-        scrub: 1,
-        start: "top bottom", //when the top of the trigger hits bottom of vw
-        end: "+=100%"
-      },
-    });
+    },"-=.5")
+
+    .to(blackLogo.current, {
+      opacity: 1,
+      ease: Power3.easeOut
+    },"-=.5")
+
+    .to([hamburgerLines.current[0],hamburgerLines.current[1]], {
+      background: "#25373f",
+      ease: Power3.easeOut
+    },"-=.5")
+
 
   }, []);
 
@@ -110,11 +121,11 @@ const Header = () => {
   }, [sidebarOpen]);
 
 
-
   return (
     <nav className={classes.headerContainer} ref={nav}>
-      <Link to="/">
-        <img style={{ opacity: .95 }} className={classes.logo} src="/boom_final_black.svg" />
+        <Link to="/">
+        <img className={classes.logo} src="/boom_all_white.svg" />
+        <img style={{opacity: 0}} ref={blackLogo} className={classes.logo} src="/boom_final_black.svg" />
       </Link>
       <div className={classes.menuInner} ref={mobileNav}>
         <div className={classes.navLinks}>
@@ -230,9 +241,8 @@ const Header = () => {
         <Link to="/events" className={classes.button}>
           BUY TICKETS
         </Link>
-        <Divider variant="middle" orientation="vertical" style={{marginLeft: "2rem", marginRight: "2rem"}} />
-        <Link to="/account">
-        <IconButton>
+      {/*   <Link to="/account">
+      <IconButton>
         <svg x="0px" y="0px"
           viewBox="0 0 285.5 285.5" style={{ height: 19, width: 18, enableBackground: "new 0 0 285.5 285.5;" }} xmlSpace="preserve">
           <g id="XMLID_791_">
@@ -243,10 +253,10 @@ const Header = () => {
 		C257.75,207.089,206.161,155.5,142.75,155.5z M59.075,255.5c7.106-39.739,41.923-70,83.675-70s76.569,30.261,83.675,70H59.075z"/>
           </g>
         </svg>
-        </IconButton>
-        </Link>
+        </IconButton> 
+        </Link> */}
+        
       </div>
-
       <div className={classes.hamburgerHolder}
         onClick={() => setSidebarOpen(!sidebarOpen)}>
         <span
