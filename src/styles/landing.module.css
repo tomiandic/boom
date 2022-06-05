@@ -33,6 +33,8 @@ h1 .line span{
     font-family: 'Syne', sans-serif;
     text-transform: uppercase;
     font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -1px;
 }
 .line{
     height: 35px;
@@ -220,6 +222,9 @@ section{
 }
 
 @media (min-width: 900px) {
+    h1 .line span{
+        font-size: 35px;
+    }
 
     .button{
         display: inline-flex;
@@ -278,6 +283,7 @@ section{
     }
     .landingContent > h1{
         font-size: 2.4rem;
+        letter-spacing: 0;
     }
     .line {
         height: 3.3rem;

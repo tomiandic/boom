@@ -29,7 +29,7 @@ const GallerySection = (props) => {
 
 
     gsap.to(DOM.image, {
-      clipPath: "polygon(10% 20%, 90% 20%, 90% 80%, 10% 80%)",
+      clipPath: "polygon(5% 20%, 95% 20%, 95% 80%, 5% 80%)",
       scrollTrigger: {
         trigger: DOM.image,
         start: "bottom bottom", //when the top of the trigger hits bottom of vw
@@ -40,6 +40,7 @@ const GallerySection = (props) => {
     });
     gsap.from(DOM.quote, {
       opacity: 0,
+      y: -100,
       scrollTrigger: {
         trigger: DOM.quote,
         start: "bottom bottom", //when the top of the trigger hits bottom of vw

@@ -234,15 +234,7 @@ p .line{
     margin-bottom: 4rem;
     overflow: hidden;
 }
-.grayBackdrop{
-    background:var(--lightBackground);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 500px;
-    width: 100%;
-    z-index: -1;
-}
+
 @media (min-width: 1000px) {
     .paraDeco{
         display: inline;
@@ -272,7 +264,8 @@ p .line{
         min-height: 700px;
         max-height: 800px;
         min-width: 400px;
-        width: 30%;
+        width: 40%;
+        height: auto;
     }
     .aboutSliderHolder{
         flex-direction: row;
@@ -283,7 +276,7 @@ p .line{
         padding: 2rem;
         max-width: 40%;
         margin-left: -60px;
-        margin-top: 0;
+        margin-top: 15rem;
         position: relative;
     }
     .largeTitle{

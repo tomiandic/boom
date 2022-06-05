@@ -1,5 +1,6 @@
 import React from 'react'
 import * as classes from "../../styles/footer.module.css";
+import { Link } from 'gatsby';
 
 
 
@@ -78,26 +79,25 @@ const Reviews = (props) => {
                 </div>
                 <div className={classes.footerColumn}>
                    {/*  <h4>Column title</h4> */}
-                    <a>Alfreda Stiglicha 26</a>
-                    <a>52100 Pula, Croatia</a>
+                    <a target="_blank" href="https://www.google.com/maps/place/Pula+Party+%2F+Boom+events/@44.8719698,13.8545113,19.82z/data=!4m19!1m13!4m12!1m4!2m2!1d15.9776768!2d45.8031104!4e1!1m6!1m2!1s0x477cd3c517dcfc53:0xb9fa9325823b5a68!2sboom+events!2m2!1d13.8541024!2d44.8722474!3m4!1s0x477cd3c517dcfc53:0xb9fa9325823b5a68!8m2!3d44.8722474!4d13.8541024">Ulica Alfreda Stiglicha 26
+                    <br/>52100 Pula, Croatia</a>
                     <br/>
-                    <a>+385 123 354 5432</a>
-                    <a>+3385 93 123 3214 432</a>
+                    <a target="_blank" href="tel:+123321123321">+385 123 354 5432</a>
+                    <a target="_blank" href="tel:+123321321123">+3385 93 123 3214 432</a>
                     <br/>
-                    <a>info@boomboatparty.com</a>
+                    <a target="_blank" href="mailto:info@boomboatparty.com">info@boomboatparty.com</a>
                 </div>
                 <div className={classes.footerColumn}>
-                    <a>About</a>
-                    <a>Faq</a>
-                    <a>Gallery</a>
-                    <a>Events</a>
+                    <Link to="/about">About</Link>
+                    <Link to="/faq">Faq</Link>
+                    <Link to="/gallery">Gallery</Link>
+                    <Link to="/events">Events</Link>
                 </div>
                 <div className={classes.footerColumn}>
 
-                    <a>Instagram</a>
-                    <a>Facebook</a>
-                    <a>LinkedIn</a>
-                    <a>Tripadvisor</a>
+                    <a target="_blank" href="">Instagram</a>
+                    <a target="_blank" href="https://www.facebook.com/BOOMeventsPula/">Facebook</a>
+                    <a target="_blank" href="https://www.tripadvisor.co.id/Attraction_Review-g295373-d24033050-Reviews-Boom_Events-Pula_Istria.html">Tripadvisor</a>
                 </div>
             </div>
         </section>

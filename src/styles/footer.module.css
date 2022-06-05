@@ -10,7 +10,13 @@
 .footerColumn h2{
     font-family: "Syne";
     font-weight: 800;
-    font-size: 35px;
+    font-size: 22px;
+}
+.footerColumn h2 br{
+    display: none;
+}
+.footerColumn p{
+    font-size: 13px;
 }
 .footerSection svg{
     position: absolute;
@@ -24,33 +30,51 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
 }
 .footerColumn{
     color: #fff;
-    margin: 3rem;
-    width: 80%;
-}
-.footerColumn h4{
-    margin-bottom: 1rem;
-    font-size: 11px;
-    letter-spacing: 1px;
-    font-family: 'Syne', sans-serif;
-    text-transform: uppercase;
-    font-weight: 800;
+    margin: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .footerColumn a{
-    display: block;
-    opacity: .7;
+    display: inline-block;
     font-size: 15px;
-    margin: 5px 0;
+    margin: 8px 0;
+    font-weight: 500;
+    color: #fff;
 }
+.footerColumn a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s ease-in;
+  }
+  
+  a:hover::after {
+    width: 100%;
+  }
 
 @media (min-width: 1000px){
     .sectionContainer{
         flex-direction: row;
+        width: 80%;
     }
-
+    .footerColumn{
+        width: 80%;
+        margin: 3rem;
+    }
+    .footerColumn h2{
+        font-size: 35px;
+    }
+    .footerColumn h2 br{
+        display: inline;
+    }
 }
 
 
