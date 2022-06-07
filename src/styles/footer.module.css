@@ -6,6 +6,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-wrap: wrap;
 }
 .footerColumn h2{
     font-family: "Syne";
@@ -31,6 +32,7 @@
     align-items: center;
     flex-direction: column;
     width: 90%;
+    margin: 8rem auto;
 }
 .footerColumn{
     color: #fff;

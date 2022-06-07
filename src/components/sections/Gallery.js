@@ -165,6 +165,7 @@ const GallerySection = (props) => {
         </div>
       </Swiper>
       <Link className={classes.sectionButton} to="/gallery">Show all photos</Link>
+
     </section>
   );
 };

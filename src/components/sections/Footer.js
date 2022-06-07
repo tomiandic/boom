@@ -1,6 +1,7 @@
 import React from 'react'
 import * as classes from "../../styles/footer.module.css";
 import { Link } from 'gatsby';
+import Newsletter from "../Newsletter";
 
 
 
@@ -70,6 +71,7 @@ const Reviews = (props) => {
                     </animate>
                 </path>
             </svg>
+            <Newsletter />
             <div className={classes.sectionContainer}>
                 <div className={classes.footerColumn}>
                     <h2>

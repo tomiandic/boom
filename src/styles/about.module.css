@@ -99,7 +99,7 @@
     text-transform: uppercase;
     font-weight: 700;
     color: var(--main);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-top: 1rem;
     padding: 1rem 2rem;
     border-radius: var(--borderRadiusDesktop);
@@ -324,6 +324,6 @@ p .line{
         margin-bottom: 3rem;
     }
     .imageOverlay{
-        background: linear-gradient(to right, rgba(255, 255, 255, 0),rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.3))
+        background: linear-gradient(to right, rgba(255, 255, 255, 0),rgba(255, 255, 255, 0),transparent, rgba(255, 255, 255, 0.3))
     }
 }
