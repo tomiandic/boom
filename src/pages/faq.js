@@ -13,7 +13,7 @@ import ArrowDown from "../../static/icons/arrow-down.svg"
 const FAQ = () => {
     return (
         <section className={classes.faqSection}>
-            <Header />
+            <Header whiteBackground={true}/>
             <div className={classes.faqContainer}>
             <h2>Frequently Asked Questions</h2>
             <br/>

@@ -47,7 +47,7 @@ const Booking = () => {
   return (
     <BookingContext.Provider value={{ selectedTickets, setSelectedTickets }}>
       <section className={classes.bookingSection}>
-        <Header />
+        <Header whiteBackground={true} />
         <div className={classes.bookingContainer}>
           <div className={classes.eventHolder}>
             <StaticImage className={classes.bookingEventImage} src="../images/b-top.jpg" />

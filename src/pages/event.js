@@ -8,7 +8,7 @@ import Event from "../components/Event";
 const event = () => {
     return(
         <>
-            <Header />
+            <Header whiteBackground={true}/>
             <Event />
             <Footer />
         </>

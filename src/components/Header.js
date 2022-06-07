@@ -4,9 +4,7 @@ import { gsap, Power3, Sine } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as classes from "../styles/header.module.css";
 
-gsap.registerPlugin(ScrollTrigger);
-
-const Header = () => {
+const Header = ({whiteBackground}) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const mobileNav = useRef();
   const nav = useRef();
@@ -15,15 +13,7 @@ const Header = () => {
   const navLinksDesktop = useRef([]);
   const socialMedia = useRef([]);
   const sidebarTL = useRef(gsap.timeline({ paused: true }));
-  const navbarTL = useRef(gsap.timeline({ 
-    paused: true, 
-    duration: 1, 
-    scrollTrigger:{
-    trigger: "#about",
-    toggleActions: "play complete reverse reset"
-  } }));
 
-  
   
   const blackLogo = useRef();
 
@@ -85,27 +75,36 @@ const Header = () => {
         "-=1.2"
       );
 
-navbarTL.current
-    .to(nav.current, {
-      background: "#ffffffb3",
-      boxShadow: "0 0 30px -20px #97a6c7",
-      ease: Power3.easeOut
-    })
+      gsap.to(nav.current, {
+        background: "rgba(255, 255, 255, 0.95)",
+        color: "#25373f",
+        scrollTrigger: {
+          trigger: "#about",
+          scrub: 1,
+          start: "top bottom", //when the top of the trigger hits bottom of vw
+          end: "+=100%"
+        },
+      });
 
-    .to([navLinksDesktop.current, hamburgerLines.current[2]], {
-      color: "#25373f",
-      ease: Power3.easeOut,
-    },"-=.5")
+      gsap.to(blackLogo.current, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: "#about",
+          scrub: 1,
+          start: "top bottom", //when the top of the trigger hits bottom of vw
+          end: "+=100%"
+        },
+      });
 
-    .to(blackLogo.current, {
-      opacity: 1,
-      ease: Power3.easeOut
-    },"-=.5")
-
-    .to([hamburgerLines.current[0],hamburgerLines.current[1]], {
-      background: "#25373f",
-      ease: Power3.easeOut
-    },"-=.5")
+      gsap.to([hamburgerLines.current[0],hamburgerLines.current[1]], {
+        background: "#25373f",
+        scrollTrigger: {
+          trigger: "#about",
+          scrub: 1,
+          start: "top bottom", //when the top of the trigger hits bottom of vw
+          end: "+=100%"
+        },
+      });
 
 
   }, []);

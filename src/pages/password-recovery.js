@@ -39,7 +39,7 @@ const PasswordRecovery = () => {
 
   return (
     <main style={pageStyles}>
-      <Header></Header>
+      <Header whiteBackground={true}></Header>
       <title>Password recovery</title>
       <div style={containerStyles}>
         <h1 style={headingStyles}>Forgot password</h1>

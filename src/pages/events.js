@@ -8,7 +8,7 @@ import Events from "../components/Events";
 const events = () => {
     return(
         <>
-            <Header />
+            <Header whiteBackground={true} />
             <Events />
             <Footer />
         </>

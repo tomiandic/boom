@@ -42,7 +42,7 @@ const ImageGallery = () => {
 
     return (
         <>
-            <Header />
+            <Header whiteBackground={true} />
             <div ref={galleryContainer} className={classes.gallerySection}>
 
                 <Grid container>
