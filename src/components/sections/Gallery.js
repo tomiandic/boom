@@ -91,36 +91,12 @@ const GallerySection = (props) => {
         }}
         className={classes.swiperContainer}
       >
-        <SwiperSlide>
-          <img src="./gallery/20.jpg"></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./gallery/21.jpg"></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./gallery/22.jpg"></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./gallery/23.jpg"></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./gallery/24.jpg"></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./gallery/25.jpg"></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./gallery/26.jpg"></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./gallery/27.jpg"></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./gallery/28.jpg"></img>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="./gallery/29.jpg"></img>
-        </SwiperSlide>
+        {[...Array(10)].map((item, index)=>
+            <SwiperSlide>
+            <img src={`./gallery/top-${index}.jpg`}></img>
+          </SwiperSlide>
+        )}
+
         <div className={classes.navContainer}>
           <div ref={navPrev}>
             <svg viewBox="0 0 90.91 21.41">

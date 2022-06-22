@@ -108,6 +108,7 @@
     transition: 300ms color;
     cursor: pointer;
     border: 2px solid var(--main);
+    display: inline-block;
 }
 .sectionButton::after {
     -webkit-transition: all 0.3s;

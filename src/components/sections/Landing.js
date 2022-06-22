@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { gsap, Power3 } from "gsap";
+import { gsap, Power2, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Loader from "../Loader";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -53,12 +53,12 @@ const Landing = () => {
       .from(
         DOM.title,
         {
-          duration: 1,
+          duration: 1.5,
           y: 95,
           rotate: 8,
           skewX: -50,
           stagger: 0.2,
-          ease: Power3.easeOut,
+          ease: Power2.out,
         },
       )
       .to(

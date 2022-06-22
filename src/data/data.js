@@ -12,7 +12,8 @@ export const aboutSliderData = [
     title: "BOAT PARTIES",
     text: "Boat party is our main event that attracts people from all over Europe and is a must do when visiting Pula. You will enjoy the breathtaking and tipsy sunset while swimming with beautiful people or chilling in crystal clear water on big inflatables, drinking summer drinks, C02 and MC show, twerk contest and many more which we leave to your imagination. ",
     buttonText: "Check dates",
-    imageSrc: "/about.jpg"
+    imageSrc: "/about.jpg",
+    href:"/events"
   },
   {
     number: "02",

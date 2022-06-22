@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Link } from "gatsby";
-import { gsap, Power3, Sine } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, Power3 } from "gsap";
 import * as classes from "../styles/header.module.css";
 
 const Header = ({whiteBackground}) => {
@@ -78,9 +77,9 @@ const Header = ({whiteBackground}) => {
       gsap.to(nav.current, {
         background: "rgba(255, 255, 255, 0.95)",
         color: "#25373f",
+        height: "4.2rem",
         scrollTrigger: {
           trigger: "#about",
-          scrub: 1,
           start: "top bottom", //when the top of the trigger hits bottom of vw
           end: "+=100%"
         },
@@ -90,7 +89,6 @@ const Header = ({whiteBackground}) => {
         opacity: 1,
         scrollTrigger: {
           trigger: "#about",
-          scrub: 1,
           start: "top bottom", //when the top of the trigger hits bottom of vw
           end: "+=100%"
         },
@@ -100,7 +98,6 @@ const Header = ({whiteBackground}) => {
         background: "#25373f",
         scrollTrigger: {
           trigger: "#about",
-          scrub: 1,
           start: "top bottom", //when the top of the trigger hits bottom of vw
           end: "+=100%"
         },

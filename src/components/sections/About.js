@@ -5,6 +5,7 @@ import { Navigation } from "swiper";
 import { aboutSliderData } from "../../data/data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/navigation";
+import { Link } from "gatsby";
 
 import * as classes from "../../styles/about.module.css";
 gsap.registerPlugin(ScrollTrigger);
@@ -113,7 +114,7 @@ const About = (props) => {
                       {aboutSliderData[sliderIndex].text}
                     </p>
                     {aboutSliderData[sliderIndex].buttonText ?
-                      <button className={classes.sectionButton}>{aboutSliderData[sliderIndex].buttonText}<span></span></button>
+                      <Link to={aboutSliderData[sliderIndex].href} className={classes.sectionButton}>{aboutSliderData[sliderIndex].buttonText}<span></span></Link>
                       :
                       null
                     }
