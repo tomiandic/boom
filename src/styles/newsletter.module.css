@@ -21,7 +21,7 @@
     font-size: 1rem;
     cursor: pointer;
     width: 100%;
-    margin-left: -10px;
+    margin-left: 0;
 }
 
 .subscribe h3 {
@@ -55,5 +55,6 @@ flex-direction: row;
     }    
     .subscribeContainer button{
         width: auto;
+        margin-left: -10px;
     }
 }

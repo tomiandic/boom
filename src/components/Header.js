@@ -74,14 +74,16 @@ const Header = ({whiteBackground}) => {
         "-=1.2"
       );
 
-      gsap.to(nav.current, {
-        background: "rgba(255, 255, 255, 0.95)",
-        color: "#25373f",
-        height: "4.2rem",
+      gsap.from(nav.current, {
+        background: "transparent",
+        height: "6rem",
+        color: "#fff",
+        boxShadow: "rgb(0 0 0 / 0%) 0px 0px 0px 0px",
         scrollTrigger: {
           trigger: "#about",
           start: "top bottom", //when the top of the trigger hits bottom of vw
-          end: "+=100%"
+          end: "+=100%",
+          toggleActions: "play pause resume reset"
         },
       });
 
@@ -90,7 +92,8 @@ const Header = ({whiteBackground}) => {
         scrollTrigger: {
           trigger: "#about",
           start: "top bottom", //when the top of the trigger hits bottom of vw
-          end: "+=100%"
+          end: "+=100%",
+          toggleActions: "play pause resume reset"
         },
       });
 
@@ -99,7 +102,8 @@ const Header = ({whiteBackground}) => {
         scrollTrigger: {
           trigger: "#about",
           start: "top bottom", //when the top of the trigger hits bottom of vw
-          end: "+=100%"
+          end: "+=100%",
+          toggleActions: "play pause resume reset"
         },
       });
 
@@ -119,7 +123,7 @@ const Header = ({whiteBackground}) => {
 
   return (
     <nav className={classes.headerContainer} ref={nav}>
-        <Link to="/">
+        <Link className={classes.logoContainer} to="/">
         <img className={classes.logo} src="/boom_all_white.svg" />
         <img style={{opacity: 0}} ref={blackLogo} className={classes.logo} src="/boom_final_black.svg" />
       </Link>

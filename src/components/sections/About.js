@@ -32,7 +32,7 @@ const About = (props) => {
       ease: Power3.easeOut,
       scrollTrigger: {
         trigger: DOM.scrolltext,
-        scrub: 1,
+        scrub: .5,
         start: "top bottom", //when the top of the trigger hits bottom of vw
         end: "+=140%"
       },
@@ -42,7 +42,7 @@ const About = (props) => {
       y: 300,
       scrollTrigger: {
         trigger: DOM.slideSwitcher,
-        scrub: true,
+        scrub: .5,
         start: "center center", //when the top of the trigger hits bottom of vw
         end: "+=200%"
       },

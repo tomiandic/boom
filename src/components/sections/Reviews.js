@@ -4,6 +4,7 @@ import SwiperCore, { Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { reviewData } from "../../data/data";
 import { Modal } from "../Modal";
+import 'swiper/css/pagination';
 
 SwiperCore.use([Navigation, Pagination])
 
@@ -34,6 +35,7 @@ const Reviews = (props) => {
                 <img src="/quotes.svg" />
                 <Swiper 
                   slidesPerView={1}
+                  pagination={{ clickable: false}}
                   onBeforeInit={(swiper) => {
                     swiper.params.navigation.prevEl = navPrev.current;
                     swiper.params.navigation.nextEl = navNext.current;

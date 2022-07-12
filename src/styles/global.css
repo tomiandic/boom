@@ -42,8 +42,8 @@ html, body{
     top: unset;
     background: rgb(228, 228, 228);
 }
-.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
-    background: var(--secondary);
+.swiper-pagination{
+bottom: 30px!important;
 }
 .vertical-timeline-element-content{
     box-shadow: 5px 0 70px -20px rgb(221, 225, 228);
@@ -101,11 +101,26 @@ html, body{
     color: var(--main);
 }
 
+
+/* swiper slide styles */
+
+.swiper-pagination-bullet{
+    background-color: rgb(206, 213, 223);
+}
+
+.swiper-pagination-bullet-active{
+    background: var(--secondaryDark);
+}
+
 @media (min-width: 900px) {
 
     .sectionContent{
         width: 80vw;
         padding: 10rem 0;
+    }
+
+    .swiper-pagination{
+        visibility: hidden;
     }
 }
 
