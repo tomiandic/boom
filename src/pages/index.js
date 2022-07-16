@@ -7,6 +7,8 @@ import Header from "../components/Header";
 import Footer from "../components/sections/Footer";
 /* import SocialMedia from "../components/sections/SocialMedia"; */
 import Landing from "../components/sections/Landing";
+import UpcomingEvents from "../components/sections/UpcomingEvents";
+
 
 
 import "swiper/css";
@@ -19,6 +21,7 @@ const IndexPage = () => {
     <>
       <Header />
       <Landing/>
+      <UpcomingEvents />
       <About />
      {/*  <Blog /> */}
       <Reviews />

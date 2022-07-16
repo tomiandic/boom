@@ -20,6 +20,8 @@
     "@emotion/styled": "^11.8.1",
     "@merc/react-timeline": "^0.1.42",
     "@mui/material": "^5.8.1",
+    "axios": "^0.27.2",
+    "date-fns": "^2.28.0",
     "gatsby": "^4.10.0",
     "gatsby-core-utils": "^3.15.0",
     "gatsby-plugin-google-gapi": "0.0.11",

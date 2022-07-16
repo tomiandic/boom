@@ -2,15 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap, Power2, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Loader from "../Loader";
-import { Swiper, SwiperSlide } from "swiper/react";
+/* import { Swiper, SwiperSlide } from "swiper/react"; */
 import * as classes from "../../styles/landing.module.css";
-import { Link } from "gatsby";
-import SwiperCore, {
+/* import SwiperCore, {
   FreeMode
 } from 'swiper';
 
-SwiperCore.use([FreeMode]);
-gsap.registerPlugin(ScrollTrigger);
+SwiperCore.use([FreeMode]); */
 
 
 const Landing = () => {
@@ -19,10 +17,12 @@ const Landing = () => {
   const navNext = useRef();
   const landingContainer = useRef();
   const landingVideo = useRef();
-  const slidesContainer = useRef();
+/*   const slidesContainer = useRef(); */
   const landingTL = useRef(gsap.timeline({ paused: true }));
 
   const [loaderShowed, setLoaderShowed] = useState(false);
+  const [eventDat, setEventData] = useState(null);
+
 
   useEffect(() => {
     initTimelines();
@@ -34,11 +34,11 @@ const Landing = () => {
     let DOM = {
       title: landingContainer.current.querySelectorAll("[data-animate='reveal']"),
       svg: landingContainer.current.querySelector("[data-animate='path']"),
-      slides: landingContainer.current.querySelectorAll(".swiper-slide")
+     /*  slides: landingContainer.current.querySelectorAll(".swiper-slide") */
     };
 
 
-    gsap.to(slidesContainer.current, {
+   /*  gsap.to(slidesContainer.current, {
       y: 100,
       scrollTrigger: {
         trigger: landingContainer.current,
@@ -46,7 +46,7 @@ const Landing = () => {
         end: "+=100%",
         scrub: true
       },
-    });
+    }); */
 
 
     landingTL.current
@@ -179,7 +179,7 @@ const Landing = () => {
         </svg>
       </div>
 
-      <div ref={slidesContainer} className={classes.landingBottomContainer}>
+     {/*  <div ref={slidesContainer} className={classes.landingBottomContainer}>
         <div className={classes.line}>
           <span className={classes.sliderTitle} data-animate="reveal">
             Upcoming events:
@@ -242,118 +242,6 @@ const Landing = () => {
               </div>
             </Link>
           </SwiperSlide>
-          <SwiperSlide>
-            <Link to="/event" className={classes.swiperSlide}>
-              <div className={classes.eventDate}>
-                <p>
-                  24<span>Jully</span>
-                </p>
-              </div>
-              <div className={classes.eventDetails}>
-                <p className={classes.eventName}>Giant Party Boom Boat</p>
-                <div className={classes.bottomDetails}>
-                  <div className={classes.dash}></div>
-
-                  <div className={classes.eventDetail}>
-                    <p>
-                      Pula
-                    </p>
-                  </div>
-                  <div className={classes.eventDetail}>
-                    <p>
-                      16:00 - 22:00
-                    </p>
-                  </div>
-                </div>
-                <div className={classes.slideArrowHolder}>
-                </div>
-              </div>
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide>
-            <Link to="/event" className={classes.swiperSlide}>
-              <div className={classes.eventDate}>
-                <p>
-                  24<span>Jully</span>
-                </p>
-              </div>
-              <div className={classes.eventDetails}>
-                <p className={classes.eventName}>Giant Party Boom Boat in Pula</p>
-                <div className={classes.bottomDetails}>
-                  <div className={classes.dash}></div>
-
-                  <div className={classes.eventDetail}>
-                    <p>
-                      Pula
-                    </p>
-                  </div>
-                  <div className={classes.eventDetail}>
-                    <p>
-                      16:00 - 22:00
-                    </p>
-                  </div>
-                </div>
-                <div className={classes.slideArrowHolder}>
-                </div>
-              </div>
-            </Link>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={classes.swiperSlide}>
-              <div className={classes.eventDate}>
-                <p>
-                  24<span>Jully</span>
-                </p>
-              </div>
-              <div className={classes.eventDetails}>
-                <p className={classes.eventName}>Giant Party Boom Boat in Pula</p>
-                <div className={classes.bottomDetails}>
-                  <div className={classes.dash}></div>
-
-                  <div className={classes.eventDetail}>
-                    <p>
-                      Pula
-                    </p>
-                  </div>
-                  <div className={classes.eventDetail}>
-                    <p>
-                      16:00 - 22:00
-                    </p>
-                  </div>
-                </div>
-                <div className={classes.slideArrowHolder}>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className={classes.swiperSlide}>
-              <div className={classes.eventDate}>
-                <p>
-                  24<span>Jully</span>
-                </p>
-              </div>
-              <div className={classes.eventDetails}>
-                <p className={classes.eventName}>Giant Party Boom Boat in Pula</p>
-                <div className={classes.bottomDetails}>
-                  <div className={classes.dash}></div>
-
-                  <div className={classes.eventDetail}>
-                    <p>
-                      Pula
-                    </p>
-                  </div>
-                  <div className={classes.eventDetail}>
-                    <p>
-                      16:00 - 22:00
-                    </p>
-                  </div>
-                </div>
-                <div className={classes.slideArrowHolder}>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
           <SwiperSlide><Link to="/events" className={classes.swiperSlide}><div className={classes.swiperButton}>Show all events    <svg
             style={{ marginLeft: 10 }}
             width="24"
@@ -364,7 +252,7 @@ const Landing = () => {
           </svg></div></Link></SwiperSlide>
           <SwiperSlide></SwiperSlide>
         </Swiper>
-      </div>
+      </div> */}
     </section>)
 }
 

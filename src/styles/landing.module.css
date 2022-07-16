@@ -36,7 +36,7 @@ h1 .line span{
     letter-spacing: -1px;
 }
 .line{
-    height: 35px;
+    height: 40px;
     position: relative;
     overflow: hidden;
 }
@@ -55,13 +55,15 @@ p .line{
 }
 .landingParagraph{
     margin-bottom: 20px;
+    margin-top: 20px;
     line-height: 1.8rem;
     font-weight: 500;
-    opacity: .8;
+    font-size: 1.1rem;
     text-align: left;
     width: 100%;
     display: inline-block;
 } 
+
 .backdropGradient{
     position: absolute;
     top: 0;
@@ -81,65 +83,62 @@ p .line{
     stroke-dasharray: 45;
     stroke-dashoffset: 45;
 }
-.swiperContainer{
-    width: 100vw;
-}
-.swiperContainer > div{
-    margin: 20px;
-}
+
 .landingBottomContainer{
-    width: 100vw;
+    width: 95%;
+    max-width: 900px;
     z-index: 1;
     position: relative;
-    margin-top: 2rem;
-    margin-bottom: 55px;
     overflow:hidden;
+    margin: auto;
+    opacity: 0;
 }
+
 .landingBottomContainer .line span{
-    margin-left: 5vw;
     text-transform: uppercase;
-    color: #fff;
-    font-weight: 500;
-    font-size: 14px; 
-    letter-spacing: 1px;
-    margin-bottom: -10px;
+}
+.upcomingEventsSection{
+    background: #050a0c;
+    min-height:50vh;
+    padding: 6rem 0;
 }
 .swiperSlide{
-    background: #fff;
+    background: var(--secondary);
     border-radius: var(--borderRadiusDesktop);
-    box-shadow: 0 4px 25px -7px #00000075;
     overflow: hidden;
     cursor: pointer;
     display: flex; 
-    height: 80px!important; 
-    padding: 5px;
+    padding: 8px;
+    position:relative;
 }
-.swiperSlide:hover .eventDate{
-    transform: scale(.94);
+.swiperSlide:hover .eventImage{
+    transform: scale(.98);
 }
 .swiperSlide:hover{
     transition: transform 300ms;
     transform: scale(.98)!important;
 }
 .eventName{
-    font-weight: 500;
-    font-size: 13px;
-    color: var(--black);
+    font-weight: 600;
+    font-size: 22px;
 }
-.eventDate{
-    font-size: 25px;
-    font-weight: 900;
-    background: var(--secondary);
-    height: 100%;
+.eventImage{
+    height: 200px;
+    width: 150px;
     color: #fff;
     min-width: 70px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 20px 2px #e7e7e7;
     transition: transform 300ms;
     border-radius: 4px;
+    overflow: hidden;
+    position:relative;
+}
+.eventImage img{
+    object-fit: cover;
+    width: 100%;
 }
 .eventDate span{
     display: block;
@@ -148,13 +147,12 @@ p .line{
 }
 .bottomDetails{
     display: flex;
-    position: absolute;
-    bottom: 6px;
-    opacity: .7;
+    margin-top: 1rem;
+    flex-direction: column;
 }
 .eventDetails{
     padding: 8px;
-    color: var(--black);
+    color: #fff;
 }
 .eventDetail{
     font-weight: 500;
@@ -164,8 +162,7 @@ p .line{
     margin-right: 20px;
 }
 .eventDetail p{
-    font-size: 10px;
-    margin-top: 4px;
+    font-size: 14px;
 }
 
 .slideArrowHolder{
@@ -185,9 +182,14 @@ section{
 }
 .sliderTitle{
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
-    font-size: 12px!important;
+    font-family: "syne";
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+    font-size: 1rem;
 }
 .sliderNavigation div{
     margin: 1rem;
@@ -207,67 +209,64 @@ section{
     justify-content: center;
     font-weight: 600;
     min-width: 100%;
-    border-radius: 9px;
-    color: var(--black);
-    fill: var(--black);
+    color: #fff;
+    fill: #fff;
+    font-size: 20px;
+}
+.eventOpenSign {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #fff;
+    fill: #fff;
+    font-size: 13px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
 }
 
-@media (min-width: 1400px) {
-
-    .landingBottomContainer{
-        width: 45%!important;
-    }
-
-}
 
 @media (min-width: 900px) {
-    h1 .line span{
-        font-size: 35px;
-    }
+    .eventOpenSign{
+        font-size: 18px;
+    right: 2rem;
+    bottom: 2rem;
 
+    }
+    h1 .line span{
+        font-size: 40px;
+    }
+    .sliderTitle{
+        font-size: 1.1rem;
+    }
+    .eventImage{
+        height: 250px;
+        width: 400px;
+    }
+    .bottomDetails{flex-direction: row;}
     .button{
         display: inline-flex;
     }
     .svgWave{
         display: none;
     }
-    .landingBottomContainer{
-        width: 50%;
-        position: absolute;
-        bottom: 0;
-        padding: 3rem 0; 
-        margin-bottom: unset;
-        right: 0;
-    }
-    .landingBottomContainer .line span{
-        margin-left: 0;
-        margin-bottom: 1rem;
-        font-size: 12px;
-        opacity: .8;
-    }
     .swiperContainer{
         width: 100%;
     }
-    .swiperContainer > div{
-        margin: 0;
-    }
     .swiperSlide{
         border-left:0;
-        height: 85px!important;
+        padding: 1rem;
     }
     .eventName{
-        font-size:14px;
-        line-height: 1.4rem;
+        font-size:30px;
     }
-    .eventDetail,
-    .eventDate > span{
+    .eventDetail{
         font-size: 11px;
-    }
-    .backdropGradient{
-        background: linear-gradient(185deg, rgb(0 0 0 / 70%), rgb(0 11 34 / 30%), rgb(0 0 0 / 60%));
     }
     .landingContent{
         width: 75vw;
+        margin-top: auto;
+        margin-bottom: 20vh;
     }
     .dash{
         top: -7px;
@@ -279,6 +278,9 @@ section{
 @media (min-width: 600px) {
     .button{
         margin-left:0;
+    }
+    .eventImage{
+        width: 250px;
     }
     .landingContent > h1{
         font-size: 2.4rem;
@@ -292,10 +294,6 @@ section{
     }
     .sliderNavigation{
         display: flex;
-    }
-    .eventDate{
-        font-size: 30px;
-        min-width: 80px;
     }
   
 }
